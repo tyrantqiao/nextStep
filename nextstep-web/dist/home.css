@@ -16,3 +16,52 @@
 .home-start .primary-button{background:#214bd6;color:#fff;border:1px solid #173bab;font-weight:600;opacity:1;min-height:48px;box-shadow:0 4px 12px #214bd633}
 .home-start .primary-button:hover{background:#193cad}
 .home-start .primary-button:active{background:#15328f}
+
+/* 今日概览只保留开练入口与紧凑指标，详细图表及历史在记录页。 */
+.workspace:has(.home-overview) main{padding-top:24px;padding-bottom:16px}
+.workspace:has(.home-overview) footer{display:none}
+.home-overview{display:flex;flex-direction:column;gap:18px}
+.home-overview .page-heading{margin:0;align-items:center;flex-wrap:nowrap}
+.home-overview .eyebrow{display:none}
+.home-overview h1{font-size:26px}
+.home-overview .page-heading .subtitle{display:none}
+.home-overview .home-workout{flex:none;min-height:0;max-height:none;padding:26px 30px;gap:24px}
+.home-overview .home-workout-label{margin-bottom:12px}
+.home-overview .home-workout h2{font-size:26px;overflow-wrap:anywhere}
+.home-overview .home-start{gap:6px}
+.home-overview .stats-grid{margin:0;gap:10px}
+.home-overview .stat{padding:12px 16px;border-radius:13px}
+.home-overview .stat-number{font-size:23px;margin:3px 0 0;line-height:1.3}
+.home-overview .stat-number small{font-size:11px;margin-left:4px}
+.home-overview .stat-foot{display:none}
+.home-overview .stats-grid::after{content:'仅已保存记录 · 计划完成按计划训练日计';grid-column:1/-1;font-size:11px;color:var(--muted)}
+.workspace:has(.home-overview) .profile-reminder{padding:12px 16px;margin-bottom:14px;gap:8px}
+@media(max-width:700px){
+ .workspace:has(.home-overview) main{padding:16px 16px calc(80px + env(safe-area-inset-bottom))}
+ .home-overview{gap:14px}
+ .home-overview h1{font-size:23px;overflow-wrap:anywhere}
+ .home-overview .date-chip{white-space:nowrap;flex-shrink:0;padding:6px 8px}
+ .home-overview .home-workout{padding:18px;gap:14px;border-radius:18px}
+ .home-overview .home-workout h2{font-size:23px;line-height:1.3}
+ .home-overview .home-workout .subtitle{font-size:12px;line-height:1.5;margin-top:6px}
+ .home-overview .home-workout-label{margin-bottom:8px}
+ .home-overview .home-start{display:grid;grid-template-columns:1fr 1fr;gap:4px 8px}
+ .home-overview .home-start .primary-button{grid-column:1/-1;min-height:46px;padding:11px 14px;font-size:15px}
+ .home-overview .home-start .text-button{min-height:36px;padding:4px 0}
+ .home-overview .stats-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+ .home-overview .stat{padding:9px 6px;border-radius:10px}
+ .home-overview .stat-head{font-size:10px;white-space:nowrap}
+ .home-overview .stat-number{font-size:20px;letter-spacing:-.5px}
+ .home-overview .stat-number small{font-size:10px;margin-left:2px}
+ .home-overview .stats-grid::after{font-size:10px}
+ .workspace:has(.home-overview) .profile-reminder{flex-direction:row;align-items:center;font-size:12px}
+ .workspace:has(.home-overview) .profile-reminder p{display:none}
+ .workspace:has(.home-overview) .profile-reminder button{flex-shrink:0;padding:8px;font-size:12px}
+}
+@media(max-width:700px) and (max-height:600px){
+ .workspace:has(.home-overview) main{padding-top:10px}
+ .home-overview{gap:10px}
+ .home-overview .home-workout{padding:12px 16px;gap:8px}
+ .home-overview .home-workout-label{margin-bottom:4px}
+ .home-overview .home-workout h2{font-size:21px}
+}
