@@ -9,7 +9,7 @@ for (const name of ['index.html', 'styles.css', 'home.css', 'app.js']) {
   if (name === 'app.js') {
     const marker = "case 'export':{const url=";
     if (!content.includes(marker)) throw new Error('Export action changed; update the Android adapter.');
-    content = content.replace(marker, "case 'export':{if(window.NextStepAndroid&&typeof window.NextStepAndroid.exportRecords==='function'){window.NextStepAndroid.exportRecords(JSON.stringify({version:1,profile,records},null,2));break;}const url=");
+    content = content.replace(marker, "case 'export':{if(window.NextStepAndroid&&typeof window.NextStepAndroid.exportRecords==='function'){window.NextStepAndroid.exportRecords(JSON.stringify(exportData(),null,2));break;}const url=");
   }
   fs.writeFileSync(path.join(target, name), content);
 }

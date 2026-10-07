@@ -25,11 +25,80 @@ import java.util.Collections;
 import org.json.JSONObject;
 
 /** Offline WebView shell. The web assets are copied from nextstep-web/dist at build time. */
-public final class MainActivity extends Activity {
+public final class MainActivity extends Activity implements AppUpdater.Listener {
     private static final String ORIGIN = "https://app.nextstep.local";
     private static final int EXPORT_REQUEST = 41;
     private WebView webView;
     private byte[] pendingExport;
+    private boolean healthBusy;
+    private int healthGeneration;
+    private static final String READ_STEPS = "android.permission.health.READ_STEPS";
+    private long announcedUpdate;
+
+    @Override public void changed() {
+        AppUpdater updater = AppUpdater.get(this);
+        long code = updater.release == null ? 0 : updater.release.optLong("versionCode");
+        if ("ready".equals(updater.state) && code > announcedUpdate) {
+            announcedUpdate = code; message("新版已下载，进入设置的「应用更新」即可安装");
+        }
+    }
+
+    @Override protected void onPause() {
+        AppUpdater.get(this).remove(this); super.onPause();
+    }
+
+    private void sendHealth(JSONObject value) {
+        if (webView == null || isFinishing() || isDestroyed()) return;
+        webView.evaluateJavascript("window.nextstepHealthResult&&window.nextstepHealthResult(" + value.toString() + ")", null);
+    }
+
+    private void readHealth(boolean authorize) {
+        if (android.os.Build.VERSION.SDK_INT < 34) {
+            sendHealth(healthStatus("unavailable", "此测试版需要 Android 14 及以上的 Health Connect")); return;
+        }
+        if (!HealthSteps.available(this)) {
+            sendHealth(healthStatus("unavailable", "手机的 Health Connect 服务不可用")); return;
+        }
+        if (checkSelfPermission(READ_STEPS) != android.content.pm.PackageManager.PERMISSION_GRANTED) {
+            healthGeneration++; healthBusy = false;
+            sendHealth(healthStatus("permission", "请允许 NextStep 读取步数"));
+            if (authorize) requestPermissions(new String[]{READ_STEPS}, 42);
+            return;
+        }
+        if (healthBusy) return;
+        healthBusy = true;
+        final int generation = ++healthGeneration;
+        webView.postDelayed(() -> {
+            if (generation != healthGeneration || !healthBusy) return;
+            healthBusy = false; healthGeneration++;
+            sendHealth(healthStatus("error", "读取超时，请重试或打开 Health Connect 检查"));
+        }, 20000);
+        HealthSteps.read(this, value -> {
+            if (generation != healthGeneration) return;
+            healthBusy = false;
+            if (checkSelfPermission(READ_STEPS) != android.content.pm.PackageManager.PERMISSION_GRANTED)
+                value = healthStatus("permission", "步数权限已撤销");
+            sendHealth(value);
+        });
+    }
+
+    private JSONObject healthStatus(String status, String message) {
+        JSONObject value = new JSONObject();
+        try { value.put("status", status).put("message", message); } catch (Exception ignored) { }
+        return value;
+    }
+
+    @Override public void onRequestPermissionsResult(int code, String[] permissions, int[] results) {
+        super.onRequestPermissionsResult(code, permissions, results);
+        if (code == 42) readHealth(false);
+    }
+
+    @Override protected void onResume() {
+        super.onResume();
+        if (webView != null) webView.evaluateJavascript("window.refreshHealthSteps&&window.refreshHealthSteps(false)", null);
+        AppUpdater.get(this).add(this);
+        AppUpdater.get(this).automaticCheck();
+    }
 
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
@@ -110,6 +179,27 @@ public final class MainActivity extends Activity {
     }
 
     public final class ExportBridge {
+        @JavascriptInterface public void openAppUpdates() {
+            runOnUiThread(() -> startActivity(new Intent(MainActivity.this, UpdateActivity.class)));
+        }
+        @JavascriptInterface public void readHealthSteps(boolean authorize) {
+            runOnUiThread(() -> {
+                try { readHealth(authorize); }
+                catch (Exception error) {
+                    healthBusy = false; healthGeneration++;
+                    sendHealth(healthStatus("error", "无法访问 Health Connect，请检查系统服务后重试"));
+                }
+            });
+        }
+        @JavascriptInterface public void openHealthSettings() {
+            runOnUiThread(() -> {
+                try { startActivity(new Intent("android.health.connect.action.HEALTH_HOME_SETTINGS")); }
+                catch (ActivityNotFoundException error) { message("请在手机设置中搜索 Health Connect"); }
+            });
+        }
+        @JavascriptInterface public void showHealthPrivacy() {
+            runOnUiThread(() -> startActivity(new Intent(MainActivity.this, HealthPrivacyActivity.class)));
+        }
         @JavascriptInterface public void exportRecords(String json) {
             if (json == null || json.length() > 5_000_000) { message("导出内容过大"); return; }
             try {
