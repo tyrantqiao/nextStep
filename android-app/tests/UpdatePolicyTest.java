@@ -5,6 +5,13 @@ public final class UpdatePolicyTest {
     private static void check(boolean condition) { checks++; if(!condition) throw new AssertionError("Check " + checks + " failed"); }
     private static void rejected(Runnable action) { checks++; try { action.run(); } catch(IllegalArgumentException expected) { return; } throw new AssertionError("Expected rejection"); }
     public static void main(String[] args) throws Exception {
+        long interval = 12L * 60 * 60 * 1000;
+        check(UpdatePolicy.checkDue(true, interval, interval));
+        check(!UpdatePolicy.checkDue(false, interval, interval));
+        check(!UpdatePolicy.checkDue(false, interval, 1));
+        check(UpdatePolicy.checkDue(false, interval, 0));
+        check(UpdatePolicy.checkDue(false, 1, interval));
+        check(UpdatePolicy.DEFAULT_SOURCE.equals("https://github.com/tyrantqiao/nextStep/releases/latest/download/update.json"));
         check(UpdatePolicy.newer(14,15)); check(!UpdatePolicy.newer(14,14)); check(!UpdatePolicy.newer(14,13));
         check(UpdatePolicy.hex(new byte[]{0,15,(byte)255}).equals("000fff"));
         for(String url : new String[]{"http://example.com/update.json", "file:///update.apk", "https://user:password@example.com/a", "https://example.com/a#part", "not a url"}) rejected(() -> UpdatePolicy.https(url));

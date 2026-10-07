@@ -33,6 +33,7 @@ final class AppUpdater {
     private final Handler main = new Handler(Looper.getMainLooper());
     private final Set<Listener> listeners = new HashSet<>();
     private boolean busy;
+    private boolean startupChecked;
     String state = "idle", message = "尚未检查更新";
     int progress;
     JSONObject release;
@@ -92,7 +93,9 @@ final class AppUpdater {
     void automaticCheck() {
         if (!automatic() || source().isEmpty() || busy()) return;
         long last = prefs.getLong("lastAttempt", 0), now = System.currentTimeMillis();
-        if (now < last || now - last >= 12L * 60 * 60 * 1000) check(true);
+        boolean startup = !startupChecked;
+        startupChecked = true;
+        if (UpdatePolicy.checkDue(startup, now, last)) check(true);
         else if (release != null && !apk().isFile() && autoDownload() && wifi()) download(true);
     }
     private static long version(PackageInfo info) { return Build.VERSION.SDK_INT >= 28 ? info.getLongVersionCode() : info.versionCode; }

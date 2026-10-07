@@ -1,10 +1,10 @@
-# NextStep 安卓本地体验版 0.6.1
+# NextStep 安卓本地体验版 0.6.4
 
-安装包：`dist/NextStep-0.6.1.apk`，支持 Android 8.0 及以上。使用系统 WebView，本地记录离线可用，无需账户。应用更新需要网络和安装应用权限；不上传个人资料或活动记录。步数功能需要 Android 14 及以上、可用的 Health Connect 服务和用户授权。
+安装包：`dist/NextStep-0.6.4.apk`，支持 Android 8.0 及以上。使用系统 WebView，本地记录离线可用，无需账户。应用更新需要网络和安装应用权限；不上传个人资料或活动记录。步数功能需要 Android 14 及以上、可用的 Health Connect 服务和用户授权。
 
 ## 0.6.1 应用更新
 
-入口：设置底部「应用更新 → 检查更新 / 自动更新」，打开原生更新页。支持手动检查、自动检查、下载进度、失败重试、已下载包的安装；默认开启自动检查与不计费 Wi-Fi 自动下载。自动检查在应用启动或回到前台时执行，每 12 小时最多一次，失败检查也按该间隔节流；手动检查不受此间隔限制。没有后台定时服务，应用关闭后不会定时检查。自动下载途中断开不计费 Wi-Fi 会停止，重试会重新下载；手动下载可使用当前网络。
+入口：设置底部「应用更新 → 检查更新 / 自动更新」，打开原生更新页。支持手动检查、自动检查、下载进度、失败重试、已下载包的安装；默认开启自动检查与不计费 Wi-Fi 自动下载。0.6.3 起每次进程冷启动检查一次，回到前台每 12 小时最多检查一次，失败检查在同一进程内也按该间隔节流；手动检查不受此间隔限制。没有后台定时服务，应用关闭后不会定时检查。自动下载途中断开不计费 Wi-Fi 会停止，重试会重新下载；手动下载可使用当前网络。
 
 自动更新完成下载后，需要点击「安装更新」并在系统安装器确认。首次可能需允许 NextStep 安装应用。没有静默安装、卸载或清空数据；沿用包名、签名和本地 HTTPS 来源，覆盖升级保留已有资料、草稿、训练及步数。请先保存尚未提交的表单内容。
 
@@ -14,14 +14,14 @@
 
 ### 发布新版
 
-先递增 Manifest versionCode/versionName，并同步 build.ps1 的 APK 文件名及校验文件名、README。使用原签名构建并验证。以下命令针对 v0.6.1；发布下一版时同时替换版本号：
+先递增 Manifest versionCode/versionName，并同步 build.ps1 的 APK 文件名及校验文件名、README。使用原签名构建并验证。以下命令针对 v0.6.4；发布下一版时同时替换版本号：
 
 ```powershell
 # 在仓库根目录运行；构建成功后生成 dist/update.json
-./android-app/build.ps1 -UpdateBaseUrl 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.1/'
+./android-app/build.ps1 -UpdateBaseUrl 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.4/'
 
 # 或在已有已校验 APK 上单独生成，可附带 UTF-8 更新说明文件
-node android-app/update-manifest.cjs --base-url 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.1/' --notes-file android-app/release-notes.txt
+node android-app/update-manifest.cjs --base-url 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.4/' --notes-file android-app/release-notes.txt
 ```
 
 生成器从当前 Manifest 和已构建 APK 读取版本、包名、最低 SDK、大小和 SHA256，要求 APK 与构建校验文件匹配。将输出 APK 上传到 apkUrl 指定的位置，再发布 update.json；不上传 signing/、SDK 或 build/。服务器应正确返回 JSON 与 APK、避免对 update.json 长期缓存。GitHub Releases 也可托管：在最新正式 Release 附加 APK 与 update.json，源地址使用 releases/latest/download/update.json；更新信息中的 apkUrl 应指向该版本的固定 Release 资产地址。先创建草稿 Release，上传 APK、对应 .sha256 和 update.json，检查后再发布为最新正式版。
@@ -71,3 +71,17 @@ Find X8 Ultra / ColorOS 16 测试步骤：直接覆盖安装，勿卸载旧版�
 ## 0.6.2 首页精简
 
 安装包 `dist/NextStep-0.6.2.apk`，versionCode=16，沿用原包名、来源和签名，可覆盖安装。首页七天步数与说明默认折叠，今日缺失时标记最新数据日期。读取逻辑仍包含今日及最近七天，没有新增健康权限或后台同步。已构建并通过 APK 结构、资源对齐和 v2/v3 签名校验；尚未真机验证近期缺失数据的来源。0.6.2 发布资产包含 APK、SHA256 和 update.json，应用通过 GitHub 最新正式版本检查更新。
+
+## 0.6.3 启动检查更新
+
+安装包 `dist/NextStep-0.6.3.apk`，versionCode=17。默认更新源继续绑定当前 Git 远端 tyrantqiao/nextStep 的 GitHub Releases。自动检查开启时，每次进程冷启动检查一次，返回前台仍按 12 小时间隔节流；关闭自动检查后不发起启动检查。发现新版及下载完成分别提示设置中的应用更新入口，离线失败不阻止使用。系统保留进程时再次打开属于返回前台，不算冷启动。沿用原包名、签名和本地来源。
+
+0.6.3 验证：47 项 Node 回归测试、25 项 JVM 更新策略检查通过；APK 已通过资源结构、对齐和 v2/v3 签名校验。生成了对应 update.json，尚未发布 v0.6.3 Release，尚未真机验证启动联网与提示。
+
+## 0.6.4 训练日志图标
+
+安装包 `dist/NextStep-0.6.4.apk`，versionCode=18。采用训练日志、哑铃与完成标记组成的新应用图标，深蓝底配米白及橙色。包含 0.6.3 的冷启动检查更新与新版提示改动；沿用原包名、签名和本地来源，支持保留数据覆盖升级。图标原稿位于 `src/res/drawable-nodpi/ic_training_journal.png`，由内置 ImageGen 生成，设计提示为：训练日志卡片结合哑铃与完成对勾，深蓝、米白与活力橙，无文字。
+
+尚未进行安卓真机图标与覆盖升级验证。
+
+0.6.4 验证：47 项 Node 回归测试、25 项 JVM 更新策略检查通过；APK 已通过资源结构、四字节对齐和 v2/v3 签名校验，资源信息确认启动图标为新训练日志图标。已生成对应 update.json；Git 推送不等于发布 GitHub Release，应用内更新需另行上传发布资产。

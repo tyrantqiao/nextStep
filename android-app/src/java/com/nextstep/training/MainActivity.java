@@ -34,12 +34,15 @@ public final class MainActivity extends Activity implements AppUpdater.Listener 
     private int healthGeneration;
     private static final String READ_STEPS = "android.permission.health.READ_STEPS";
     private long announcedUpdate;
+    private long announcedAvailable;
 
     @Override public void changed() {
         AppUpdater updater = AppUpdater.get(this);
         long code = updater.release == null ? 0 : updater.release.optLong("versionCode");
         if ("ready".equals(updater.state) && code > announcedUpdate) {
             announcedUpdate = code; message("新版已下载，进入设置的「应用更新」即可安装");
+        } else if ("available".equals(updater.state) && code > announcedAvailable) {
+            announcedAvailable = code; message("发现新版，进入设置的「应用更新」即可下载");
         }
     }
 

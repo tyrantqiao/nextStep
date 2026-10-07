@@ -28,7 +28,7 @@ for (let i = 0; i < count; i++) {
   entries.set(name, {method, dataOffset, data});
   offset += 46 + nameLength + extraLength + commentLength;
 }
-for (const name of ['AndroidManifest.xml', 'resources.arsc', 'classes.dex', 'assets/www/index.html', 'assets/www/app.js', 'assets/www/styles.css', 'assets/www/home.css']) {
+for (const name of ['AndroidManifest.xml', 'resources.arsc', 'res/drawable-nodpi-v4/ic_training_journal.png', 'classes.dex', 'assets/www/index.html', 'assets/www/app.js', 'assets/www/styles.css', 'assets/www/home.css']) {
   assert(entries.has(name) && entries.get(name).data.length > 0, `Missing ${name}`);
 }
 const table = entries.get('resources.arsc');

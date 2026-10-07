@@ -24,6 +24,9 @@ final class UpdatePolicy {
                 || sha256 == null || !sha256.matches("[0-9a-fA-F]{64}"))
             throw new IllegalArgumentException("更新信息格式无效");
     }
+    static boolean checkDue(boolean startup, long now, long last) {
+        return startup || now < last || now - last >= 12L * 60 * 60 * 1000;
+    }
     static boolean newer(long installed, long offered) { return offered > installed; }
     static void verifyDigest(File file, long size, String hash) throws Exception {
         if (file.length() != size) throw new IOException("安装包大小校验失败");
