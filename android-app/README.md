@@ -1,6 +1,6 @@
-# NextStep 安卓本地体验版 0.6.4
+# NextStep 安卓本地体验版 0.6.5
 
-安装包：`dist/NextStep-0.6.4.apk`，支持 Android 8.0 及以上。使用系统 WebView，本地记录离线可用，无需账户。应用更新需要网络和安装应用权限；不上传个人资料或活动记录。步数功能需要 Android 14 及以上、可用的 Health Connect 服务和用户授权。
+安装包：`dist/NextStep-0.6.5.apk`，支持 Android 8.0 及以上。使用系统 WebView，本地记录离线可用，无需账户。应用更新需要网络和安装应用权限；不上传个人资料或活动记录。步数功能需要 Android 14 及以上、可用的 Health Connect 服务和用户授权。
 
 ## 0.6.1 应用更新
 
@@ -14,14 +14,14 @@
 
 ### 发布新版
 
-先递增 Manifest versionCode/versionName，并同步 build.ps1 的 APK 文件名及校验文件名、README。使用原签名构建并验证。以下命令针对 v0.6.4；发布下一版时同时替换版本号：
+先递增 Manifest versionCode/versionName，并同步 build.ps1 的 APK 文件名及校验文件名、README。使用原签名构建并验证。以下命令针对 v0.6.5；发布下一版时同时替换版本号：
 
 ```powershell
 # 在仓库根目录运行；构建成功后生成 dist/update.json
-./android-app/build.ps1 -UpdateBaseUrl 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.4/'
+./android-app/build.ps1 -UpdateBaseUrl 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.5/'
 
 # 或在已有已校验 APK 上单独生成，可附带 UTF-8 更新说明文件
-node android-app/update-manifest.cjs --base-url 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.4/' --notes-file android-app/release-notes.txt
+node android-app/update-manifest.cjs --base-url 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.5/' --notes-file android-app/release-notes.txt
 ```
 
 生成器从当前 Manifest 和已构建 APK 读取版本、包名、最低 SDK、大小和 SHA256，要求 APK 与构建校验文件匹配。将输出 APK 上传到 apkUrl 指定的位置，再发布 update.json；不上传 signing/、SDK 或 build/。服务器应正确返回 JSON 与 APK、避免对 update.json 长期缓存。GitHub Releases 也可托管：在最新正式 Release 附加 APK 与 update.json，源地址使用 releases/latest/download/update.json；更新信息中的 apkUrl 应指向该版本的固定 Release 资产地址。先创建草稿 Release，上传 APK、对应 .sha256 和 update.json，检查后再发布为最新正式版。
@@ -85,3 +85,9 @@ Find X8 Ultra / ColorOS 16 测试步骤：直接覆盖安装，勿卸载旧版�
 尚未进行安卓真机图标与覆盖升级验证。
 
 0.6.4 验证：47 项 Node 回归测试、25 项 JVM 更新策略检查通过；APK 已通过资源结构、四字节对齐和 v2/v3 签名校验，资源信息确认启动图标为新训练日志图标。已生成对应 update.json；Git 推送不等于发布 GitHub Release，应用内更新需另行上传发布资产。
+
+## 0.6.5 训练交互修复
+
+安装包 `dist/NextStep-0.6.5.apk`，versionCode=19。修复草稿清理失败后的重复续练与保存、历史编辑覆盖原始计时、无效组输入回退旧值、详情空值显示；增加准备与替换弹窗返回入口，计划日期切换保留焦点，首页显示结束待保存状态。沿用原包名、签名和本地来源，支持覆盖升级保留数据。
+
+验证：55 项 Node 回归测试及 25 项 JVM 更新策略检查通过；APK 已通过资源结构、四字节对齐和 v2/v3 签名校验。已生成 APK、SHA256 和对应 update.json。浏览器工具因环境启动失败未完成本次窄屏及桌面验证，未进行安卓真机验证。此次构建和 Git 推送不包含 GitHub Release 发布；应用内更新需要另行上传发布资产。
