@@ -1,6 +1,6 @@
-# NextStep 安卓本地体验版 0.6.5
+# NextStep 安卓本地体验版 0.6.6
 
-安装包：`dist/NextStep-0.6.5.apk`，支持 Android 8.0 及以上。使用系统 WebView，本地记录离线可用，无需账户。应用更新需要网络和安装应用权限；不上传个人资料或活动记录。步数功能需要 Android 14 及以上、可用的 Health Connect 服务和用户授权。
+安装包：`dist/NextStep-0.6.6.apk`，支持 Android 8.0 及以上。使用系统 WebView，本地记录离线可用，无需账户。应用更新需要网络和安装应用权限；不上传个人资料或活动记录。步数功能需要 Android 14 及以上、可用的 Health Connect 服务和用户授权。
 
 ## 0.6.1 应用更新
 
@@ -14,14 +14,14 @@
 
 ### 发布新版
 
-先递增 Manifest versionCode/versionName，并同步 build.ps1 的 APK 文件名及校验文件名、README。使用原签名构建并验证。以下命令针对 v0.6.5；发布下一版时同时替换版本号：
+先递增 Manifest versionCode/versionName，并同步 build.ps1 的 APK 文件名及校验文件名、README。使用原签名构建并验证。以下命令针对 v0.6.6；发布下一版时同时替换版本号：
 
 ```powershell
 # 在仓库根目录运行；构建成功后生成 dist/update.json
-./android-app/build.ps1 -UpdateBaseUrl 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.5/'
+./android-app/build.ps1 -UpdateBaseUrl 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.6/'
 
 # 或在已有已校验 APK 上单独生成，可附带 UTF-8 更新说明文件
-node android-app/update-manifest.cjs --base-url 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.5/' --notes-file android-app/release-notes.txt
+node android-app/update-manifest.cjs --base-url 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.6/' --notes-file android-app/release-notes.txt
 ```
 
 生成器从当前 Manifest 和已构建 APK 读取版本、包名、最低 SDK、大小和 SHA256，要求 APK 与构建校验文件匹配。将输出 APK 上传到 apkUrl 指定的位置，再发布 update.json；不上传 signing/、SDK 或 build/。服务器应正确返回 JSON 与 APK、避免对 update.json 长期缓存。GitHub Releases 也可托管：在最新正式 Release 附加 APK 与 update.json，源地址使用 releases/latest/download/update.json；更新信息中的 apkUrl 应指向该版本的固定 Release 资产地址。先创建草稿 Release，上传 APK、对应 .sha256 和 update.json，检查后再发布为最新正式版。
@@ -91,3 +91,12 @@ Find X8 Ultra / ColorOS 16 测试步骤：直接覆盖安装，勿卸载旧版�
 安装包 `dist/NextStep-0.6.5.apk`，versionCode=19。修复草稿清理失败后的重复续练与保存、历史编辑覆盖原始计时、无效组输入回退旧值、详情空值显示；增加准备与替换弹窗返回入口，计划日期切换保留焦点，首页显示结束待保存状态。沿用原包名、签名和本地来源，支持覆盖升级保留数据。
 
 验证：55 项 Node 回归测试及 25 项 JVM 更新策略检查通过；APK 已通过资源结构、四字节对齐和 v2/v3 签名校验。已生成 APK、SHA256 和对应 update.json。浏览器工具因环境启动失败未完成本次窄屏及桌面验证，未进行安卓真机验证。此次构建和 Git 推送不包含 GitHub Release 发布；应用内更新需要另行上传发布资产。
+
+
+## 0.6.6 完整训练与项目搜索
+
+安装包 `dist/NextStep-0.6.6.apk`，versionCode=20。新增一次完整训练计时，力量、次数动作与跑步、游泳等运动加入同一份草稿，统一结束保存为一次训练；支持续练，分项运动时长不重复加到总时长。项目选择支持名称、部位、器械搜索、分类筛选和最近使用优先。保留自定义动作及旧数据，历史编辑支持混合训练的运动明细。
+
+验证：69 项 Node 测试、25 项 JVM 更新策略检查通过；APK 结构、资源及 DEX 对齐、v2/v3 签名校验通过，签名证书与 0.6.5 一致。核对包内完整训练、搜索及 Android 原生导出代码。网页流程已在真实 Edge 的 320、390、1280 像素视口验证；未进行安卓真机测试。
+
+已生成 APK、SHA256、带更新说明的 update.json，并打包 `dist/NextStep-0.6.6-release.zip`。GitHub Release 上传与发布尚未执行，应用内更新需发布这些资产后才能获取本版。
