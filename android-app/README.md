@@ -99,4 +99,4 @@ Find X8 Ultra / ColorOS 16 测试步骤：直接覆盖安装，勿卸载旧版�
 
 验证：69 项 Node 测试、25 项 JVM 更新策略检查通过；APK 结构、资源及 DEX 对齐、v2/v3 签名校验通过，签名证书与 0.6.5 一致。核对包内完整训练、搜索及 Android 原生导出代码。网页流程已在真实 Edge 的 320、390、1280 像素视口验证；未进行安卓真机测试。
 
-已生成 APK、SHA256、带更新说明的 update.json，并打包 `dist/NextStep-0.6.6-release.zip`。GitHub Release 上传与发布尚未执行，应用内更新需发布这些资产后才能获取本版。
+已生成 APK、SHA256、带更新说明的 update.json，并打包 `dist/NextStep-0.6.6-release.zip`。已发布 [v0.6.6 GitHub Release](https://github.com/tyrantqiao/nextStep/releases/tag/v0.6.6) 为最新正式版；四份上传资产哈希与大小一致，公开 latest/update.json 与 APK 下载校验通过，应用内更新源可获取本版。
