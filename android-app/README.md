@@ -1,6 +1,6 @@
-# NextStep 安卓本地体验版 0.6.7
+# NextStep 安卓本地体验版 0.6.8
 
-安装包：`dist/NextStep-0.6.7.apk`，支持 Android 8.0 及以上。使用系统 WebView，本地记录离线可用，无需账户。应用更新需要网络和安装应用权限；不上传个人资料或活动记录。步数功能需要 Android 14 及以上、可用的 Health Connect 服务和用户授权。
+安装包：`dist/NextStep-0.6.8.apk`，支持 Android 8.0 及以上。使用系统 WebView，本地记录离线可用，无需账户。应用更新需要网络和安装应用权限；不上传个人资料或活动记录。步数功能需要 Android 14 及以上、可用的 Health Connect 服务和用户授权。
 
 ## 0.6.1 应用更新
 
@@ -14,14 +14,14 @@
 
 ### 发布新版
 
-先递增 Manifest versionCode/versionName，并同步 build.ps1 的 APK 文件名及校验文件名、README。使用原签名构建并验证。以下命令针对 v0.6.7；发布下一版时同时替换版本号：
+先递增 Manifest versionCode/versionName，并同步 build.ps1 的 APK 文件名及校验文件名、README。使用原签名构建并验证。以下命令针对 v0.6.8；发布下一版时同时替换版本号：
 
 ```powershell
 # 在仓库根目录运行；构建成功后生成 dist/update.json
-./android-app/build.ps1 -UpdateBaseUrl 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.7/'
+./android-app/build.ps1 -UpdateBaseUrl 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.8/'
 
 # 或在已有已校验 APK 上单独生成，可附带 UTF-8 更新说明文件
-node android-app/update-manifest.cjs --base-url 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.7/' --notes-file android-app/release-notes.txt
+node android-app/update-manifest.cjs --base-url 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.8/' --notes-file android-app/release-notes.txt
 ```
 
 生成器从当前 Manifest 和已构建 APK 读取版本、包名、最低 SDK、大小和 SHA256，要求 APK 与构建校验文件匹配。将输出 APK 上传到 apkUrl 指定的位置，再发布 update.json；不上传 signing/、SDK 或 build/。服务器应正确返回 JSON 与 APK、避免对 update.json 长期缓存。GitHub Releases 也可托管：在最新正式 Release 附加 APK 与 update.json，源地址使用 releases/latest/download/update.json；更新信息中的 apkUrl 应指向该版本的固定 Release 资产地址。先创建草稿 Release，上传 APK、对应 .sha256 和 update.json，检查后再发布为最新正式版。
@@ -108,3 +108,13 @@ Find X8 Ultra / ColorOS 16 测试步骤：直接覆盖安装，勿卸载旧版�
 验证：72 项 Node 测试与 25 项 JVM 更新策略检查通过；APK 结构、资源及 DEX 对齐、v2/v3 签名校验通过，签名与 0.6.6 相同。真实 Edge 已检查 320/390/1280 像素的布局及暂停、刷新续练、长按结束和保存。沿用原包名与本地来源，支持覆盖升级；尚未进行安卓真机验证。
 
 发布资产为 APK、SHA256、带更新说明的 update.json 和 release.zip，供 [v0.6.7 GitHub Release](https://github.com/tyrantqiao/nextStep/releases/tag/v0.6.7) 使用；应用更新源继续使用最新正式 Release 的 update.json。
+
+## 0.6.8 训练工具与触控修复
+
+安装包 `dist/NextStep-0.6.8.apk`，versionCode=22。训练「更多」改为最多四个适用入口的目录：添加项目、替换当前动作、修改上一组、训练设置。子页返回上一层，添加、替换或纠错成功后回到训练；保留暂停和休息状态。放弃草稿和撤销组完成采用独立确认，休息设置单独展示保存反馈。暂停中撤销组完成会清除已失效的冻结休息。
+
+修复 Android 字体导入 URL 中分号造成 CSS 截断、暂停/继续按钮空白的问题。长按结束时手指滑出按钮立即取消；成功后的松手点击不再误关反馈弹窗。
+
+验证：82 项 Node 测试和 25 项 JVM 更新策略检查通过；APK 结构、资源及 DEX 对齐、v2/v3 签名校验通过，证书与 0.6.7 相同。真实 Edge 安卓触控走查添加、替换、修改、确认/取消及结束保存，320/390/1280 像素无横向溢出；打包资源与走查资源一致。沿用原包名、本地来源和签名，支持覆盖安装保留数据。尚未进行安卓真机验证。
+
+发布资产为 APK、SHA256、带说明的 update.json 和 release.zip；Release：[v0.6.8](https://github.com/tyrantqiao/nextStep/releases/tag/v0.6.8)。应用内更新继续使用最新正式 Release 的 update.json。整体动线见 [训练交互动线](../nextstep-web/TRAINING_FLOW.md)。

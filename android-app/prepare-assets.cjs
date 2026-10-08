@@ -5,7 +5,7 @@ const target = path.resolve(process.argv[2], 'www');
 fs.mkdirSync(target, { recursive: true });
 for (const name of ['index.html', 'styles.css', 'home.css', 'app.js']) {
   let content = fs.readFileSync(path.join(source, name), 'utf8');
-  if (name === 'styles.css') content = content.replace(/@import url\([^;]+;/g, '');
+  if (name === 'styles.css') content = content.replace(/@import\s+url\([^)]*\)\s*;/g, '');
   if (name === 'app.js') {
     const marker = "case 'export':{const url=";
     if (!content.includes(marker)) throw new Error('Export action changed; update the Android adapter.');
