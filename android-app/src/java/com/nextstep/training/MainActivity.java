@@ -194,6 +194,15 @@ public final class MainActivity extends Activity implements AppUpdater.Listener 
                 }
             });
         }
+        @JavascriptInterface public void openGoogleFit() {
+            runOnUiThread(() -> {
+                try {
+                    Intent intent = getPackageManager().getLaunchIntentForPackage("com.google.android.apps.fitness");
+                    if (intent == null) { message("未找到 Google Fit，请先安装或启用应用，再开启 Health Connect 共享"); return; }
+                    startActivity(intent);
+                } catch (Exception error) { message("无法打开 Google Fit，请手动打开并开启 Health Connect 共享"); }
+            });
+        }
         @JavascriptInterface public void openHealthSettings() {
             runOnUiThread(() -> {
                 try { startActivity(new Intent("android.health.connect.action.HEALTH_HOME_SETTINGS")); }

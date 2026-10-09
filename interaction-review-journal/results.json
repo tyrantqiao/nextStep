@@ -1,0 +1,186 @@
+[
+  {
+    "name": "history visibility 320",
+    "result": true
+  },
+  {
+    "name": "history overflow 320",
+    "result": true
+  },
+  {
+    "name": "progress visibility 320",
+    "result": true
+  },
+  {
+    "name": "progress overflow 320",
+    "result": true
+  },
+  {
+    "name": "activity visibility 320",
+    "result": true
+  },
+  {
+    "name": "activity overflow 320",
+    "result": true
+  },
+  {
+    "name": "month 320",
+    "result": true
+  },
+  {
+    "name": "month overflow 320",
+    "result": true
+  },
+  {
+    "name": "range scroll 320",
+    "result": true
+  },
+  {
+    "name": "week focus 320",
+    "result": true
+  },
+  {
+    "name": "10 records 320",
+    "result": true
+  },
+  {
+    "name": "20 records 320",
+    "result": true
+  },
+  {
+    "name": "detail 320",
+    "result": true
+  },
+  {
+    "name": "edit 320",
+    "result": true
+  },
+  {
+    "name": "delete confirmation 320",
+    "result": true
+  },
+  {
+    "name": "history visibility 390",
+    "result": true
+  },
+  {
+    "name": "history overflow 390",
+    "result": true
+  },
+  {
+    "name": "progress visibility 390",
+    "result": true
+  },
+  {
+    "name": "progress overflow 390",
+    "result": true
+  },
+  {
+    "name": "activity visibility 390",
+    "result": true
+  },
+  {
+    "name": "activity overflow 390",
+    "result": true
+  },
+  {
+    "name": "month 390",
+    "result": true
+  },
+  {
+    "name": "month overflow 390",
+    "result": true
+  },
+  {
+    "name": "range scroll 390",
+    "result": true
+  },
+  {
+    "name": "week focus 390",
+    "result": true
+  },
+  {
+    "name": "10 records 390",
+    "result": true
+  },
+  {
+    "name": "20 records 390",
+    "result": true
+  },
+  {
+    "name": "detail 390",
+    "result": true
+  },
+  {
+    "name": "edit 390",
+    "result": true
+  },
+  {
+    "name": "delete confirmation 390",
+    "result": true
+  },
+  {
+    "name": "history visibility 1280",
+    "result": true
+  },
+  {
+    "name": "history overflow 1280",
+    "result": true
+  },
+  {
+    "name": "progress visibility 1280",
+    "result": true
+  },
+  {
+    "name": "progress overflow 1280",
+    "result": true
+  },
+  {
+    "name": "activity visibility 1280",
+    "result": true
+  },
+  {
+    "name": "activity overflow 1280",
+    "result": true
+  },
+  {
+    "name": "month 1280",
+    "result": true
+  },
+  {
+    "name": "month overflow 1280",
+    "result": true
+  },
+  {
+    "name": "range scroll 1280",
+    "result": true
+  },
+  {
+    "name": "week focus 1280",
+    "result": true
+  },
+  {
+    "name": "10 records 1280",
+    "result": true
+  },
+  {
+    "name": "20 records 1280",
+    "result": true
+  },
+  {
+    "name": "detail 1280",
+    "result": true
+  },
+  {
+    "name": "edit 1280",
+    "result": true
+  },
+  {
+    "name": "delete confirmation 1280",
+    "result": true
+  },
+  {
+    "name": "empty history",
+    "result": true
+  }
+]

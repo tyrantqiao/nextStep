@@ -63,14 +63,14 @@ $keyPath = Join-Path $signingPath 'nextstep-demo.keystore'
 if (-not (Test-Path -LiteralPath $keyPath)) {
     Invoke-Checked $keytool @('-genkeypair', '-keystore', $keyPath, '-storepass', 'android', '-keypass', 'android', '-alias', 'nextstep-demo', '-keyalg', 'RSA', '-keysize', '2048', '-validity', '10000', '-dname', 'CN=NextStep Demo, O=Personal Development, C=CN', '-storetype', 'JKS')
 }
-$apk = Join-Path $outputPath 'NextStep-0.6.8.apk'
+$apk = Join-Path $outputPath 'NextStep-0.6.10.apk'
 Invoke-Checked $java @('-jar', $signerJar, 'sign', '--ks', $keyPath, '--ks-key-alias', 'nextstep-demo', '--ks-pass', 'pass:android', '--key-pass', 'pass:android', '--out', $apk, "$buildPath/aligned.apk")
 Invoke-Checked $java @('-jar', $signerJar, 'verify', '--verbose', '--print-certs', $apk)
 Invoke-Checked $align @('-c', '4', $apk)
 Invoke-Checked 'node' @("$PSScriptRoot/verify-apk.cjs", $apk)
 Invoke-Checked $aapt @('dump', 'badging', $apk)
 $hash = (Get-FileHash -LiteralPath $apk -Algorithm SHA256).Hash.ToLowerInvariant()
-Set-Content -LiteralPath "$apk.sha256" -Value "$hash  NextStep-0.6.8.apk" -Encoding utf8
+Set-Content -LiteralPath "$apk.sha256" -Value "$hash  NextStep-0.6.10.apk" -Encoding utf8
 Write-Output "APK: $apk"
 Write-Output "SHA256: $hash"
 if ($UpdateBaseUrl) { Invoke-Checked 'node' @("$PSScriptRoot/update-manifest.cjs", '--base-url', $UpdateBaseUrl) }

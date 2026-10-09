@@ -1,6 +1,6 @@
-# NextStep 安卓本地体验版 0.6.8
+# NextStep 安卓本地体验版 0.6.10
 
-安装包：`dist/NextStep-0.6.8.apk`，支持 Android 8.0 及以上。使用系统 WebView，本地记录离线可用，无需账户。应用更新需要网络和安装应用权限；不上传个人资料或活动记录。步数功能需要 Android 14 及以上、可用的 Health Connect 服务和用户授权。
+安装包：`dist/NextStep-0.6.10.apk`，支持 Android 8.0 及以上。使用系统 WebView，本地记录离线可用，无需账户。应用更新需要网络和安装应用权限；不上传个人资料或活动记录。步数功能需要 Android 14 及以上、可用的 Health Connect 服务和用户授权。
 
 ## 0.6.1 应用更新
 
@@ -14,14 +14,14 @@
 
 ### 发布新版
 
-先递增 Manifest versionCode/versionName，并同步 build.ps1 的 APK 文件名及校验文件名、README。使用原签名构建并验证。以下命令针对 v0.6.8；发布下一版时同时替换版本号：
+先递增 Manifest versionCode/versionName，并同步 build.ps1 的 APK 文件名及校验文件名、README。使用原签名构建并验证。以下命令针对 v0.6.10；发布下一版时同时替换版本号：
 
 ```powershell
 # 在仓库根目录运行；构建成功后生成 dist/update.json
-./android-app/build.ps1 -UpdateBaseUrl 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.8/'
+./android-app/build.ps1 -UpdateBaseUrl 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.10/'
 
 # 或在已有已校验 APK 上单独生成，可附带 UTF-8 更新说明文件
-node android-app/update-manifest.cjs --base-url 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.8/' --notes-file android-app/release-notes.txt
+node android-app/update-manifest.cjs --base-url 'https://github.com/tyrantqiao/nextStep/releases/download/v0.6.10/' --notes-file android-app/release-notes.txt
 ```
 
 生成器从当前 Manifest 和已构建 APK 读取版本、包名、最低 SDK、大小和 SHA256，要求 APK 与构建校验文件匹配。将输出 APK 上传到 apkUrl 指定的位置，再发布 update.json；不上传 signing/、SDK 或 build/。服务器应正确返回 JSON 与 APK、避免对 update.json 长期缓存。GitHub Releases 也可托管：在最新正式 Release 附加 APK 与 update.json，源地址使用 releases/latest/download/update.json；更新信息中的 apkUrl 应指向该版本的固定 Release 资产地址。先创建草稿 Release，上传 APK、对应 .sha256 和 update.json，检查后再发布为最新正式版。
@@ -118,3 +118,23 @@ Find X8 Ultra / ColorOS 16 测试步骤：直接覆盖安装，勿卸载旧版�
 验证：82 项 Node 测试和 25 项 JVM 更新策略检查通过；APK 结构、资源及 DEX 对齐、v2/v3 签名校验通过，证书与 0.6.7 相同。真实 Edge 安卓触控走查添加、替换、修改、确认/取消及结束保存，320/390/1280 像素无横向溢出；打包资源与走查资源一致。沿用原包名、本地来源和签名，支持覆盖安装保留数据。尚未进行安卓真机验证。
 
 发布资产为 APK、SHA256、带说明的 update.json 和 release.zip；Release：[v0.6.8](https://github.com/tyrantqiao/nextStep/releases/tag/v0.6.8)。应用内更新继续使用最新正式 Release 的 update.json。整体动线见 [训练交互动线](../nextstep-web/TRAINING_FLOW.md)。
+
+## OPPO / ColorOS 接入调查
+
+网页每日活动入口已移至记录页；已发布 0.6.8 APK 尚未包含此次移动。手机系统步数、穿戴接口及独立计步的限制见 [步数接入调查](STEPS_INTEGRATION.md)。目前仍使用 Health Connect，未实现 OPPO 直连或自动备用切换。
+
+## 0.6.9 Google Fit 步数共享
+
+记录页新增 Google Fit 同步引导与原生打开应用入口。Google Fit → 个人资料 → 设置 → 开启「将 Fit 与 Health Connect 同步」，允许 Fit 写入步数、NextStep 读取步数，再返回刷新。最近七天数据继续使用 Health Connect 聚合，按来源优先级避免重复计步；本次结果确实包含 Fit 包名时才显示已获取，历史与导出保留原始来源。未发现来源不代表未安装或未授权。
+
+仅同步已共享的步数，不访问 Google 账号云端、不读取心率或睡眠、不补未共享历史。旧 Fit API 不作为新依赖。打开应用仅允许固定 Google Fit 包名，未安装显示提示。沿用包名、本地来源和签名，versionCode=23。尚未进行 Google Fit / ColorOS 真机同步验证。
+
+参考：[Google Fit 共享设置](https://support.google.com/fit/faq/6108483?hl=en-GB)、[官方 API 迁移](https://developer.android.com/health-and-fitness/health-connect/migration/fit)。
+
+0.6.9 验证：83 项 Node 回归、25 项 JVM 更新策略检查、JavaScript 语法及差异格式检查通过；APK 已构建并通过结构、资源对齐及 v2/v3 签名校验。安装包为 android-app/dist/NextStep-0.6.9.apk，包含首页每日活动移至记录页及 Google Fit 同步入口。浏览器工具启动失败，未完成窄屏与桌面布局验证；未进行 Android / Google Fit 真机同步测试。未发布至 GitHub。
+
+## 0.6.10 训练选择与动作示意
+
+versionCode=24。今日与计划合并、记录分层、频次及训练时长自行输入；自由训练按部位和器械选择，60个力量动作与15个运动配有简化循环示意，支持自定义动作。选择后默认展示示意与锁定动作信息，训练和组间休息继续显示；本版包含0.6.9的Google Fit入口及共享引导。沿用包名、本地来源和签名。
+
+验证：104项Node测试、25项JVM更新策略检查及语法检查通过；真实Edge完成320/390/1280像素27项最新流程检查。APK结构、DEX及资源对齐、v2/v3签名通过。产物为dist/NextStep-0.6.10.apk、SHA256、update.json及NextStep-0.6.10-release.zip。未进行Android或Google Fit真机测试；本次生成发布包，尚未上传GitHub Release。

@@ -1,0 +1,62 @@
+[
+  {
+    "name": "four choices 320",
+    "result": true
+  },
+  {
+    "name": "one screen 320",
+    "result": true
+  },
+  {
+    "name": "free setup 320",
+    "result": true
+  },
+  {
+    "name": "sport setup 320",
+    "result": true
+  },
+  {
+    "name": "starts once 320",
+    "result": true
+  },
+  {
+    "name": "four choices 390",
+    "result": true
+  },
+  {
+    "name": "one screen 390",
+    "result": true
+  },
+  {
+    "name": "free setup 390",
+    "result": true
+  },
+  {
+    "name": "sport setup 390",
+    "result": true
+  },
+  {
+    "name": "starts once 390",
+    "result": true
+  },
+  {
+    "name": "four choices 1280",
+    "result": true
+  },
+  {
+    "name": "one screen 1280",
+    "result": true
+  },
+  {
+    "name": "free setup 1280",
+    "result": true
+  },
+  {
+    "name": "sport setup 1280",
+    "result": true
+  },
+  {
+    "name": "starts once 1280",
+    "result": true
+  }
+]

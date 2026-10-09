@@ -1,0 +1,110 @@
+[
+  {
+    "name": "default demo 320",
+    "result": true
+  },
+  {
+    "name": "locked metadata 320",
+    "result": true
+  },
+  {
+    "name": "unlock metadata 320",
+    "result": true
+  },
+  {
+    "name": "locked submit type 320",
+    "result": true
+  },
+  {
+    "name": "training animation visible 320",
+    "result": true
+  },
+  {
+    "name": "training overflow 320",
+    "result": true
+  },
+  {
+    "name": "rest animation 320",
+    "result": true
+  },
+  {
+    "name": "paused animation 320",
+    "result": true
+  },
+  {
+    "name": "custom editable 320",
+    "result": true
+  },
+  {
+    "name": "default demo 390",
+    "result": true
+  },
+  {
+    "name": "locked metadata 390",
+    "result": true
+  },
+  {
+    "name": "unlock metadata 390",
+    "result": true
+  },
+  {
+    "name": "locked submit type 390",
+    "result": true
+  },
+  {
+    "name": "training animation visible 390",
+    "result": true
+  },
+  {
+    "name": "training overflow 390",
+    "result": true
+  },
+  {
+    "name": "rest animation 390",
+    "result": true
+  },
+  {
+    "name": "paused animation 390",
+    "result": true
+  },
+  {
+    "name": "custom editable 390",
+    "result": true
+  },
+  {
+    "name": "default demo 1280",
+    "result": true
+  },
+  {
+    "name": "locked metadata 1280",
+    "result": true
+  },
+  {
+    "name": "unlock metadata 1280",
+    "result": true
+  },
+  {
+    "name": "locked submit type 1280",
+    "result": true
+  },
+  {
+    "name": "training animation visible 1280",
+    "result": true
+  },
+  {
+    "name": "training overflow 1280",
+    "result": true
+  },
+  {
+    "name": "rest animation 1280",
+    "result": true
+  },
+  {
+    "name": "paused animation 1280",
+    "result": true
+  },
+  {
+    "name": "custom editable 1280",
+    "result": true
+  }
+]

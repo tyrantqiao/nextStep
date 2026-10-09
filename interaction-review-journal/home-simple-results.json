@@ -1,0 +1,118 @@
+[
+  {
+    "name": "core fits 320",
+    "result": true
+  },
+  {
+    "name": "home overflow 320",
+    "result": true
+  },
+  {
+    "name": "plan opens 320",
+    "result": true
+  },
+  {
+    "name": "day selection 320",
+    "result": true
+  },
+  {
+    "name": "day overflow 320",
+    "result": true
+  },
+  {
+    "name": "today selection 320",
+    "result": true
+  },
+  {
+    "name": "numeric modal 320",
+    "result": true
+  },
+  {
+    "name": "save stays home 320",
+    "result": true
+  },
+  {
+    "name": "core fits 390",
+    "result": true
+  },
+  {
+    "name": "home overflow 390",
+    "result": true
+  },
+  {
+    "name": "plan opens 390",
+    "result": true
+  },
+  {
+    "name": "day selection 390",
+    "result": true
+  },
+  {
+    "name": "day overflow 390",
+    "result": true
+  },
+  {
+    "name": "today selection 390",
+    "result": true
+  },
+  {
+    "name": "numeric modal 390",
+    "result": true
+  },
+  {
+    "name": "save stays home 390",
+    "result": true
+  },
+  {
+    "name": "core fits 1280",
+    "result": true
+  },
+  {
+    "name": "home overflow 1280",
+    "result": true
+  },
+  {
+    "name": "plan opens 1280",
+    "result": true
+  },
+  {
+    "name": "day selection 1280",
+    "result": true
+  },
+  {
+    "name": "day overflow 1280",
+    "result": true
+  },
+  {
+    "name": "today selection 1280",
+    "result": true
+  },
+  {
+    "name": "numeric modal 1280",
+    "result": true
+  },
+  {
+    "name": "save stays home 1280",
+    "result": true
+  },
+  {
+    "name": "rest shown",
+    "result": true
+  },
+  {
+    "name": "rest not timed",
+    "result": true
+  },
+  {
+    "name": "starts actual today",
+    "result": true
+  },
+  {
+    "name": "draft priority",
+    "result": true
+  },
+  {
+    "name": "legacy plan route",
+    "result": true
+  }
+]
