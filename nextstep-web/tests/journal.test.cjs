@@ -119,7 +119,7 @@ test('journal switching only changes visibility and preserves data and range',()
 test('combined home distinguishes plan rest and completed dates without counting extra sports as plan',()=>{const a=app();a.run("saveProfile({...profileDefaults,name:'用户',height:'175',weight:'70',goal:'增肌',frequency:'每周 3 次',lifestyle:'久坐为主',experience:'刚开始',duration:'30',equipment:'徒手 / 家中'});profile.trainingPlan.days[(new Date().getDay()+6)%7]={name:'休息与自由活动',items:[]}");assert.match(a.run('today()'),/今日计划休息/);assert.match(a.run('today()'),/本周计划/);a.run("profile.trainingPlan.days[(new Date().getDay()+6)%7]={name:'今日动作',items:nextSession().items}");assert.match(a.run('today()'),/今日计划待练/);a.run('homeLaunchDialog()');assert.match(a.element('workout-content').innerHTML,/data-action="today-plan"/);a.run("records=[{id:1,mode:'plan',date:localDate(),minutes:10,sets:1,volume:100}]");assert.match(a.run('today()'),/今日计划已完成/);assert.doesNotMatch(a.run('today()'),/data-action="today-plan"/)});
 test('today start uses today plan even after previewing another day and old plan routes use combined home',()=>{const a=app();a.run("saveProfile({...profileDefaults,name:'用户',height:'175',weight:'70',goal:'增肌',frequency:'每周 7 次',lifestyle:'久坐为主',experience:'刚开始',duration:'30',equipment:'徒手 / 家中'});profile.trainingPlan.days[(new Date().getDay()+6)%7].name='今天专属';planDay=((new Date().getDay()+6)%7+1)%7;render('today')");a.listeners.get('click')[0]({target:{closest(){return {dataset:{action:'today-plan'}}}}});assert.equal(a.run('draft.name'),'今天专属');assert.match(a.run('today()'),/继续训练/);a.run("navigate('plan')");assert.equal(a.run('currentPage'),'today');assert.equal(a.context.location.hash,'today');assert.equal(a.run('pages.length'),2)});
 
-test('home uses parallel views with a compact dashboard and links to detailed statistics',()=>{const a=app();assert.match(a.run('today()'),/data-home-view="plan"/);assert.doesNotMatch(a.run('today()'),/<details|home-statistics|stats-grid/);assert.match(a.run('today()'),/data-action="view-progress"/);a.run("homeView='plan'");assert.match(a.run('today()'),/完善资料并生成计划/);assert.doesNotMatch(a.run('today()'),/<details/);a.listeners.get('click')[0]({target:{closest(){return {dataset:{action:'view-progress'}}}}});assert.equal(a.run('currentPage'),'training');assert.equal(a.run('journalView'),'progress');assert.equal(a.run('records.length'),0);assert.equal(a.run('draft'),null)});
+test('home uses parallel views with a compact dashboard and links to detailed statistics',()=>{const a=app();assert.match(a.run('today()'),/data-action="weekly-plan"/);assert.doesNotMatch(a.run('today()'),/<details|home-statistics|stats-grid/);assert.match(a.run('today()'),/data-action="view-progress"/);a.run('openWeeklyPlanDialog()');assert.match(a.element('workout-content').innerHTML,/完善资料并生成计划/);assert.doesNotMatch(a.run('today()'),/<details/);a.listeners.get('click')[0]({target:{closest(){return {dataset:{action:'view-progress'}}}}});assert.equal(a.run('currentPage'),'training');assert.equal(a.run('journalView'),'progress');assert.equal(a.run('records.length'),0);assert.equal(a.run('draft'),null)});
 
 test('mode selection has no rest setting and explicit action rest stays with its exercise',()=>{const a=app();a.run('workoutModeDialog()');assert.doesNotMatch(a.element('workout-content').innerHTML,/workout-rest|组间休息/);a.run("startSession();startFreeWorkout({exercise:'俯卧撑',type:'bodyweight',sets:'2',reps:'10'});startFreeWorkout({exercise:'深蹲',type:'bodyweight',sets:'2',reps:'10'});selectedExercise=0;changeWorkoutRest(120)");assert.equal(a.run('draft.items[0].restSeconds'),120);assert.equal(a.run('draft.items[1].restSeconds'),90);a.run('selectedExercise=0;completeSet(0);saveSetFeedback()');assert.ok(a.run('Math.abs(restEnd-Date.now()-120000)')<100);const b=app({'nextstep.draft':JSON.parse(a.storage.get('nextstep.draft'))});assert.equal(b.run('draft.items[0].restSeconds'),120);assert.equal(b.run('draft.items[1].restSeconds'),90)});
 
@@ -209,14 +209,14 @@ test('pure movement omits group progress and bodyweight metrics avoid zero load 
 
 test('home dashboard uses saved whole-session minutes and available movement estimates only',()=>{
  const a=app();a.run("records=[{id:1,date:localDate(),mode:'free',name:'混合',minutes:40,sets:2,volume:100,items:[{name:'深蹲',sets:[{done:true}]}],activities:[{name:'游泳',minutes:30,calories:200},{name:'旧运动',minutes:20}]},{id:2,date:'2000-01-01',mode:'sport',minutes:90,sets:0,volume:0,calories:999}]");
- assert.equal(a.run('homeData().total.minutes'),40);assert.equal(a.run('homeData().total.count'),1);assert.equal(a.run('homeData().calories'),200);assert.equal(a.run('homeData().partialCalories'),true);assert.equal(a.run('homeData().goal'),null);assert.match(a.run('today()'),/消耗为含静息的估算，仅合计已填写用时与体重的项目/);assert.match(a.run('today()'),/再练一次/);assert.doesNotMatch(a.run('today()'),/home-workout|data-action="start-session"|data-action="sport-setup"/);
+ assert.equal(a.run('homeData().total.minutes'),40);assert.equal(a.run('homeData().total.count'),1);assert.equal(a.run('homeData().calories'),200);assert.equal(a.run('homeData().partialCalories'),true);assert.equal(a.run('homeData().goal'),null);assert.match(a.run('today()'),/消耗为含静息的估算，仅合计已填写用时与体重的项目/);assert.doesNotMatch(a.run('today()'),/data-action="home-launch"/);a.run('openWeeklyPlanDialog()');assert.match(a.element('workout-content').innerHTML,/再练一次/);assert.doesNotMatch(a.run('today()'),/home-workout|data-action="start-session"|data-action="sport-setup"/);
 });
 
 test('dashboard missing steps and estimates remain unknown while real zero steps survive denial',()=>{
  const a=app();assert.equal(a.run('homeData().calories'),null);assert.match(a.run('homeStepCard()'),/—<small>步/);assert.match(a.run('today()'),/—<small>kcal/);assert.equal(a.run('records.length'),0);assert.equal(a.run('draft'),null);healthSample(a,0,1000);assert.match(a.run('homeStepCard()'),/0<small>步/);a.run("window.nextstepHealthResult({status:'permission'})");assert.match(a.run('homeStepCard()'),/0<small>步/);assert.equal(a.run('homeData().total.count'),0);
 });
 
-test('floating entry respects saved today, active draft, pause and pending save without starting on open',()=>{
+test('home training entry respects saved today, active draft, pause and pending save without starting on open',()=>{
  const a=app();assert.equal(a.run('homeAction().label'),'开练');a.run('homeLaunchDialog()');assert.equal(a.run('draft'),null);assert.match(a.element('workout-content').innerHTML,/准备开练/);a.run("saveSport({sport:'swim-slow',minutes:'30',weight:'70',date:localDate()})");assert.equal(a.run('homeAction().label'),'再练一次');a.run('homeLaunchDialog()');assert.match(a.element('workout-content').innerHTML,/新训练会单独保存/);a.run("startSession();saveSport({sport:'swim-slow',minutes:'5',weight:'70',date:localDate()})");assert.equal(a.run('homeAction().label'),'继续训练');a.run('toggleWorkoutPause()');assert.match(a.run('today()'),/训练已暂停/);assert.equal(a.run('homeAction().label'),'继续训练');a.run('finishReview()');assert.equal(a.run('homeAction().label'),'完成保存');assert.match(a.run('today()'),/尚未计入下方数据/);assert.equal(a.run('homeData().total.minutes'),30);
 });
 
@@ -229,7 +229,7 @@ test('home weekly chart is independent of journal range and routes dates and ste
 });
 
 test('home navigation reopens the dashboard while the explicit plan route keeps its selected day',()=>{
- const a=app();a.run("homeView='plan';planDay=5;navigate('training');navigate('today')");assert.equal(a.run('homeView'),'today');assert.equal(a.run('planDay'),5);a.run("navigate('plan')");assert.equal(a.run('homeView'),'plan');assert.equal(a.run('planDay'),5);
+ const a=app();a.run("homeView='plan';planDay=5;navigate('training');navigate('today')");assert.equal(a.run('homeView'),'today');assert.equal(a.run('planDay'),5);a.run("navigate('plan')");assert.equal(a.run('homeView'),'today');assert.equal(a.run('weeklyPlanOpen'),true);assert.equal(a.run('planDay'),5);
 });
 
 test('home composition counts actual project occurrences without deriving strength time',()=>{
@@ -269,4 +269,58 @@ test('template removal and cancellation preserve originals and rest days can gai
  const a=app();a.run("saveProfile({...profileDefaults,name:'测试',height:'175',weight:'70',goal:'增肌',frequency:'每周 2 次',lifestyle:'久坐为主',experience:'有训练基础',duration:'45',equipment:'哑铃'});planDay=0;openPlanEditor()");const before=a.storage.get('nextstep.profile');
  a.run('removePlanItem(0);closeCurrentDialog()');assert.equal(a.storage.get('nextstep.profile'),before);a.run('openPlanEditor();while(planEdit.session.items.length)removePlanItem(0);savePlanTemplate()');assert.equal(a.run('selectedSession().items.length'),0);assert.equal(a.run('selectedSession().name'),'休息与自由活动');
  a.run("planDay=1;openPlanEditor();planEditIndex=-1;updatePlanItem({exercise:'俯卧撑',type:'bodyweight',sets:'2',reps:'10'});savePlanTemplate()");assert.equal(a.run('selectedSession().name'),'自选力量训练');assert.equal(a.run('selectedSession().items.length'),1);
+});
+
+test('saved strength without estimates can be supplemented and survives reload',()=>{
+ const a=app();a.run("records=[{id:1,date:localDate(),name:'旧力量训练',mode:'free',minutes:20,seconds:1200,sets:1,volume:100,items:[{name:'哑铃划船',type:'weighted',sets:[{done:true,weight:10,reps:10}]}]}]");
+ assert.equal(a.run('homeData().calories'),null);assert.match(a.run('today()'),/待补填用时与体重/);assert.match(a.run('today()'),/data-action="home-estimates"/);
+ a.run("recordEditDialog('1')");assert.match(a.element('workout-content').innerHTML,/name="strength-minutes-0"/);assert.match(a.element('workout-content').innerHTML,/name="strength-weight-0"/);assert.doesNotMatch(a.element('workout-content').innerHTML,/name="strength-(?:minutes|weight)-0"[^>]*required/);
+ const values={name:'旧力量训练',date:a.run('localDate()'),minutes:'20','weight-0-0':'10','reps-0-0':'10','strength-minutes-0':'5','strength-weight-0':'70'};a.context.values=values;
+ assert.equal(a.run("updateRecord('1',values)"),true);assert.equal(a.run('homeData().calories'),20);assert.equal(a.run('homeData().partialCalories'),false);assert.equal(a.run('records[0].seconds'),1200);assert.equal(a.run('records[0].volume'),100);assert.equal(a.run('records[0].items[0].calorieEstimate.activityCode'),'02054');
+ const b=app({'nextstep.records':JSON.parse(a.storage.get('nextstep.records'))});assert.equal(b.run('homeData().calories'),20);assert.equal(b.run('exportData().records[0].items[0].calorieEstimate.bodyWeight'),70);
+});
+test('supplemental estimates validate duration and weight and retain records on save failure',()=>{
+ const a=app();a.run("records=[{id:1,date:localDate(),name:'次数训练',mode:'free',minutes:20,seconds:1200,items:[{name:'俯卧撑',type:'bodyweight',sets:[{done:true,reps:10,weight:null}]}]}]");
+ const values={name:'次数训练',date:a.run('localDate()'),minutes:'20','reps-0-0':'10','strength-minutes-0':'5','strength-weight-0':'70'};a.context.values=values;
+ for(const bad of ['','0','Infinity','301']){values['strength-weight-0']=bad;assert.equal(a.run("updateRecord('1',values)"),false);assert.equal(a.run('homeData().calories'),null)}
+ values['strength-weight-0']='70';values['strength-minutes-0']='21';assert.equal(a.run("updateRecord('1',values)"),false);values['strength-minutes-0']='5';
+ a.context.localStorage.setItem=()=>{throw Error('quota')};assert.equal(a.run("updateRecord('1',values)"),false);assert.equal(a.run('homeData().calories'),null);
+ a.context.localStorage.setItem=(k,v)=>a.storage.set(k,v);assert.equal(a.run("updateRecord('1',values)"),true);assert.equal(a.run('homeData().calories'),18);assert.equal(a.run('records[0].volume'),0);
+ values['strength-minutes-0']='';values['strength-weight-0']='';assert.equal(a.run("updateRecord('1',values)"),true);assert.equal(a.run('homeData().calories'),null);assert.equal(a.run('records[0].items[0].calorieEstimate'),undefined);
+});
+test('home estimate selector exposes all today records and marks partial calories',()=>{
+ const a=app();a.run("records=[{id:1,date:localDate(),name:'<力量>',minutes:10,items:[{name:'俯卧撑',type:'bodyweight',sets:[{done:true}]}]},{id:2,date:localDate(),mode:'sport',name:'步行',minutes:10,calories:40},{id:3,date:'2000-01-01',name:'往日',minutes:10}]");
+ assert.equal(a.run('homeData().calories'),40);assert.match(a.run('today()'),/部分项目 · 补填/);a.run('homeEstimatesDialog()');const html=a.element('workout-content').innerHTML;assert.match(html,/data-edit-record="1"/);assert.match(html,/data-edit-record="2"/);assert.doesNotMatch(html,/data-edit-record="3"|<力量>/);assert.match(html,/&lt;力量&gt;/);
+});
+
+test('home review switches panels without rebuilding, changing range or losing focus',()=>{
+ const a=app();a.run("period='month';homeTrend='volume';render('today')");const before=a.element('app').innerHTML;
+ let focused=false;const buttons=['trend','composition'].map(key=>({dataset:{homeReview:key},setAttribute(k,v){this.pressed=v}}));const panels=['trend','composition'].map(key=>({dataset:{homeReviewPanel:key},hidden:key!=='trend'}));
+ a.context.document.querySelectorAll=selector=>selector==='[data-home-review]'?buttons:panels;a.context.document.querySelector=()=>({focus(options){focused=options.preventScroll}});
+ a.listeners.get('click')[0]({target:{closest(){return {dataset:{homeReview:'composition'}}}}});assert.deepEqual(panels.map(p=>p.hidden),[true,false]);assert.deepEqual(buttons.map(b=>b.pressed),['false','true']);assert.equal(focused,true);assert.equal(a.run('period'),'month');assert.equal(a.run('homeTrend'),'volume');assert.equal(a.element('app').innerHTML,before);assert.equal(a.run('records.length'),0);a.run("changeHomeReview('invalid')");assert.equal(a.run('homeReview'),'composition');
+});
+test('home training card escapes saved draft titles and keeps launch preparation separate',()=>{
+ const a=app();const before=[...a.storage];a.run("homeTrainingCard(homeData());homeLaunchDialog()");assert.equal(a.run('draft'),null);assert.deepEqual([...a.storage],before);
+ a.run("draft={name:'<旧训练>',paused:true,startedAt:Date.now(),items:[],activities:[]}");const html=a.run('homeTrainingCard(homeData())');assert.match(html,/&lt;旧训练&gt;/);assert.doesNotMatch(html,/<旧训练>/);assert.match(html,/训练已暂停/);assert.match(html,/aria-label="继续训练"/);assert.equal(a.run('homeData().total.count'),0);assert.doesNotMatch(a.run('today()'),/class="home-fab/);
+});
+
+test('weekly strip shows seven real days with rest and missing plan states without creating data',()=>{
+ const a=app(),before=[...a.storage];let html=a.run('homeWeekStrip()');assert.equal((html.match(/data-weekday=/g)||[]).length,7);assert.match(html,/未设/);assert.match(html,/aria-current="date"/);assert.deepEqual([...a.storage],before);
+ a.run("saveProfile({...profileDefaults,name:'测试',height:'175',weight:'70',goal:'增肌',frequency:'每周 2 次',lifestyle:'久坐为主',experience:'刚开始',duration:'30',equipment:'哑铃'})");html=a.run('homeWeekStrip()');assert.match(html,/休息/);assert.match(html,/全身/);assert.doesNotMatch(a.run('today()'),/data-home-view|home-week-plan|<details/);
+});
+test('weekly plan day selection stays in modal and never starts or changes a workout',()=>{
+ const a=app();a.run("saveProfile({...profileDefaults,name:'测试',height:'175',weight:'70',goal:'增肌',frequency:'每周 7 次',lifestyle:'久坐为主',experience:'刚开始',duration:'30',equipment:'哑铃'});openWeeklyPlanDialog(5)");assert.equal(a.run('planDay'),5);assert.equal(a.run('draft'),null);
+ const before=a.element('app').innerHTML;let focused=false;const buttons=Array.from({length:7},(_,i)=>({dataset:{planPopupDay:String(i)},setAttribute(k,v){this.pressed=v}}));a.context.document.querySelectorAll=()=>buttons;a.context.document.querySelector=()=>({focus(options){focused=options.preventScroll}});a.run('changeWeeklyPlanDay(2)');assert.equal(a.run('planDay'),2);assert.equal(focused,true);assert.equal(buttons[2].pressed,'true');assert.match(a.element('weekly-plan-day').innerHTML,/调整这一天的动作/);assert.equal(a.element('app').innerHTML,before);assert.equal(a.run('draft'),null);a.run('changeWeeklyPlanDay(7)');assert.equal(a.run('planDay'),2);
+});
+test('weekly template save and cancel return to the same day while retaining records and draft',()=>{
+ const a=app();a.run("saveProfile({...profileDefaults,name:'测试',height:'175',weight:'70',goal:'增肌',frequency:'每周 7 次',lifestyle:'久坐为主',experience:'刚开始',duration:'30',equipment:'哑铃'});startSession();openWeeklyPlanDialog(5);openPlanEditor();planEditIndex=0;updatePlanItem({exercise:'俯卧撑',type:'bodyweight',sets:'3',reps:'12'})");const draft=a.run('JSON.stringify(draft)');assert.equal(a.run('savePlanTemplate()'),true);assert.equal(a.run('weeklyPlanOpen'),true);assert.equal(a.run('planDay'),5);assert.match(a.element('workout-content').innerHTML,/本周计划/);assert.match(a.element('workout-content').innerHTML,/俯卧撑/);assert.equal(a.run('JSON.stringify(draft)'),draft);
+ a.run('openPlanEditor();removePlanItem(0)');a.listeners.get('click')[0]({target:{closest(){return {dataset:{action:'cancel-plan-template'}}}}});assert.equal(a.run('profile.trainingPlan.days[5].items[0].name'),'俯卧撑');assert.equal(a.run('weeklyPlanOpen'),true);assert.equal(a.run('planDay'),5);a.run('closeCurrentDialog()');assert.equal(a.run('weeklyPlanOpen'),false);assert.equal(a.run('records.length'),0);
+});
+
+test('new workouts launch only inside weekly plan and returning keeps the preview day',()=>{
+ const a=app();assert.doesNotMatch(a.run('today()'),/data-action="home-launch"|class="home-training-card/);const before=[...a.storage];a.run('openWeeklyPlanDialog(5)');assert.match(a.element('workout-content').innerHTML,/data-action="home-launch"/);assert.equal(a.run('draft'),null);
+ a.listeners.get('click')[0]({target:{closest(){return {dataset:{action:'home-launch'}}}}});assert.match(a.element('workout-content').innerHTML,/返回本周计划/);assert.equal(a.run('draft'),null);a.listeners.get('click')[0]({target:{closest(){return {dataset:{action:'weekly-plan'}}}}});assert.equal(a.run('planDay'),5);assert.equal(a.run('weeklyPlanOpen'),true);assert.deepEqual([...a.storage],before);
+});
+test('launch from a different week preview still starts actual today and exits plan context',()=>{
+ const a=app();a.run("saveProfile({...profileDefaults,name:'测试',height:'175',weight:'70',goal:'增肌',frequency:'每周 7 次',lifestyle:'久坐为主',experience:'刚开始',duration:'30',equipment:'哑铃'});profile.trainingPlan.days[(new Date().getDay()+6)%7].name='实际今日';openWeeklyPlanDialog(((new Date().getDay()+6)%7+1)%7);homeLaunchDialog()");a.listeners.get('click')[0]({target:{closest(){return {dataset:{action:'today-plan'}}}}});assert.equal(a.run('draft.name'),'实际今日');assert.equal(a.run('weeklyPlanOpen'),false);assert.match(a.run('today()'),/home-training-resume/);assert.match(a.run('today()'),/继续训练/);assert.equal(a.run('homeData().total.count'),0);
 });

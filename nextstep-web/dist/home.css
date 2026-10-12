@@ -142,7 +142,7 @@ button.history-row{display:grid;grid-template-columns:38px minmax(0,1fr) 16px;al
 /* 简洁首页：四项摘要、两张图表、当天记录。 */
 .page-enter:has(.home-dashboard){animation:none}
 .home-dashboard{gap:14px;padding-bottom:100px}.home-dashboard .page-heading{margin:0}.home-dashboard .page-heading .eyebrow,.home-dashboard .page-heading .subtitle:empty{display:none}.home-dashboard .page-heading h1{font-size:26px}.home-dashboard .home-tabs{max-width:440px}
-.home-quick-data{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:white;border:1px solid #e8ecf2;border-radius:18px;padding:20px 8px}.home-quick-metric{display:grid;align-content:center;gap:7px;padding:0 18px;color:var(--ink);background:transparent;text-align:left;min-width:0}.home-quick-metric+.home-quick-metric{border-left:1px solid #edf0f5}.home-quick-metric>span{font-size:12px;color:#738096}.home-quick-metric>strong{font-size:30px;font-weight:600;line-height:1.3;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;letter-spacing:-.5px}.home-quick-metric small{font-size:11px;font-weight:400;color:#758096;letter-spacing:0;margin-left:5px}.home-quick-metric .home-metric-status{font-size:10px;margin-left:0}.home-quick-metric:focus-visible{outline:3px solid #d99439;outline-offset:1px}.home-quick-metric[data-action]:hover{color:#3155cb}
+.home-quick-data{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:white;border:1px solid #e8ecf2;border-radius:18px;padding:20px 8px}.home-quick-metric{display:grid;grid-template-rows:auto auto 1fr;align-content:start;gap:7px;padding:0 18px;color:var(--ink);background:transparent;text-align:left;min-width:0}.home-quick-metric+.home-quick-metric{border-left:1px solid #edf0f5}.home-quick-metric>span{font-size:12px;color:#738096}.home-quick-metric>strong{font-size:30px;font-weight:600;line-height:1.3;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;letter-spacing:-.5px}.home-quick-metric small{font-size:11px;font-weight:400;color:#758096;letter-spacing:0;margin-left:5px}.home-quick-metric .home-metric-status{font-size:10px;margin-left:0}.home-quick-metric:focus-visible{outline:3px solid #d99439;outline-offset:1px}.home-quick-metric[data-action]:hover{color:#3155cb}
 .home-simple-plan{display:flex;align-items:center;gap:6px;color:#6c7890;font-size:11px;padding:0 4px;line-height:1.6}.home-simple-plan>span{margin-left:auto;color:#8b95a7}.home-simple-charts{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:16px;align-items:stretch}.home-simple-charts .card{margin:0;padding:20px 22px;border:1px solid #e8ecf2;box-shadow:none}.home-simple-charts .card-head{align-items:center;margin-bottom:10px;gap:8px}.home-simple-charts h2{font-size:16px}.home-simple-charts .card-head .text-button{font-size:11px;min-height:36px;padding:0 3px}.home-chart-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;background:#f4f6fa;border-radius:9px;padding:3px}.home-chart-tabs button{min-width:0;min-height:34px;border-radius:7px;background:transparent;color:#7a8598;font-size:11px}.home-chart-tabs button[aria-pressed=true]{background:white;color:#3155cb;box-shadow:0 1px 5px #1d345c0e}.home-chart-total{display:flex;align-items:center;gap:10px;margin:15px 0 8px}.home-chart-total strong{font-size:27px;font-weight:600;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.home-chart-total small{font-size:11px;color:#7a8598;font-weight:400;margin-left:5px}.home-chart-total>span{font-size:10px;color:#8b95a7;flex-shrink:0}.home-simple-bars{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:10px}.home-chart-day{background:transparent;padding:0;color:#8b95a7;display:grid;gap:6px;text-align:center;min-width:0;font-size:10px}.home-chart-day:focus-visible,.home-chart-tabs button:focus-visible{outline:3px solid #d99439;outline-offset:2px}.home-chart-day:hover:not(:disabled) .home-simple-track{background:#e9eef8}.home-chart-day:disabled{opacity:.5;cursor:default}.home-bar-number{font-size:10px;font-variant-numeric:tabular-nums;white-space:nowrap;min-height:15px}.home-simple-track{display:flex;align-items:flex-end;height:76px;background:#f3f5f9;border-radius:5px;overflow:hidden}.home-simple-track i{display:block;width:100%;background:#aebeea;border-radius:5px}.home-chart-day.is-today{color:#3155cb}.home-chart-day.is-today .home-simple-track i{background:#3155cb}
 .home-composition-body{display:flex;align-items:center;justify-content:center;gap:25px;padding:14px 0;min-height:170px}.home-composition-ring{width:128px;height:128px;border-radius:50%;display:grid;place-items:center;flex-shrink:0}.home-composition-ring>div{width:87px;height:87px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:2px}.home-composition-ring strong{font-size:30px;font-weight:600;font-variant-numeric:tabular-nums}.home-composition-ring span{font-size:10px;color:#8b95a7}.home-composition-legend{display:grid;gap:9px;min-width:0}.home-composition-legend>div{display:grid;grid-template-columns:7px minmax(0,1fr) auto;align-items:center;gap:9px;font-size:11px;min-width:0;color:#67758c}.home-composition-legend i{width:7px;height:7px;border-radius:50%}.home-composition-legend span{overflow-wrap:anywhere}.home-composition-legend strong{font-size:12px;font-weight:500;color:#354560}.home-chart-caption{font-size:10px;color:#8b95a7;text-align:center;line-height:1.7}.home-composition-detail{font-size:11px;color:#65748a;text-align:center;margin-top:6px;line-height:1.7;overflow-wrap:anywhere}
 .home-recent{padding:6px 2px}.home-recent>.card-head{align-items:center;margin:0 0 3px}.home-recent h2{font-size:15px}.home-recent .text-button{font-size:11px;min-height:36px}.home-recent-row{display:grid;grid-template-columns:32px minmax(0,1fr) 12px;gap:10px;width:100%;padding:12px 0;text-align:left;background:transparent;color:var(--ink);border-radius:0;border-bottom:1px solid #e7ebf1}.home-recent-row:last-child{border:0}.home-recent-row .history-icon{width:30px;height:30px}.home-recent-row>span:nth-child(2){display:grid;gap:4px;min-width:0}.home-recent-row strong{font-size:12px;font-weight:500;overflow-wrap:anywhere}.home-recent-row small{font-size:10px;color:#7e899b;line-height:1.6;overflow-wrap:anywhere}.home-recent-row .chevron{align-self:center;color:#8b95a7}.home-simple-note{font-size:10px;color:#8b95a7;line-height:1.7;padding:0 2px}
@@ -150,3 +150,114 @@ button.history-row{display:grid;grid-template-columns:38px minmax(0,1fr) 16px;al
 @media(max-width:950px){.home-quick-metric{padding:0 12px}.home-quick-metric>strong{font-size:26px}.home-composition-body{gap:14px}.home-composition-ring{width:112px;height:112px}.home-composition-ring>div{width:76px;height:76px}.home-simple-charts .card{padding:18px}.home-simple-bars{gap:8px}}
 @media(max-width:700px){.home-dashboard{gap:12px;padding-bottom:100px}.home-dashboard .page-heading h1{font-size:23px}.home-dashboard .home-tabs{max-width:none}.home-quick-data{padding:14px 5px;border-radius:14px}.home-quick-metric{padding:0 9px;gap:6px}.home-quick-metric>span{font-size:10px}.home-quick-metric>strong{font-size:22px;letter-spacing:-.3px}.home-quick-metric>strong small{font-size:9px;display:block;margin:2px 0 0;letter-spacing:0}.home-simple-charts{grid-template-columns:minmax(0,1fr);gap:12px}.home-simple-charts .card{padding:14px 18px;border-radius:16px}.home-chart-total{margin:12px 0 7px}.home-chart-total strong{font-size:24px}.home-simple-track{height:60px}.home-simple-bars{gap:13px}.home-composition-body{min-height:120px;gap:30px;padding:7px 0}.home-composition-ring{width:102px;height:102px}.home-composition-ring>div{width:70px;height:70px}.home-composition-ring strong{font-size:26px}.home-composition-legend{gap:7px}.home-composition-detail{margin-top:4px}.home-recent{padding:4px 2px}.home-fab{right:18px;bottom:calc(83px + env(safe-area-inset-bottom));min-height:52px;padding:0 21px 0 16px}.home-fab strong{font-size:14px}.home-launch-choices{grid-template-columns:minmax(0,1fr)}.home-launch-choices .mode-quick-choice{min-height:120px}.home-launch-choices .mode-quick-choice:first-child:nth-last-child(3){grid-column:auto}}
 @media(max-width:350px){.home-quick-metric{padding:0 7px}.home-quick-metric>strong{font-size:20px}.home-simple-charts .card{padding:13px 15px}.home-simple-bars{gap:10px}.home-composition-body{gap:22px}}
+
+/* 首页模块分层：训练行动、今日活动、记录回看与本周回顾。 */
+.home-dashboard{gap:18px;padding-bottom:20px}
+.home-dashboard .home-tabs{max-width:360px}
+.home-dashboard-body{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:20px;align-items:start}
+.home-training-card{padding:24px;border:1px solid #d9e3fa;border-radius:20px;background:linear-gradient(120deg,#edf2ff,#f9faff);min-width:0}
+.home-training-main{display:flex;flex-direction:column;align-items:start;gap:18px}
+.home-training-copy{min-width:0}
+.home-training-eyebrow{font-size:12px;font-weight:600;color:#4265bb;margin-bottom:8px}
+.home-training-copy h2{font-size:25px;line-height:1.35;letter-spacing:-.5px;overflow-wrap:anywhere}
+.home-training-description{font-size:12px;color:#6c7890;margin-top:8px;line-height:1.7}
+.home-training-start{display:flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 22px;border-radius:12px;background:#3155cb;color:white;max-width:100%;box-shadow:0 4px 12px #3155cb20}
+.home-training-start strong{font-size:14px;font-weight:600}
+.home-training-start>span{font-size:21px;line-height:1;margin-left:8px}
+.home-training-start:hover{background:#2444b3}
+.home-training-start:focus-visible{outline:3px solid #d99439;outline-offset:3px}
+.home-training-card .home-simple-plan{margin-top:20px;padding:14px 0 0;border-top:1px solid #dce4f4;font-size:11px;flex-wrap:wrap}
+.home-activity-card{padding:24px;background:white;border:1px solid #e8ecf2;border-radius:20px;min-width:0}
+.home-activity-card>.card-head{margin-bottom:20px;align-items:center}
+.home-activity-card h2,.home-week-review>.card-head h2,.home-recent h2{font-size:16px}
+.home-activity-card .home-quick-data{padding:0;border:0;border-radius:0;background:transparent}
+.home-activity-card .home-quick-metric{padding:0 12px;gap:6px}
+.home-activity-card .home-quick-metric:first-child{padding-left:0}
+.home-activity-card .home-quick-metric:last-child{padding-right:0}
+.home-activity-card .home-quick-metric>span{font-size:11px;min-height:17px;line-height:17px}
+.home-activity-card .home-quick-metric>strong{font-size:27px}
+.home-activity-card .home-quick-metric>strong small{display:block;margin:3px 0 0;font-size:10px;line-height:15px}
+.home-activity-card .home-metric-status{font-size:10px;line-height:1.6}
+.home-activity-note{font-size:10px;color:#8b95a7;line-height:1.7;margin-top:18px}
+.home-dashboard-body>.home-recent,.home-dashboard-body>.home-week-review{margin:0;padding:22px 24px;min-width:0;border:1px solid #e8ecf2;border-radius:20px;box-shadow:none}
+.home-recent .card-head{margin-bottom:12px}
+.home-recent .home-recent-row{grid-template-columns:36px minmax(0,1fr) 12px;padding:16px 0;gap:12px}
+.home-recent .history-icon{width:36px;height:36px;background:#f1f4fc;border-radius:10px}
+.home-recent-row strong{font-size:14px}
+.home-recent-row small{font-size:11px;line-height:1.7}
+.home-recent>.small-label{padding:16px 0;color:#8b95a7;font-size:12px}
+.home-week-review>.card-head{align-items:center;margin-bottom:12px}
+.home-week-review>.card-head .text-button{font-size:11px;min-height:36px;padding:0 2px}
+.home-review-tabs{display:flex;gap:22px;margin-bottom:16px;border-bottom:1px solid #edf0f5}
+.home-review-tabs button{background:transparent;color:#7a8598;border-bottom:2px solid transparent;padding:9px 0;min-height:42px;font-size:12px}
+.home-review-tabs button[aria-pressed=true]{color:#3155cb;border-bottom-color:#3155cb;font-weight:600}
+.home-review-tabs button:focus-visible{outline:3px solid #d99439;outline-offset:2px}
+.home-review-panels{display:grid}.home-review-panel{grid-area:1/1;min-width:0}.home-review-panel[hidden]{display:block!important;visibility:hidden;pointer-events:none}
+.home-week-review .card{margin:0;padding:0;border:0;border-radius:0;box-shadow:none}
+.home-week-review .home-trend-card>.card-head,.home-week-review .home-composition-card>.card-head{display:none}
+.home-week-review .home-chart-tabs button{min-height:40px;font-size:11px}
+.home-week-review .home-chart-total{margin:14px 0 10px}
+.home-week-review .home-simple-track{height:64px}
+.home-week-review .home-composition-body{padding:10px 0;min-height:165px}
+@media(min-width:1051px){.home-dashboard-body>.home-training-card,.home-dashboard-body>.home-activity-card{height:100%}.home-dashboard-body>.home-recent{grid-column:1}.home-dashboard-body>.home-week-review{grid-column:2;grid-row:2}}
+@media(max-width:1050px){.home-dashboard-body{grid-template-columns:minmax(0,1fr);gap:16px}.home-training-main{flex-direction:row;justify-content:space-between;align-items:center}.home-training-start{flex-shrink:0}.home-training-copy{flex:1}}
+@media(max-width:700px){
+ .home-dashboard{gap:14px;padding-bottom:10px}.home-dashboard-body{gap:14px}.home-dashboard .home-tabs{max-width:none}
+ .home-training-card{padding:18px;border-radius:18px}.home-training-main{flex-direction:column;align-items:stretch;gap:16px}
+ .home-training-copy h2{font-size:22px}.home-training-eyebrow{font-size:11px;margin-bottom:6px}.home-training-description{font-size:11px;margin-top:6px}
+ .home-training-start{width:100%;min-height:46px}.home-training-card .home-simple-plan{margin-top:16px;padding-top:12px;font-size:10px}
+ .home-activity-card{padding:18px 16px;border-radius:18px}.home-activity-card>.card-head{margin-bottom:16px}.home-activity-card .home-quick-metric{padding:0 9px}.home-activity-card .home-quick-metric>span{font-size:10px}.home-activity-card .home-quick-metric>strong{font-size:24px}.home-activity-card .home-metric-status{font-size:9px}.home-activity-note{font-size:9px;margin-top:14px}
+ .home-dashboard-body>.home-recent,.home-dashboard-body>.home-week-review{padding:18px 16px;border-radius:18px}.home-activity-card h2,.home-week-review>.card-head h2,.home-recent h2{font-size:15px}
+ .home-recent .home-recent-row{padding:13px 0}.home-recent-row strong{font-size:13px}.home-recent-row small{font-size:10px}.home-review-tabs{gap:22px;margin-bottom:12px}.home-week-review .home-composition-body{min-height:150px}
+}
+@media(max-width:350px){.home-activity-card .home-quick-metric{padding:0 6px}.home-activity-card .home-quick-metric>strong{font-size:21px}.home-training-copy h2{font-size:20px}.home-training-card .home-simple-plan>span{margin-left:0}.home-week-review .home-chart-tabs{gap:2px}.home-week-review .home-chart-tabs button{font-size:10px}}
+
+/* 一排七天安排与末尾计划管理入口。 */
+.home-week-strip{display:grid;grid-template-columns:repeat(7,minmax(0,1fr)) 90px;gap:8px;align-items:center;padding:16px 20px;background:white;border:1px solid #e8ecf2;border-radius:18px}
+.home-week-day{display:grid;justify-items:center;gap:7px;min-width:0;background:transparent;color:#738096;padding:4px 0;border-radius:10px}
+.home-week-label{font-size:11px;line-height:16px}
+.home-week-circle{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:#f1f4fa;border:1px solid #e8edf5;color:#8c98ab}
+.home-week-task{font-size:11px;line-height:16px;white-space:nowrap;max-width:100%}
+.home-week-day.is-today{color:#3155cb;font-weight:600}
+.home-week-day.is-today .home-week-circle{background:#edf2ff;border:2px solid #3155cb;color:#3155cb}
+.home-week-day.is-completed .home-week-circle{background:#eaf6f0;border-color:#c8e5d6;color:#248b73}
+.home-week-day.is-completed.is-today .home-week-circle{border-color:#248b73}
+.home-week-manage{display:flex;align-items:center;justify-content:center;gap:4px;flex-wrap:wrap;min-height:70px;min-width:0;padding:8px 6px;background:#f5f7fc;color:#3155cb;border-radius:12px;font-size:11px}
+.home-week-manage>span:first-of-type{width:100%;font-weight:600}
+.home-week-day:focus-visible,.home-week-manage:focus-visible{outline:3px solid #d99439;outline-offset:2px}
+.home-week-day:hover .home-week-circle{background:#e5ecfa}
+.weekly-plan-note{margin-bottom:16px;line-height:1.7}
+.weekly-plan-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;margin-bottom:20px}
+.weekly-plan-days button{display:grid;justify-items:center;gap:4px;min-width:0;padding:10px 2px;background:#f5f7fb;color:#738096;border:1px solid transparent;border-radius:10px;font-size:11px}
+.weekly-plan-days button small{font-size:10px}
+.weekly-plan-days button[aria-pressed=true]{background:#edf2ff;color:#3155cb;border-color:#b5c7f8;font-weight:600}
+.weekly-plan-days button:focus-visible{outline:3px solid #d99439;outline-offset:2px}
+.weekly-plan-selected{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
+.weekly-plan-selected h3{font-size:19px;margin-top:6px;overflow-wrap:anywhere}
+.weekly-plan-selected .pill{flex-shrink:0;font-size:10px}
+.weekly-plan-exercises{display:grid;gap:12px;margin:14px 0 20px}
+.weekly-plan-exercise{display:flex;align-items:center;gap:12px;padding:12px;border:1px solid #edf0f5;border-radius:12px}
+.weekly-plan-exercise>span{display:grid;place-items:center;width:28px;height:28px;background:#f2f5fc;border-radius:8px;font-size:11px;color:#7a89a5;flex-shrink:0}
+.weekly-plan-exercise>div{min-width:0;display:grid;gap:4px}
+.weekly-plan-exercise strong{font-size:13px;overflow-wrap:anywhere}
+.weekly-plan-exercise small{font-size:11px;color:#7a8598;overflow-wrap:anywhere}
+.weekly-plan-edit{width:100%;min-height:44px;margin-top:8px}
+.weekly-plan-settings{margin-top:22px;padding-top:16px;border-top:1px solid #edf0f5;display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:11px;color:#8b95a7}
+.weekly-plan-settings button{font-size:11px;padding:4px 0;min-height:40px}
+@media(max-width:700px){.home-week-strip{grid-template-columns:repeat(7,minmax(0,1fr)) 47px;gap:3px;padding:12px 10px;border-radius:16px}.home-week-day{gap:6px}.home-week-label,.home-week-task{font-size:10px;line-height:14px}.home-week-circle{width:32px;height:32px}.home-week-circle svg{width:15px;height:15px}.home-week-manage{min-height:68px;font-size:10px;gap:2px;padding:6px 3px}.home-week-manage>span:first-of-type{line-height:1.5}.weekly-plan-days{gap:3px}.weekly-plan-days button{font-size:10px;padding:9px 1px}.weekly-plan-days button small{font-size:9px}.weekly-plan-selected h3{font-size:17px}}
+@media(max-width:350px){.home-week-strip{grid-template-columns:repeat(7,minmax(0,1fr)) 41px;gap:2px;padding:11px 7px}.home-week-circle{width:27px;height:27px}.home-week-label,.home-week-task{font-size:9px}.home-week-manage{font-size:9px}}
+
+/* 开练收进计划弹窗，首页只保留草稿续练状态。 */
+.weekly-plan-launch{display:grid;gap:8px;margin:0 0 20px;padding:14px;background:#f4f7ff;border:1px solid #e1e8fa;border-radius:12px}
+.weekly-plan-launch .primary-button{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;min-height:46px}
+.weekly-plan-launch .small-label{font-size:10px;line-height:1.7;text-align:center}
+.home-training-resume{grid-column:1/-1;padding:14px 18px;border-radius:14px}
+.home-training-resume .home-training-main{flex-direction:row;align-items:center;justify-content:space-between;gap:12px}
+.home-training-resume .home-training-copy h2{font-size:15px;letter-spacing:0}
+.home-training-resume .home-training-eyebrow{font-size:10px;margin-bottom:4px}
+.home-training-resume .home-training-description{font-size:10px;margin-top:4px}
+.home-training-resume .home-training-start{width:auto;flex-shrink:0;min-height:44px;padding:0 14px;gap:6px}
+.home-training-resume .home-training-start strong{font-size:12px}
+.home-training-resume .home-training-start>span{display:none}
+@media(min-width:1051px){.home-dashboard-body>.home-activity-card{grid-column:1/-1;height:auto}.home-dashboard-body>.home-week-review{grid-row:auto}.home-dashboard-body>.home-training-resume{height:auto}}
+@media(max-width:350px){.home-training-resume{padding:12px}.home-training-resume .home-training-start{padding:0 10px}.home-training-resume .home-training-start svg{display:none}}

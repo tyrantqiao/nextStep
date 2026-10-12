@@ -1,0 +1,183 @@
+[
+  {
+    "state": "schedule",
+    "compact": false,
+    "homeLaunches": 0,
+    "pageFits": true,
+    "width": 320
+  },
+  {
+    "name": "plan-launch",
+    "state": "schedule",
+    "width": 320,
+    "action": "开练",
+    "fits": true
+  },
+  {
+    "state": "saved",
+    "compact": false,
+    "homeLaunches": 0,
+    "pageFits": true,
+    "width": 320
+  },
+  {
+    "name": "plan-launch",
+    "state": "saved",
+    "width": 320,
+    "action": "再练一次",
+    "fits": true
+  },
+  {
+    "state": "active",
+    "compact": true,
+    "homeLaunches": 1,
+    "pageFits": true,
+    "width": 320
+  },
+  {
+    "name": "plan-launch",
+    "state": "active",
+    "width": 320,
+    "action": "继续训练",
+    "fits": true
+  },
+  {
+    "state": "finished",
+    "compact": true,
+    "homeLaunches": 1,
+    "pageFits": true,
+    "width": 320
+  },
+  {
+    "name": "plan-launch",
+    "state": "finished",
+    "width": 320,
+    "action": "完成保存",
+    "fits": true
+  },
+  {
+    "state": "schedule",
+    "compact": false,
+    "homeLaunches": 0,
+    "pageFits": true,
+    "width": 390
+  },
+  {
+    "name": "plan-launch",
+    "state": "schedule",
+    "width": 390,
+    "action": "开练",
+    "fits": true
+  },
+  {
+    "state": "saved",
+    "compact": false,
+    "homeLaunches": 0,
+    "pageFits": true,
+    "width": 390
+  },
+  {
+    "name": "plan-launch",
+    "state": "saved",
+    "width": 390,
+    "action": "再练一次",
+    "fits": true
+  },
+  {
+    "state": "active",
+    "compact": true,
+    "homeLaunches": 1,
+    "pageFits": true,
+    "width": 390
+  },
+  {
+    "name": "plan-launch",
+    "state": "active",
+    "width": 390,
+    "action": "继续训练",
+    "fits": true
+  },
+  {
+    "state": "finished",
+    "compact": true,
+    "homeLaunches": 1,
+    "pageFits": true,
+    "width": 390
+  },
+  {
+    "name": "plan-launch",
+    "state": "finished",
+    "width": 390,
+    "action": "完成保存",
+    "fits": true
+  },
+  {
+    "state": "schedule",
+    "compact": false,
+    "homeLaunches": 0,
+    "pageFits": true,
+    "width": 1280
+  },
+  {
+    "name": "plan-launch",
+    "state": "schedule",
+    "width": 1280,
+    "action": "开练",
+    "fits": true
+  },
+  {
+    "state": "saved",
+    "compact": false,
+    "homeLaunches": 0,
+    "pageFits": true,
+    "width": 1280
+  },
+  {
+    "name": "plan-launch",
+    "state": "saved",
+    "width": 1280,
+    "action": "再练一次",
+    "fits": true
+  },
+  {
+    "state": "active",
+    "compact": true,
+    "homeLaunches": 1,
+    "pageFits": true,
+    "width": 1280
+  },
+  {
+    "name": "plan-launch",
+    "state": "active",
+    "width": 1280,
+    "action": "继续训练",
+    "fits": true
+  },
+  {
+    "state": "finished",
+    "compact": true,
+    "homeLaunches": 1,
+    "pageFits": true,
+    "width": 1280
+  },
+  {
+    "name": "plan-launch",
+    "state": "finished",
+    "width": 1280,
+    "action": "完成保存",
+    "fits": true
+  },
+  {
+    "name": "return-to-preview",
+    "selected": "true"
+  },
+  {
+    "name": "started-today-plan",
+    "exercise": "哑铃卧推"
+  },
+  {
+    "name": "home-resume",
+    "label": "继续训练",
+    "compact": true
+  }
+]

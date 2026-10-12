@@ -1,0 +1,343 @@
+[
+  {
+    "state": "schedule",
+    "currentDays": 1,
+    "days": 7,
+    "inlinePlan": false,
+    "labels": [
+      "胸背",
+      "休息",
+      "核心",
+      "休息",
+      "腿部",
+      "肩部",
+      "休息"
+    ],
+    "pageFits": true,
+    "tabs": false,
+    "width": 320
+  },
+  {
+    "state": "schedule",
+    "width": 320,
+    "popup": {
+      "buttons": 7,
+      "fits": true
+    }
+  },
+  {
+    "name": "rest-selection",
+    "width": 320,
+    "text": "为这一天添加动作"
+  },
+  {
+    "name": "return-focus",
+    "state": "schedule",
+    "width": 320,
+    "focus": "weekly-plan"
+  },
+  {
+    "state": "saved",
+    "currentDays": 1,
+    "days": 7,
+    "inlinePlan": false,
+    "labels": [
+      "胸背",
+      "胸背",
+      "胸背",
+      "胸背",
+      "胸背",
+      "胸背",
+      "胸背"
+    ],
+    "pageFits": true,
+    "tabs": false,
+    "width": 320
+  },
+  {
+    "state": "saved",
+    "width": 320,
+    "popup": {
+      "buttons": 7,
+      "fits": true
+    }
+  },
+  {
+    "name": "return-focus",
+    "state": "saved",
+    "width": 320,
+    "focus": "weekly-plan"
+  },
+  {
+    "state": "empty",
+    "currentDays": 1,
+    "days": 7,
+    "inlinePlan": false,
+    "labels": [
+      "未设",
+      "未设",
+      "未设",
+      "未设",
+      "未设",
+      "未设",
+      "未设"
+    ],
+    "pageFits": true,
+    "tabs": false,
+    "width": 320
+  },
+  {
+    "state": "empty",
+    "width": 320,
+    "popup": {
+      "buttons": 7,
+      "fits": true
+    }
+  },
+  {
+    "name": "return-focus",
+    "state": "empty",
+    "width": 320,
+    "focus": "weekly-plan"
+  },
+  {
+    "state": "schedule",
+    "currentDays": 1,
+    "days": 7,
+    "inlinePlan": false,
+    "labels": [
+      "胸背",
+      "休息",
+      "核心",
+      "休息",
+      "腿部",
+      "肩部",
+      "休息"
+    ],
+    "pageFits": true,
+    "tabs": false,
+    "width": 390
+  },
+  {
+    "state": "schedule",
+    "width": 390,
+    "popup": {
+      "buttons": 7,
+      "fits": true
+    }
+  },
+  {
+    "name": "rest-selection",
+    "width": 390,
+    "text": "为这一天添加动作"
+  },
+  {
+    "name": "return-focus",
+    "state": "schedule",
+    "width": 390,
+    "focus": "weekly-plan"
+  },
+  {
+    "state": "saved",
+    "currentDays": 1,
+    "days": 7,
+    "inlinePlan": false,
+    "labels": [
+      "胸背",
+      "胸背",
+      "胸背",
+      "胸背",
+      "胸背",
+      "胸背",
+      "胸背"
+    ],
+    "pageFits": true,
+    "tabs": false,
+    "width": 390
+  },
+  {
+    "state": "saved",
+    "width": 390,
+    "popup": {
+      "buttons": 7,
+      "fits": true
+    }
+  },
+  {
+    "name": "return-focus",
+    "state": "saved",
+    "width": 390,
+    "focus": "weekly-plan"
+  },
+  {
+    "state": "empty",
+    "currentDays": 1,
+    "days": 7,
+    "inlinePlan": false,
+    "labels": [
+      "未设",
+      "未设",
+      "未设",
+      "未设",
+      "未设",
+      "未设",
+      "未设"
+    ],
+    "pageFits": true,
+    "tabs": false,
+    "width": 390
+  },
+  {
+    "state": "empty",
+    "width": 390,
+    "popup": {
+      "buttons": 7,
+      "fits": true
+    }
+  },
+  {
+    "name": "return-focus",
+    "state": "empty",
+    "width": 390,
+    "focus": "weekly-plan"
+  },
+  {
+    "state": "schedule",
+    "currentDays": 1,
+    "days": 7,
+    "inlinePlan": false,
+    "labels": [
+      "胸背",
+      "休息",
+      "核心",
+      "休息",
+      "腿部",
+      "肩部",
+      "休息"
+    ],
+    "pageFits": true,
+    "tabs": false,
+    "width": 1280
+  },
+  {
+    "state": "schedule",
+    "width": 1280,
+    "popup": {
+      "buttons": 7,
+      "fits": true
+    }
+  },
+  {
+    "name": "rest-selection",
+    "width": 1280,
+    "text": "为这一天添加动作"
+  },
+  {
+    "name": "return-focus",
+    "state": "schedule",
+    "width": 1280,
+    "focus": "weekly-plan"
+  },
+  {
+    "state": "saved",
+    "currentDays": 1,
+    "days": 7,
+    "inlinePlan": false,
+    "labels": [
+      "胸背",
+      "胸背",
+      "胸背",
+      "胸背",
+      "胸背",
+      "胸背",
+      "胸背"
+    ],
+    "pageFits": true,
+    "tabs": false,
+    "width": 1280
+  },
+  {
+    "state": "saved",
+    "width": 1280,
+    "popup": {
+      "buttons": 7,
+      "fits": true
+    }
+  },
+  {
+    "name": "return-focus",
+    "state": "saved",
+    "width": 1280,
+    "focus": "weekly-plan"
+  },
+  {
+    "state": "empty",
+    "currentDays": 1,
+    "days": 7,
+    "inlinePlan": false,
+    "labels": [
+      "未设",
+      "未设",
+      "未设",
+      "未设",
+      "未设",
+      "未设",
+      "未设"
+    ],
+    "pageFits": true,
+    "tabs": false,
+    "width": 1280
+  },
+  {
+    "state": "empty",
+    "width": 1280,
+    "popup": {
+      "buttons": 7,
+      "fits": true
+    }
+  },
+  {
+    "name": "return-focus",
+    "state": "empty",
+    "width": 1280,
+    "focus": "weekly-plan"
+  },
+  {
+    "name": "template-save-return",
+    "selected": "true",
+    "exerciseCount": 1
+  },
+  {
+    "name": "circle-updated",
+    "labels": [
+      "胸部",
+      "休息",
+      "核心",
+      "休息",
+      "腿部",
+      "肩部",
+      "休息"
+    ],
+    "focus": "0"
+  },
+  {
+    "name": "preference-save-return",
+    "title": "本周计划"
+  },
+  {
+    "name": "regenerated-week",
+    "labels": [
+      "全身",
+      "全身",
+      "休息",
+      "全身",
+      "休息",
+      "全身",
+      "休息"
+    ]
+  },
+  {
+    "name": "legacy-plan-link",
+    "popupVisible": true
+  }
+]

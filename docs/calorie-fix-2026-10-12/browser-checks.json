@@ -1,0 +1,35 @@
+[
+  {
+    "dialogFits": true,
+    "optional": true,
+    "pageFits": true,
+    "width": 320
+  },
+  {
+    "width": 320,
+    "home": "运动估算 ›\n20\nkcal\n已估算项目 ›",
+    "pageFits": true
+  },
+  {
+    "dialogFits": true,
+    "optional": true,
+    "pageFits": true,
+    "width": 390
+  },
+  {
+    "width": 390,
+    "home": "运动估算 ›\n20\nkcal\n已估算项目 ›",
+    "pageFits": true
+  },
+  {
+    "dialogFits": true,
+    "optional": true,
+    "pageFits": true,
+    "width": 1280
+  },
+  {
+    "width": 1280,
+    "home": "运动估算 ›\n20kcal\n已估算项目 ›",
+    "pageFits": true
+  }
+]
