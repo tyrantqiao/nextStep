@@ -1,0 +1,32 @@
+[
+  {
+    "buttonWidths": [
+      130.53334045410156,
+      130.53334045410156
+    ],
+    "columns": "130.533px 130.533px",
+    "pageWidth": 305,
+    "unusedRight": 4,
+    "width": 320
+  },
+  {
+    "buttonWidths": [
+      165.73333740234375,
+      165.73333740234375
+    ],
+    "columns": "165.733px 165.733px",
+    "pageWidth": 375,
+    "unusedRight": 4,
+    "width": 390
+  },
+  {
+    "buttonWidths": [
+      214.00001525878903,
+      214.00001525878903
+    ],
+    "columns": "214px 214px",
+    "pageWidth": 1265,
+    "unusedRight": 3.9999847412109375,
+    "width": 1280
+  }
+]

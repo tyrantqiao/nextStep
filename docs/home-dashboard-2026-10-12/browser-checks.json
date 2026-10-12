@@ -1,0 +1,259 @@
+[
+  {
+    "name": "empty-390",
+    "dialog": null,
+    "fab": {
+      "bottom": 761.2667274475098,
+      "focus": false,
+      "label": "开练",
+      "left": 260.4000244140625,
+      "navTop": 776.7333984375,
+      "right": 357.4666976928711,
+      "top": 709.2667236328125
+    },
+    "pageWidth": 375,
+    "scrollY": 0,
+    "width": 390
+  },
+  {
+    "name": "launch-390",
+    "dialog": {
+      "scrollWidth": 337,
+      "width": 337
+    },
+    "fab": {
+      "bottom": 761.2667274475098,
+      "focus": false,
+      "label": "开练",
+      "left": 260.4000244140625,
+      "navTop": 776.7333984375,
+      "right": 357.4666976928711,
+      "top": 709.2667236328125
+    },
+    "pageWidth": 375,
+    "scrollY": 0,
+    "width": 390
+  },
+  {
+    "name": "saved-swim-390",
+    "dialog": null,
+    "fab": {
+      "bottom": 761.2667274475098,
+      "focus": false,
+      "label": "再练一次",
+      "left": 232.40000915527344,
+      "navTop": 776.7333984375,
+      "right": 357.46668243408203,
+      "top": 709.2667236328125
+    },
+    "pageWidth": 375,
+    "scrollY": 0,
+    "width": 390
+  },
+  {
+    "name": "saved-swim-320",
+    "dialog": null,
+    "fab": {
+      "bottom": 485.0000343322754,
+      "focus": false,
+      "label": "再练一次",
+      "left": 162.00001525878906,
+      "navTop": 500.4667053222656,
+      "right": 287.06668853759766,
+      "top": 433.0000305175781
+    },
+    "pageWidth": 305,
+    "scrollY": 0,
+    "width": 320
+  },
+  {
+    "name": "saved-swim-1280",
+    "dialog": null,
+    "fab": {
+      "bottom": 692.0000648498535,
+      "focus": false,
+      "label": "再练一次",
+      "left": 1100.0084228515625,
+      "navTop": 0,
+      "right": 1233.0667572021484,
+      "top": 636.0000610351562
+    },
+    "pageWidth": 1265,
+    "scrollY": 0,
+    "width": 1280
+  },
+  {
+    "name": "launch-1280",
+    "dialog": {
+      "scrollWidth": 640,
+      "width": 640
+    },
+    "fab": {
+      "bottom": 692.0000648498535,
+      "focus": false,
+      "label": "再练一次",
+      "left": 1100.0084228515625,
+      "navTop": 0,
+      "right": 1233.0667572021484,
+      "top": 636.0000610351562
+    },
+    "pageWidth": 1265,
+    "scrollY": 0,
+    "width": 1280
+  },
+  {
+    "name": "launch-320",
+    "dialog": {
+      "scrollWidth": 252,
+      "width": 252
+    },
+    "fab": {
+      "bottom": 485.0000343322754,
+      "focus": false,
+      "label": "再练一次",
+      "left": 162.00001525878906,
+      "navTop": 500.4667053222656,
+      "right": 287.06668853759766,
+      "top": 433.0000305175781
+    },
+    "pageWidth": 305,
+    "scrollY": 0,
+    "width": 320
+  },
+  {
+    "name": "active-320",
+    "dialog": null,
+    "fab": {
+      "bottom": 485.0000343322754,
+      "focus": true,
+      "label": "继续训练",
+      "left": 162.00001525878906,
+      "navTop": 500.4667053222656,
+      "right": 287.06668853759766,
+      "top": 433.0000305175781
+    },
+    "pageWidth": 305,
+    "scrollY": 0,
+    "width": 320
+  },
+  {
+    "name": "paused-390",
+    "dialog": null,
+    "fab": {
+      "bottom": 761.2667274475098,
+      "focus": true,
+      "label": "继续训练",
+      "left": 232.40000915527344,
+      "navTop": 776.7333984375,
+      "right": 357.46668243408203,
+      "top": 709.2667236328125
+    },
+    "pageWidth": 375,
+    "scrollY": 0,
+    "width": 390
+  },
+  {
+    "name": "pending-save-390",
+    "dialog": null,
+    "fab": {
+      "bottom": 761.2667274475098,
+      "focus": true,
+      "label": "完成保存",
+      "left": 232.40000915527344,
+      "navTop": 776.7333984375,
+      "right": 357.46668243408203,
+      "top": 709.2667236328125
+    },
+    "pageWidth": 375,
+    "scrollY": 0,
+    "width": 390
+  },
+  {
+    "name": "completed-390",
+    "dialog": null,
+    "fab": {
+      "bottom": 761.2667274475098,
+      "focus": false,
+      "label": "再练一次",
+      "left": 232.40000915527344,
+      "navTop": 776.7333984375,
+      "right": 357.46668243408203,
+      "top": 709.2667236328125
+    },
+    "pageWidth": 375,
+    "scrollY": 0,
+    "width": 390
+  },
+  {
+    "name": "plan-390",
+    "dialog": null,
+    "fab": null,
+    "pageWidth": 375,
+    "scrollY": 0,
+    "width": 390
+  },
+  {
+    "name": "plan-320",
+    "dialog": null,
+    "fab": null,
+    "pageWidth": 305,
+    "scrollY": 0,
+    "width": 320
+  },
+  {
+    "name": "plan-1280",
+    "dialog": null,
+    "fab": null,
+    "pageWidth": 1265,
+    "scrollY": 0,
+    "width": 1280
+  },
+  {
+    "name": "completed-1280",
+    "dialog": null,
+    "fab": {
+      "bottom": 692.0000648498535,
+      "focus": false,
+      "label": "再练一次",
+      "left": 1100.0084228515625,
+      "navTop": 0,
+      "right": 1233.0667572021484,
+      "top": 636.0000610351562
+    },
+    "pageWidth": 1265,
+    "scrollY": 0,
+    "width": 1280
+  },
+  {
+    "name": "completed-320",
+    "dialog": null,
+    "fab": {
+      "bottom": 485.0000343322754,
+      "focus": false,
+      "label": "再练一次",
+      "left": 162.00001525878906,
+      "navTop": 500.4667053222656,
+      "right": 287.06668853759766,
+      "top": 433.0000305175781
+    },
+    "pageWidth": 305,
+    "scrollY": 0,
+    "width": 320
+  },
+  {
+    "name": "bottom-320",
+    "dialog": null,
+    "fab": {
+      "bottom": 485.0000343322754,
+      "focus": false,
+      "label": "再练一次",
+      "left": 162.00001525878906,
+      "navTop": 500.4667053222656,
+      "right": 287.06668853759766,
+      "top": 433.0000305175781
+    },
+    "pageWidth": 305,
+    "scrollY": 870.933349609375,
+    "width": 320
+  }
+]
