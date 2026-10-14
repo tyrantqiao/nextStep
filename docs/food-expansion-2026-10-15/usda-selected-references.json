@@ -1,0 +1,206 @@
+{
+  "checkedAt": "2026-10-15",
+  "sourceUrl": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/SR28/dnload/sr28abbr.zip",
+  "dataset": "USDA Standard Reference 28 · ABBREV.txt · kcal/100g edible portion",
+  "license": "USDA public-domain reference data",
+  "foods": [
+    {
+      "ndb": "11251",
+      "description": "LETTUCE,COS OR ROMAINE,RAW",
+      "water": 94.61,
+      "energyKcal": 17
+    },
+    {
+      "ndb": "11205",
+      "description": "CUCUMBER,WITH PEEL,RAW",
+      "water": 95.23,
+      "energyKcal": 15
+    },
+    {
+      "ndb": "11109",
+      "description": "CABBAGE,RAW",
+      "water": 92.18,
+      "energyKcal": 25
+    },
+    {
+      "ndb": "11119",
+      "description": "CABBAGE,CHINESE (PE-TSAI),RAW",
+      "water": 94.39,
+      "energyKcal": 16
+    },
+    {
+      "ndb": "11090",
+      "description": "BROCCOLI,RAW",
+      "water": 89.3,
+      "energyKcal": 34
+    },
+    {
+      "ndb": "11352",
+      "description": "POTATOES,FLESH & SKN,RAW",
+      "water": 79.25,
+      "energyKcal": 77
+    },
+    {
+      "ndb": "11282",
+      "description": "ONIONS,RAW",
+      "water": 89.11,
+      "energyKcal": 40
+    },
+    {
+      "ndb": "11260",
+      "description": "MUSHROOMS,WHITE,RAW",
+      "water": 92.45,
+      "energyKcal": 22
+    },
+    {
+      "ndb": "11168",
+      "description": "CORN,SWT,YEL,CKD,BLD,DRND,WO/SALT",
+      "water": 73.41,
+      "energyKcal": 96
+    },
+    {
+      "ndb": "11212",
+      "description": "EDAMAME,FRZ,PREP",
+      "water": 72.77,
+      "energyKcal": 121
+    },
+    {
+      "ndb": "20134",
+      "description": "RICE NOODLES,CKD",
+      "water": 73.82,
+      "energyKcal": 108
+    },
+    {
+      "ndb": "10005",
+      "description": "PORK,FRSH,BELLY,RAW",
+      "water": 36.74,
+      "energyKcal": 518
+    },
+    {
+      "ndb": "23568",
+      "description": "BEEF,GROUND,85% LN MEAT / 15% FAT,PATTY,CKD,BRLD",
+      "water": 57.98,
+      "energyKcal": 250
+    },
+    {
+      "ndb": "01077",
+      "description": "MILK,WHL,3.25% MILKFAT,W/ ADDED VITAMIN D",
+      "water": 88.13,
+      "energyKcal": 61
+    },
+    {
+      "ndb": "18069",
+      "description": "BREAD,WHITE,COMMLY PREP (INCL SOFT BREAD CRUMBS)",
+      "water": 36.42,
+      "energyKcal": 266
+    },
+    {
+      "ndb": "09040",
+      "description": "BANANAS,RAW",
+      "water": 74.91,
+      "energyKcal": 89
+    },
+    {
+      "ndb": "09003",
+      "description": "APPLES,RAW,WITH SKIN",
+      "water": 85.56,
+      "energyKcal": 52
+    },
+    {
+      "ndb": "01116",
+      "description": "YOGURT,PLN,WHL MILK,8 GRAMS PROT PER 8 OZ",
+      "water": 87.9,
+      "energyKcal": 61
+    },
+    {
+      "ndb": "16098",
+      "description": "PEANUT BUTTER,SMOOTH STYLE,W/ SALT",
+      "water": 1.23,
+      "energyKcal": 598
+    },
+    {
+      "ndb": "01026",
+      "description": "CHEESE,MOZZARELLA,WHL MILK",
+      "water": 50.01,
+      "energyKcal": 300
+    },
+    {
+      "ndb": "16123",
+      "description": "SOY SAU MADE FROM SOY&WHEAT (SHOYU)",
+      "water": 71.15,
+      "energyKcal": 53
+    },
+    {
+      "ndb": "04025",
+      "description": "SALAD DRSNG,MAYO,REG",
+      "water": 21.65,
+      "energyKcal": 680
+    },
+    {
+      "ndb": "21299",
+      "description": "FAST FD,PIZZA CHAIN,14\" PIZZA,CHS TOPPING,REG CRUST",
+      "water": 43.17,
+      "energyKcal": 266
+    },
+    {
+      "ndb": "21300",
+      "description": "FAST FD,PIZZA CHAIN,14\" PIZZA,CHS TOPPING,THICK CRUST",
+      "water": 43.05,
+      "energyKcal": 271
+    },
+    {
+      "ndb": "15121",
+      "description": "FISH,TUNA,LT,CND IN H2O,DRND SOL",
+      "water": 78.14,
+      "energyKcal": 86
+    },
+    {
+      "ndb": "16427",
+      "description": "TOFU,RAW,REG,PREP W/CA SULFATE",
+      "water": 84.55,
+      "energyKcal": 76
+    },
+    {
+      "ndb": "11333",
+      "description": "PEPPERS,SWT,GRN,RAW",
+      "water": 93.89,
+      "energyKcal": 20
+    },
+    {
+      "ndb": "11209",
+      "description": "EGGPLANT,RAW",
+      "water": 92.3,
+      "energyKcal": 25
+    },
+    {
+      "ndb": "05098",
+      "description": "CHICKEN,BROILERS OR FRYERS,THIGH,MEAT ONLY,CKD,RSTD",
+      "water": 67,
+      "energyKcal": 179
+    },
+    {
+      "ndb": "21302",
+      "description": "FAST FD,PIZZA CHAIN,14\" PIZZA,PEPPERONI TOPPING,REG CRUST",
+      "water": 41.77,
+      "energyKcal": 282
+    },
+    {
+      "ndb": "02068",
+      "description": "VINEGAR,RED WINE",
+      "water": 94.47,
+      "energyKcal": 19
+    },
+    {
+      "ndb": "08120",
+      "description": "CEREALS,OATS,REG & QUICK,NOT FORT,DRY",
+      "water": 10.84,
+      "energyKcal": 379
+    },
+    {
+      "ndb": "10022",
+      "description": "PORK,FRSH,LOIN,WHL,LN&FAT,CKD,BRLD",
+      "water": 57.87,
+      "energyKcal": 242
+    }
+  ]
+}

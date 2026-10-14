@@ -1,0 +1,153 @@
+{
+  "checks": [
+    {
+      "name": "95 foods and 20 combos load without seeding user data",
+      "passed": true
+    },
+    {
+      "name": "老乡鸡 filtered combos and no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "大米先生 filtered combos and no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "米村拌饭 filtered combos and no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "杨国福 filtered combos and no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "麻辣香锅 filtered combos and no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "沙拉 filtered combos and no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "披萨 filtered combos and no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "Included rice not duplicated 320",
+      "passed": true
+    },
+    {
+      "name": "Recipe provenance shows ingredients and distinguishes menu from calories 320",
+      "passed": true
+    },
+    {
+      "name": "老乡鸡 filtered combos and no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "大米先生 filtered combos and no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "米村拌饭 filtered combos and no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "杨国福 filtered combos and no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "麻辣香锅 filtered combos and no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "沙拉 filtered combos and no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "披萨 filtered combos and no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "Included rice not duplicated 390",
+      "passed": true
+    },
+    {
+      "name": "Recipe provenance shows ingredients and distinguishes menu from calories 390",
+      "passed": true
+    },
+    {
+      "name": "老乡鸡 filtered combos and no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "大米先生 filtered combos and no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "米村拌饭 filtered combos and no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "杨国福 filtered combos and no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "麻辣香锅 filtered combos and no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "沙拉 filtered combos and no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "披萨 filtered combos and no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "Included rice not duplicated 1280",
+      "passed": true
+    },
+    {
+      "name": "Recipe provenance shows ingredients and distinguishes menu from calories 1280",
+      "passed": true
+    },
+    {
+      "name": "Mala bowl separates ingredients noodles and broth",
+      "passed": true
+    },
+    {
+      "name": "Removing reference broth does not change food portions",
+      "passed": true
+    },
+    {
+      "name": "Half dressing adjusts only dressing energy",
+      "passed": true
+    },
+    {
+      "name": "Pizza uses actual grams rather than fixed slice counts",
+      "passed": true
+    },
+    {
+      "name": "Full store name finds all five rice bowls",
+      "passed": true
+    },
+    {
+      "name": "Official per-100g origin remains distinct from recipe estimate",
+      "passed": true
+    },
+    {
+      "name": "Soup grams scale to 60 kcal and meal snapshots retain recipe provenance",
+      "passed": true
+    },
+    {
+      "name": "Reload preserves totals and does not inject a plan",
+      "passed": true
+    },
+    {
+      "name": "No browser runtime errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}
