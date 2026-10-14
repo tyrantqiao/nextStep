@@ -221,16 +221,21 @@ button.history-row{display:grid;grid-template-columns:38px minmax(0,1fr) 16px;al
 .home-week-day.is-today{color:#3155cb;font-weight:600}
 .home-week-day.is-today .home-week-circle{background:#edf2ff;border:2px solid #3155cb;color:#3155cb}
 .home-week-day.is-completed .home-week-circle{background:#eaf6f0;border-color:#c8e5d6;color:#248b73}
+.home-week-day.is-completed .home-week-task{color:#248b73;font-weight:600}
 .home-week-day.is-completed.is-today .home-week-circle{border-color:#248b73}
 .home-week-manage{display:flex;align-items:center;justify-content:center;gap:4px;flex-wrap:wrap;min-height:70px;min-width:0;padding:8px 6px;background:#f5f7fc;color:#3155cb;border-radius:12px;font-size:11px}
 .home-week-manage>span:first-of-type{width:100%;font-weight:600}
 .home-week-day:focus-visible,.home-week-manage:focus-visible{outline:3px solid #d99439;outline-offset:2px}
 .home-week-day:hover .home-week-circle{background:#e5ecfa}
+.home-week-day.is-completed:hover .home-week-circle{background:#d9efe4}
 .weekly-plan-note{margin-bottom:16px;line-height:1.7}
 .weekly-plan-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:5px;margin-bottom:20px}
 .weekly-plan-days button{display:grid;justify-items:center;gap:4px;min-width:0;padding:10px 2px;background:#f5f7fb;color:#738096;border:1px solid transparent;border-radius:10px;font-size:11px}
 .weekly-plan-days button small{font-size:10px}
 .weekly-plan-days button[aria-pressed=true]{background:#edf2ff;color:#3155cb;border-color:#b5c7f8;font-weight:600}
+.weekly-plan-days button.is-trained{background:#eaf6f0}
+.weekly-plan-days button.is-trained[aria-pressed=true]{border-color:#248b73}
+.weekly-plan-trained{font-size:9px;white-space:nowrap;color:#248b73;font-weight:600}
 .weekly-plan-days button:focus-visible{outline:3px solid #d99439;outline-offset:2px}
 .weekly-plan-selected{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:14px}
 .weekly-plan-selected h3{font-size:19px;margin-top:6px;overflow-wrap:anywhere}

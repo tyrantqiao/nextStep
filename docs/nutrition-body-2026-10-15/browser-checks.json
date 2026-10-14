@@ -1,0 +1,161 @@
+{
+  "results": [
+    {
+      "name": "No seeded nutrition or body data",
+      "passed": true
+    },
+    {
+      "name": "Source screen includes explicit recipe",
+      "passed": true
+    },
+    {
+      "name": "Back from source preserves quantity",
+      "passed": true
+    },
+    {
+      "name": "Reloaded draft does not contribute to calories",
+      "passed": true
+    },
+    {
+      "name": "Saved meal counts once; whole day incomplete",
+      "passed": true
+    },
+    {
+      "name": "Explicit completeness enables deficit",
+      "passed": true
+    },
+    {
+      "name": "Unknown branded heat does not become zero or a deficit",
+      "passed": true
+    },
+    {
+      "name": "User label correction keeps original meal count",
+      "passed": true
+    },
+    {
+      "name": "Custom label converts kJ once and persists food",
+      "passed": true
+    },
+    {
+      "name": "Measurement does not create profile or training data",
+      "passed": true
+    },
+    {
+      "name": "New sport can explicitly use latest measured body weight",
+      "passed": true
+    },
+    {
+      "name": "Historical sport excludes future body measurement",
+      "passed": true
+    },
+    {
+      "name": "Body no horizontal overflow 320",
+      "passed": true
+    },
+    {
+      "name": "Body form no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "Nutrition no horizontal overflow 320",
+      "passed": true
+    },
+    {
+      "name": "Meal form no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "Search no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "Chart switch retains scroll 320",
+      "passed": true
+    },
+    {
+      "name": "Home no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "Body no horizontal overflow 390",
+      "passed": true
+    },
+    {
+      "name": "Body form no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "Nutrition no horizontal overflow 390",
+      "passed": true
+    },
+    {
+      "name": "Meal form no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "Search no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "Chart switch retains scroll 390",
+      "passed": true
+    },
+    {
+      "name": "Home no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "Body no horizontal overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "Body form no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "Nutrition no horizontal overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "Meal form no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "Search no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "Chart switch retains scroll 1280",
+      "passed": true
+    },
+    {
+      "name": "Home no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "Failed save retains form and record count",
+      "passed": true
+    },
+    {
+      "name": "Retry saves once",
+      "passed": true
+    },
+    {
+      "name": "Second window refuses stale write",
+      "passed": true
+    },
+    {
+      "name": "Training draft coexists with meal draft",
+      "passed": true
+    },
+    {
+      "name": "Export contains legacy and new records",
+      "passed": true
+    },
+    {
+      "name": "No new browser runtime errors",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

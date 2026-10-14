@@ -1,0 +1,51 @@
+{
+  "results": [
+    {
+      "width": 320,
+      "home": {
+        "overflow": false,
+        "monday": "一\n已训练",
+        "today": "今天\n休息",
+        "completed": 1
+      },
+      "modal": {
+        "overflow": false,
+        "status": "2026-10-12 · 周一\n\n全身训练 A\n已训练\n1\n哑铃高脚杯深蹲\n2 组 × 10 次 · 参考 5 kg\n2\n哑铃卧推\n2 组 × 10 次 · 参考 2.5 kg\n3\n哑铃划船\n2 组 × 10 次 · 参考 5 kg\n4\n哑铃罗马尼亚硬拉\n2 组 × 10 次 · 参考 5 kg\n调整这一天的动作",
+        "marker": "周一\n10/12\n已训练"
+      },
+      "focus": true
+    },
+    {
+      "width": 390,
+      "home": {
+        "overflow": false,
+        "monday": "一\n已训练",
+        "today": "今天\n休息",
+        "completed": 1
+      },
+      "modal": {
+        "overflow": false,
+        "status": "2026-10-12 · 周一\n\n全身训练 A\n已训练\n1\n哑铃高脚杯深蹲\n2 组 × 10 次 · 参考 5 kg\n2\n哑铃卧推\n2 组 × 10 次 · 参考 2.5 kg\n3\n哑铃划船\n2 组 × 10 次 · 参考 5 kg\n4\n哑铃罗马尼亚硬拉\n2 组 × 10 次 · 参考 5 kg\n调整这一天的动作",
+        "marker": "周一\n10/12\n已训练"
+      },
+      "focus": true
+    },
+    {
+      "width": 1280,
+      "home": {
+        "overflow": false,
+        "monday": "一\n已训练",
+        "today": "今天\n休息",
+        "completed": 1
+      },
+      "modal": {
+        "overflow": false,
+        "status": "2026-10-12 · 周一\n\n全身训练 A\n已训练\n1\n哑铃高脚杯深蹲\n2 组 × 10 次 · 参考 5 kg\n2\n哑铃卧推\n2 组 × 10 次 · 参考 2.5 kg\n3\n哑铃划船\n2 组 × 10 次 · 参考 5 kg\n4\n哑铃罗马尼亚硬拉\n2 组 × 10 次 · 参考 5 kg\n调整这一天的动作",
+        "marker": "周一\n10/12\n已训练"
+      },
+      "focus": true
+    }
+  ],
+  "reload": true,
+  "removedRecord": true
+}

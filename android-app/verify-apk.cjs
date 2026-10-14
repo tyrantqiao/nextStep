@@ -28,7 +28,7 @@ for (let i = 0; i < count; i++) {
   entries.set(name, {method, dataOffset, data});
   offset += 46 + nameLength + extraLength + commentLength;
 }
-for (const name of ['AndroidManifest.xml', 'resources.arsc', 'res/drawable-nodpi-v4/ic_training_journal.png', 'classes.dex', 'assets/www/index.html', 'assets/www/app.js', 'assets/www/styles.css', 'assets/www/home.css']) {
+for (const name of ['AndroidManifest.xml', 'resources.arsc', 'res/drawable-nodpi-v4/ic_training_journal.png', 'classes.dex', 'assets/www/index.html', 'assets/www/app.js', 'assets/www/styles.css', 'assets/www/home.css', 'assets/www/nutrition.css', 'assets/www/foods.js', 'assets/www/nutrition.js']) {
   assert(entries.has(name) && entries.get(name).data.length > 0, `Missing ${name}`);
 }
 const table = entries.get('resources.arsc');
@@ -37,5 +37,5 @@ assert.equal(table.dataOffset % 4, 0, 'Android requires resources.arsc aligned t
 const dex = entries.get('classes.dex').data;
 assert.equal(dex.toString('ascii', 0, 4), 'dex\n', 'Invalid Android code');
 const html = entries.get('assets/www/index.html').data.toString('utf8');
-for (const name of ['app.js', 'styles.css', 'home.css']) assert(html.includes(name), `Missing HTML reference: ${name}`);
+for (const name of ['app.js', 'styles.css', 'home.css', 'nutrition.css', 'foods.js', 'nutrition.js']) assert(html.includes(name), `Missing HTML reference: ${name}`);
 console.log(JSON.stringify({verified: true, entries: entries.size, resourceTable: {compression: 'stored', offset: table.dataOffset, aligned: true}, bytes: apk.length}));

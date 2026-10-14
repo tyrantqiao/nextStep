@@ -3,7 +3,7 @@ const path = require('node:path');
 const source = path.resolve(__dirname, '../nextstep-web/dist');
 const target = path.resolve(process.argv[2], 'www');
 fs.mkdirSync(target, { recursive: true });
-for (const name of ['index.html', 'styles.css', 'home.css', 'app.js']) {
+for (const name of ['index.html', 'styles.css', 'home.css', 'nutrition.css', 'foods.js', 'nutrition.js', 'app.js']) {
   let content = fs.readFileSync(path.join(source, name), 'utf8');
   if (name === 'styles.css') content = content.replace(/@import\s+url\([^)]*\)\s*;/g, '');
   if (name === 'app.js') {
