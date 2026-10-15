@@ -1,0 +1,509 @@
+{
+  "checks": [
+    {
+      "name": "Fresh user opens icon search without injected records 320",
+      "passed": true
+    },
+    {
+      "name": "Default classification layout has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "place/restaurant filters visible rows and keeps button focus 320",
+      "passed": true
+    },
+    {
+      "name": "place/restaurant has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "place/home filters visible rows and keeps button focus 320",
+      "passed": true
+    },
+    {
+      "name": "place/home has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "place/fridge filters visible rows and keeps button focus 320",
+      "passed": true
+    },
+    {
+      "name": "place/fridge has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "place/cupboard filters visible rows and keeps button focus 320",
+      "passed": true
+    },
+    {
+      "name": "place/cupboard has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "kind/fruit filters visible rows and keeps button focus 320",
+      "passed": true
+    },
+    {
+      "name": "kind/fruit has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "kind/meat filters visible rows and keeps button focus 320",
+      "passed": true
+    },
+    {
+      "name": "kind/meat has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "kind/vegetable filters visible rows and keeps button focus 320",
+      "passed": true
+    },
+    {
+      "name": "kind/vegetable has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "kind/staple filters visible rows and keeps button focus 320",
+      "passed": true
+    },
+    {
+      "name": "kind/staple has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "kind/dairy filters visible rows and keeps button focus 320",
+      "passed": true
+    },
+    {
+      "name": "kind/dairy has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "kind/snacks filters visible rows and keeps button focus 320",
+      "passed": true
+    },
+    {
+      "name": "kind/snacks has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "kind/drink filters visible rows and keeps button focus 320",
+      "passed": true
+    },
+    {
+      "name": "kind/drink has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "kind/custom filters visible rows and keeps button focus 320",
+      "passed": true
+    },
+    {
+      "name": "kind/custom has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "time/breakfast filters visible rows and keeps button focus 320",
+      "passed": true
+    },
+    {
+      "name": "time/breakfast has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "time/lunch filters visible rows and keeps button focus 320",
+      "passed": true
+    },
+    {
+      "name": "time/lunch has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "time/dinner filters visible rows and keeps button focus 320",
+      "passed": true
+    },
+    {
+      "name": "time/dinner has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "time/night filters visible rows and keeps button focus 320",
+      "passed": true
+    },
+    {
+      "name": "time/night has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "Keyword intersects fruit and live result count is correct 320",
+      "passed": true
+    },
+    {
+      "name": "Back preserves food quantity, query and category 320",
+      "passed": true
+    },
+    {
+      "name": "Clear restores all foods and focus 320",
+      "passed": true
+    },
+    {
+      "name": "Parameters have no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "Reload restores browse state and quantities 320",
+      "passed": true
+    },
+    {
+      "name": "Saved meal contains 180g watermelon and 20g walnuts exactly once 320",
+      "passed": true
+    },
+    {
+      "name": "Edit retains saved quantities 320",
+      "passed": true
+    },
+    {
+      "name": "Edit has no overflow 320",
+      "passed": true
+    },
+    {
+      "name": "Fresh user opens icon search without injected records 390",
+      "passed": true
+    },
+    {
+      "name": "Default classification layout has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "place/restaurant filters visible rows and keeps button focus 390",
+      "passed": true
+    },
+    {
+      "name": "place/restaurant has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "place/home filters visible rows and keeps button focus 390",
+      "passed": true
+    },
+    {
+      "name": "place/home has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "place/fridge filters visible rows and keeps button focus 390",
+      "passed": true
+    },
+    {
+      "name": "place/fridge has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "place/cupboard filters visible rows and keeps button focus 390",
+      "passed": true
+    },
+    {
+      "name": "place/cupboard has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "kind/fruit filters visible rows and keeps button focus 390",
+      "passed": true
+    },
+    {
+      "name": "kind/fruit has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "kind/meat filters visible rows and keeps button focus 390",
+      "passed": true
+    },
+    {
+      "name": "kind/meat has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "kind/vegetable filters visible rows and keeps button focus 390",
+      "passed": true
+    },
+    {
+      "name": "kind/vegetable has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "kind/staple filters visible rows and keeps button focus 390",
+      "passed": true
+    },
+    {
+      "name": "kind/staple has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "kind/dairy filters visible rows and keeps button focus 390",
+      "passed": true
+    },
+    {
+      "name": "kind/dairy has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "kind/snacks filters visible rows and keeps button focus 390",
+      "passed": true
+    },
+    {
+      "name": "kind/snacks has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "kind/drink filters visible rows and keeps button focus 390",
+      "passed": true
+    },
+    {
+      "name": "kind/drink has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "kind/custom filters visible rows and keeps button focus 390",
+      "passed": true
+    },
+    {
+      "name": "kind/custom has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "time/breakfast filters visible rows and keeps button focus 390",
+      "passed": true
+    },
+    {
+      "name": "time/breakfast has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "time/lunch filters visible rows and keeps button focus 390",
+      "passed": true
+    },
+    {
+      "name": "time/lunch has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "time/dinner filters visible rows and keeps button focus 390",
+      "passed": true
+    },
+    {
+      "name": "time/dinner has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "time/night filters visible rows and keeps button focus 390",
+      "passed": true
+    },
+    {
+      "name": "time/night has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "Keyword intersects fruit and live result count is correct 390",
+      "passed": true
+    },
+    {
+      "name": "Back preserves food quantity, query and category 390",
+      "passed": true
+    },
+    {
+      "name": "Clear restores all foods and focus 390",
+      "passed": true
+    },
+    {
+      "name": "Parameters have no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "Reload restores browse state and quantities 390",
+      "passed": true
+    },
+    {
+      "name": "Saved meal contains 180g watermelon and 20g walnuts exactly once 390",
+      "passed": true
+    },
+    {
+      "name": "Edit retains saved quantities 390",
+      "passed": true
+    },
+    {
+      "name": "Edit has no overflow 390",
+      "passed": true
+    },
+    {
+      "name": "Fresh user opens icon search without injected records 1280",
+      "passed": true
+    },
+    {
+      "name": "Default classification layout has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "place/restaurant filters visible rows and keeps button focus 1280",
+      "passed": true
+    },
+    {
+      "name": "place/restaurant has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "place/home filters visible rows and keeps button focus 1280",
+      "passed": true
+    },
+    {
+      "name": "place/home has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "place/fridge filters visible rows and keeps button focus 1280",
+      "passed": true
+    },
+    {
+      "name": "place/fridge has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "place/cupboard filters visible rows and keeps button focus 1280",
+      "passed": true
+    },
+    {
+      "name": "place/cupboard has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "kind/fruit filters visible rows and keeps button focus 1280",
+      "passed": true
+    },
+    {
+      "name": "kind/fruit has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "kind/meat filters visible rows and keeps button focus 1280",
+      "passed": true
+    },
+    {
+      "name": "kind/meat has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "kind/vegetable filters visible rows and keeps button focus 1280",
+      "passed": true
+    },
+    {
+      "name": "kind/vegetable has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "kind/staple filters visible rows and keeps button focus 1280",
+      "passed": true
+    },
+    {
+      "name": "kind/staple has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "kind/dairy filters visible rows and keeps button focus 1280",
+      "passed": true
+    },
+    {
+      "name": "kind/dairy has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "kind/snacks filters visible rows and keeps button focus 1280",
+      "passed": true
+    },
+    {
+      "name": "kind/snacks has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "kind/drink filters visible rows and keeps button focus 1280",
+      "passed": true
+    },
+    {
+      "name": "kind/drink has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "kind/custom filters visible rows and keeps button focus 1280",
+      "passed": true
+    },
+    {
+      "name": "kind/custom has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "time/breakfast filters visible rows and keeps button focus 1280",
+      "passed": true
+    },
+    {
+      "name": "time/breakfast has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "time/lunch filters visible rows and keeps button focus 1280",
+      "passed": true
+    },
+    {
+      "name": "time/lunch has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "time/dinner filters visible rows and keeps button focus 1280",
+      "passed": true
+    },
+    {
+      "name": "time/dinner has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "time/night filters visible rows and keeps button focus 1280",
+      "passed": true
+    },
+    {
+      "name": "time/night has no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "Keyword intersects fruit and live result count is correct 1280",
+      "passed": true
+    },
+    {
+      "name": "Back preserves food quantity, query and category 1280",
+      "passed": true
+    },
+    {
+      "name": "Clear restores all foods and focus 1280",
+      "passed": true
+    },
+    {
+      "name": "Parameters have no overflow 1280",
+      "passed": true
+    },
+    {
+      "name": "Reload restores browse state and quantities 1280",
+      "passed": true
+    },
+    {
+      "name": "Saved meal contains 180g watermelon and 20g walnuts exactly once 1280",
+      "passed": true
+    },
+    {
+      "name": "Edit retains saved quantities 1280",
+      "passed": true
+    },
+    {
+      "name": "Edit has no overflow 1280",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

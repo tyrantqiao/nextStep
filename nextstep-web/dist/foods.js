@@ -1,5 +1,5 @@
 /* Offline references. Recipe portions are editable, never personal measurements. */
-const foodDataVersion='2026-10-15.2';
+const foodDataVersion='2026-10-15.3';
 const foodSources={
   grains:{type:'食物成分参考',name:'USDA Standard Reference 28 · 谷物与意面',url:'https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg20.pdf',license:'USDA 公共领域数据；仅选用基础食物参考值'},
   eggs:{type:'食物成分参考',name:'USDA SR28 · 鸡蛋 NDB 01129',url:'https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/reports/sr28fg01.pdf',license:'USDA 公共领域数据'},
@@ -449,3 +449,325 @@ foodCombos.push(
  {id:'pizza-two-slices',name:'芝士披萨两片（参考共200g）',category:'披萨',items:[['cheese-pizza',200],['water',250]]},
  {id:'breakfast-oats-milk',name:'牛奶燕麦早餐',category:'早餐',items:[['full-milk',250],['oats-dry',40],['banana',120]]}
 );
+
+/* Everyday foods: verified USDA SR28 edible-portion references. */
+const everydayFoodReferences=[
+  {
+    "id": "orange",
+    "name": "橙子",
+    "category": "水果",
+    "ndb": "09200",
+    "portion": 150,
+    "note": "去皮可食生重",
+    "description": "ORANGES,RAW,ALL COMM VAR",
+    "kcal": 47
+  },
+  {
+    "id": "mandarin",
+    "name": "橘子",
+    "category": "水果",
+    "ndb": "09218",
+    "portion": 100,
+    "note": "去皮可食生重",
+    "description": "TANGERINES,(MANDARIN ORANGES),RAW",
+    "kcal": 53
+  },
+  {
+    "id": "pineapple",
+    "name": "菠萝",
+    "category": "水果",
+    "ndb": "09266",
+    "portion": 150,
+    "note": "去皮可食生重",
+    "description": "PINEAPPLE,RAW,ALL VAR",
+    "kcal": 50
+  },
+  {
+    "id": "strawberry",
+    "name": "草莓",
+    "category": "水果",
+    "ndb": "09316",
+    "portion": 150,
+    "note": "去蒂可食生重",
+    "description": "STRAWBERRIES,RAW",
+    "kcal": 32
+  },
+  {
+    "id": "blueberry",
+    "name": "蓝莓",
+    "category": "水果",
+    "ndb": "09050",
+    "portion": 100,
+    "note": "可食生重",
+    "description": "BLUEBERRIES,RAW",
+    "kcal": 57
+  },
+  {
+    "id": "grape",
+    "name": "葡萄",
+    "category": "水果",
+    "ndb": "09132",
+    "portion": 100,
+    "note": "红或绿无籽葡萄，可食生重",
+    "description": "GRAPES,RED OR GRN (EURO TYPE,SUCH AS THOMPSON SEEDLESS),RAW",
+    "kcal": 69
+  },
+  {
+    "id": "kiwi",
+    "name": "猕猴桃",
+    "category": "水果",
+    "ndb": "09148",
+    "portion": 100,
+    "note": "绿心，去皮可食生重",
+    "description": "KIWIFRUIT,GRN,RAW",
+    "kcal": 61
+  },
+  {
+    "id": "watermelon",
+    "name": "西瓜",
+    "category": "水果",
+    "ndb": "09326",
+    "portion": 250,
+    "note": "去皮可食生重",
+    "description": "WATERMELON,RAW",
+    "kcal": 30
+  },
+  {
+    "id": "pear",
+    "name": "梨",
+    "category": "水果",
+    "ndb": "09252",
+    "portion": 180,
+    "note": "可食生重，去核",
+    "description": "PEARS,RAW",
+    "kcal": 57
+  },
+  {
+    "id": "mango",
+    "name": "芒果",
+    "category": "水果",
+    "ndb": "09176",
+    "portion": 150,
+    "note": "去皮去核可食生重",
+    "description": "MANGOS,RAW",
+    "kcal": 60
+  },
+  {
+    "id": "peach",
+    "name": "桃子",
+    "category": "水果",
+    "ndb": "09236",
+    "portion": 150,
+    "note": "黄桃参考，去核可食生重",
+    "description": "PEACHES,YEL,RAW",
+    "kcal": 39
+  },
+  {
+    "id": "spinach",
+    "name": "菠菜",
+    "category": "蔬菜",
+    "ndb": "11457",
+    "portion": 150,
+    "note": "可食生重，烹饪油另记",
+    "description": "SPINACH,RAW",
+    "kcal": 23
+  },
+  {
+    "id": "carrot",
+    "name": "胡萝卜",
+    "category": "蔬菜",
+    "ndb": "11124",
+    "portion": 100,
+    "note": "可食生重，烹饪油另记",
+    "description": "CARROTS,RAW",
+    "kcal": 41
+  },
+  {
+    "id": "bok-choy",
+    "name": "小白菜",
+    "category": "蔬菜",
+    "ndb": "11116",
+    "portion": 150,
+    "note": "可食生重，烹饪油另记",
+    "description": "CABBAGE,CHINESE (PAK-CHOI),RAW",
+    "kcal": 13
+  },
+  {
+    "id": "zucchini",
+    "name": "西葫芦",
+    "category": "蔬菜",
+    "ndb": "11477",
+    "portion": 150,
+    "note": "带皮可食生重，烹饪油另记",
+    "description": "SQUASH,SMMR,ZUCCHINI,INCL SKN,RAW",
+    "kcal": 17
+  },
+  {
+    "id": "sweet-potato",
+    "name": "红薯（原料）",
+    "category": "主食",
+    "ndb": "11507",
+    "portion": 150,
+    "note": "生重，不直接套用到烤红薯熟重",
+    "description": "SWEET POTATO,RAW,UNPREP",
+    "kcal": 86
+  },
+  {
+    "id": "raw-salmon",
+    "name": "三文鱼（大西洋野生参考）",
+    "category": "蛋白来源",
+    "ndb": "15076",
+    "portion": 150,
+    "note": "可食生重，鱼种、养殖方式不同会变化，烹饪油另记",
+    "description": "SALMON,ATLANTIC,WILD,RAW",
+    "kcal": 142
+  },
+  {
+    "id": "black-beans",
+    "name": "熟黑豆",
+    "category": "蛋白来源",
+    "ndb": "16015",
+    "portion": 100,
+    "note": "成熟豆煮熟沥水，不加盐，不是生豆重量",
+    "description": "BEANS,BLACK,MATURE SEEDS,CKD,BLD,WO/SALT",
+    "kcal": 132
+  },
+  {
+    "id": "almond",
+    "name": "杏仁",
+    "category": "坚果零食",
+    "ndb": "12061",
+    "portion": 20,
+    "note": "可食原重，不含糖衣、额外油",
+    "description": "ALMONDS",
+    "kcal": 579
+  },
+  {
+    "id": "walnut",
+    "name": "核桃仁",
+    "category": "坚果零食",
+    "ndb": "12155",
+    "portion": 20,
+    "note": "去壳可食原重，不含额外糖油",
+    "description": "WALNUTS,ENGLISH",
+    "kcal": 654
+  },
+  {
+    "id": "sunflower",
+    "name": "葵花籽仁",
+    "category": "坚果零食",
+    "ndb": "12036",
+    "portion": 20,
+    "note": "干籽仁，不含壳和额外糖油",
+    "description": "SUNFLOWER SD KRNLS,DRIED",
+    "kcal": 584
+  },
+  {
+    "id": "popcorn",
+    "name": "空气爆米花（无额外糖油）",
+    "category": "坚果零食",
+    "ndb": "19034",
+    "portion": 25,
+    "note": "成品克重，不等同影院奶油爆米花",
+    "description": "POPCORN,AIR-POPPED",
+    "kcal": 387
+  },
+  {
+    "id": "milk-chocolate",
+    "name": "牛奶巧克力（通用参考）",
+    "category": "坚果零食",
+    "ndb": "19120",
+    "portion": 20,
+    "note": "按实际成品克重，品牌包装标签优先",
+    "description": "CANDIES,MILK CHOC",
+    "kcal": 535
+  },
+  {
+    "id": "white-chocolate",
+    "name": "白巧克力（通用参考）",
+    "category": "坚果零食",
+    "ndb": "19087",
+    "portion": 20,
+    "note": "按实际成品克重，品牌包装标签优先",
+    "description": "CANDIES,WHITE CHOC",
+    "kcal": 539
+  },
+  {
+    "id": "chocolate-icecream",
+    "name": "巧克力冰淇淋（通用参考）",
+    "category": "奶蛋豆",
+    "ndb": "19270",
+    "portion": 70,
+    "note": "按成品克重，配方差异较大，包装标签优先",
+    "description": "ICE CREAMS,CHOC",
+    "kcal": 216
+  },
+  {
+    "id": "cheddar",
+    "name": "切达奶酪",
+    "category": "奶蛋豆",
+    "ndb": "01009",
+    "portion": 20,
+    "note": "按可食克重，包装标签优先",
+    "description": "CHEESE,CHEDDAR",
+    "kcal": 404
+  },
+  {
+    "id": "lowfat-milk",
+    "name": "低脂牛奶（1%乳脂，按克）",
+    "category": "饮料",
+    "ndb": "01082",
+    "portion": 250,
+    "note": "按g记录，不把ml直接当g，包装标签优先",
+    "description": "MILK,LOWFAT,FLUID,1% MILKFAT,W/ ADDED VIT A & VITAMIN D",
+    "kcal": 42
+  }
+];
+for(const r of everydayFoodReferences){const f=foodEntry(r.id,r.name,r.category,'g',100,r.kcal,r.portion,'sr28',r.note+'；USDA SR28 NDB '+r.ndb);f.reference={ndb:r.ndb,description:r.description,kcalPer100g:r.kcal};foodCatalog.push(f)}
+
+foodRecipe('home-spinach-egg','菠菜炒蛋（配方估算）','家常',[['spinach',150],['egg',2],['oil',8]],'菠菜生重150g＋熟蛋参考2个＋油8g；不含主食');
+foodRecipe('home-broccoli-beef','西兰花牛肉（配方估算）','家常',[['broccoli',150],['cooked-beef',100],['oil',8],['soy-sauce',10]],'西兰花生重150g＋熟牛肉参考100g＋油8g＋酱油10g；不含饭');
+foodRecipe('home-carrot-pork','胡萝卜炒肉（配方估算）','家常',[['carrot',150],['cooked-pork',80],['oil',8],['soy-sauce',10]],'胡萝卜生重150g＋熟猪肉参考80g＋油8g＋酱油10g；不含饭');
+foodRecipe('home-bok-choy','清炒小白菜（配方估算）','家常',[['bok-choy',200],['oil',8],['soy-sauce',5]],'小白菜生重200g＋油8g＋酱油5g；不含饭');
+foodRecipe('home-tofu-soup','番茄豆腐汤（配方估算）','家常',[['tomato',150],['tofu',150],['water',300],['oil',3]],'番茄生重150g＋豆腐原重150g＋水300ml＋油3g；参考全部食用');
+foodRecipe('home-zucchini-egg','西葫芦炒蛋（配方估算）','家常',[['zucchini',200],['egg',2],['oil',8]],'西葫芦生重200g＋熟蛋参考2个＋油8g；不含饭');
+foodRecipe('home-salmon-rice','三文鱼蔬菜饭（配方估算）','家常',[['raw-salmon',150],['rice',150],['broccoli',100],['oil',5]],'野生大西洋三文鱼生重150g＋熟米饭150g＋西兰花生重100g＋油5g；饭已含');
+foodRecipe('breakfast-egg-toast','鸡蛋奶酪吐司（配方估算）','早餐',[['white-bread',60],['egg',1],['cheddar',20]],'白吐司60g＋熟蛋1个＋切达奶酪20g；不含额外黄油和酱料');
+foodRecipe('breakfast-yogurt-fruit','草莓燕麦酸奶碗（配方估算）','早餐',[['plain-yogurt',150],['strawberry',100],['oats-dry',30]],'原味酸奶150g＋草莓可食生重100g＋干燕麦30g；不含额外糖');
+foodRecipe('breakfast-banana-toast','香蕉花生酱吐司（配方估算）','早餐',[['white-bread',60],['banana',100],['peanut-butter',15]],'白吐司60g＋香蕉去皮生重100g＋花生酱15g');
+foodRecipe('snack-fruit-yogurt','蓝莓核桃酸奶（配方估算）','加餐',[['plain-yogurt',150],['blueberry',80],['walnut',15]],'原味酸奶150g＋蓝莓可食生重80g＋核桃仁15g');
+foodRecipe('night-noodle-soup','鸡蛋青菜米粉（配方估算）','家常',[['rice-noodles',150],['bok-choy',100],['egg',1],['water',300],['oil',3]],'熟米粉150g＋小白菜生重100g＋熟蛋1个＋水300ml＋油3g；参考汤汁全部食用');
+
+// Browse tags describe common ways to find foods, not actual storage or dietary advice.
+const foodBrowseGroups={
+  place:{label:'地点',items:[['restaurant','餐馆','🍽️'],['home','家里','🏠'],['fridge','冰箱','🧊'],['cupboard','零食柜','🍪']]},
+  kind:{label:'食材',items:[['fruit','水果','🍎'],['meat','肉类海鲜','🥩'],['vegetable','蔬菜','🥬'],['staple','主食','🍚'],['dairy','奶蛋豆','🥚'],['snacks','零食坚果','🥜'],['drink','饮料','🥤'],['custom','我的食品','📝']]},
+  time:{label:'餐次',items:[['breakfast','早餐','🌅'],['lunch','午餐','☀️'],['dinner','晚餐','🌇'],['night','宵夜加餐','🌙']]}
+};
+const restaurantCategories=['麦当劳','肯德基','老乡鸡','大米先生','米村拌饭','杨国福','麻辣香锅','沙拉','披萨'];
+const meatFoodIds=['chicken','cooked-beef','raw-pork-belly','cooked-pork','cooked-chicken-thigh','tuna','raw-salmon','lxj-chicken-soup','lxj-winter-soup','lxj-scallion-chicken','lxj-edamame-chicken','lxj-broccoli-chicken','mc-bigmac','mc-chicken','mc-grilled','kfc-spicy','kfc-grilled','mc-nuggets','kfc-nuggets'];
+const dairyFoodIds=['egg','tofu','edamame','black-beans','full-milk','lowfat-milk','plain-yogurt','mozzarella','cheddar','chocolate-icecream'];
+function foodBrowseTags(food){
+  if(food.browseTags)return food.browseTags;
+  const tags=new Set(),category=food.category;
+  if(category==='水果')tags.add('fruit');
+  if(category==='蔬菜')tags.add('vegetable');
+  if(category==='主食'||['意面','披萨'].includes(category))tags.add('staple');
+  if(meatFoodIds.includes(food.id))tags.add('meat');
+  if(dairyFoodIds.includes(food.id)||category==='奶蛋豆')tags.add('dairy');
+  if(category==='坚果零食')tags.add('snacks');
+  if(category==='饮料')tags.add('drink');
+  // Ingredients make mixed dishes discoverable under their actual food types.
+  for(const c of food.recipe?.components||[]){const ingredient=foodCatalog.find(f=>f.id===c.foodId);if(ingredient)for(const tag of foodBrowseTags(ingredient))if(['meat','vegetable','staple','dairy','fruit'].includes(tag))tags.add(tag)}
+  if(food.id==='tomato-egg'){tags.add('vegetable');tags.add('dairy')}
+  if(['lxj-broccoli-chicken','lxj-winter-soup'].includes(food.id))tags.add('vegetable');
+  if(food.id==='lxj-edamame-chicken')tags.add('dairy');
+  if(restaurantCategories.includes(category))tags.add('restaurant');
+  if(!restaurantCategories.includes(category)||['沙拉','意面'].includes(category))tags.add('home');
+  if(!food.recipe&&(['水果','蔬菜','奶蛋豆','蛋白来源'].includes(category)||dairyFoodIds.includes(food.id)))tags.add('fridge');
+  if(category==='坚果零食'||food.id==='peanut-butter')tags.add('cupboard');
+  if(tags.has('fruit')&&!food.recipe||dairyFoodIds.includes(food.id)||['white-bread','oats-dry'].includes(food.id)||category==='早餐')tags.add('breakfast');
+  if(food.recipe&&category!=='加餐'||['主食','蛋白来源','蔬菜','沙拉','披萨',...restaurantCategories].includes(category)){tags.add('lunch');tags.add('dinner')}
+  if(['水果','坚果零食','加餐'].includes(category)||dairyFoodIds.includes(food.id)||food.id==='night-noodle-soup')tags.add('night');
+  return [...tags];
+}

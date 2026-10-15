@@ -1,0 +1,14 @@
+{
+  "verified": true,
+  "apk": "NextStep-0.8.2.apk",
+  "sha256": "392f65ad6f25ef0b21b1b4e9649fe249cffa1e14b90ced11bce96a2da80c65df",
+  "checked": [
+    "app.js",
+    "foods.js",
+    "home.css",
+    "index.html",
+    "nutrition.css",
+    "nutrition.js",
+    "styles.css"
+  ]
+}

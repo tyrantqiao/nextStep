@@ -1,0 +1,276 @@
+{
+  "sourceUrl": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/SR28/dnload/sr28abbr.zip",
+  "checkedAt": "2026-10-15",
+  "foods": [
+    {
+      "id": "orange",
+      "name": "橙子",
+      "category": "水果",
+      "ndb": "09200",
+      "portion": 150,
+      "note": "去皮可食生重",
+      "description": "ORANGES,RAW,ALL COMM VAR",
+      "kcal": 47
+    },
+    {
+      "id": "mandarin",
+      "name": "橘子",
+      "category": "水果",
+      "ndb": "09218",
+      "portion": 100,
+      "note": "去皮可食生重",
+      "description": "TANGERINES,(MANDARIN ORANGES),RAW",
+      "kcal": 53
+    },
+    {
+      "id": "pineapple",
+      "name": "菠萝",
+      "category": "水果",
+      "ndb": "09266",
+      "portion": 150,
+      "note": "去皮可食生重",
+      "description": "PINEAPPLE,RAW,ALL VAR",
+      "kcal": 50
+    },
+    {
+      "id": "strawberry",
+      "name": "草莓",
+      "category": "水果",
+      "ndb": "09316",
+      "portion": 150,
+      "note": "去蒂可食生重",
+      "description": "STRAWBERRIES,RAW",
+      "kcal": 32
+    },
+    {
+      "id": "blueberry",
+      "name": "蓝莓",
+      "category": "水果",
+      "ndb": "09050",
+      "portion": 100,
+      "note": "可食生重",
+      "description": "BLUEBERRIES,RAW",
+      "kcal": 57
+    },
+    {
+      "id": "grape",
+      "name": "葡萄",
+      "category": "水果",
+      "ndb": "09132",
+      "portion": 100,
+      "note": "红或绿无籽葡萄，可食生重",
+      "description": "GRAPES,RED OR GRN (EURO TYPE,SUCH AS THOMPSON SEEDLESS),RAW",
+      "kcal": 69
+    },
+    {
+      "id": "kiwi",
+      "name": "猕猴桃",
+      "category": "水果",
+      "ndb": "09148",
+      "portion": 100,
+      "note": "绿心，去皮可食生重",
+      "description": "KIWIFRUIT,GRN,RAW",
+      "kcal": 61
+    },
+    {
+      "id": "watermelon",
+      "name": "西瓜",
+      "category": "水果",
+      "ndb": "09326",
+      "portion": 250,
+      "note": "去皮可食生重",
+      "description": "WATERMELON,RAW",
+      "kcal": 30
+    },
+    {
+      "id": "pear",
+      "name": "梨",
+      "category": "水果",
+      "ndb": "09252",
+      "portion": 180,
+      "note": "可食生重，去核",
+      "description": "PEARS,RAW",
+      "kcal": 57
+    },
+    {
+      "id": "mango",
+      "name": "芒果",
+      "category": "水果",
+      "ndb": "09176",
+      "portion": 150,
+      "note": "去皮去核可食生重",
+      "description": "MANGOS,RAW",
+      "kcal": 60
+    },
+    {
+      "id": "peach",
+      "name": "桃子",
+      "category": "水果",
+      "ndb": "09236",
+      "portion": 150,
+      "note": "黄桃参考，去核可食生重",
+      "description": "PEACHES,YEL,RAW",
+      "kcal": 39
+    },
+    {
+      "id": "spinach",
+      "name": "菠菜",
+      "category": "蔬菜",
+      "ndb": "11457",
+      "portion": 150,
+      "note": "可食生重，烹饪油另记",
+      "description": "SPINACH,RAW",
+      "kcal": 23
+    },
+    {
+      "id": "carrot",
+      "name": "胡萝卜",
+      "category": "蔬菜",
+      "ndb": "11124",
+      "portion": 100,
+      "note": "可食生重，烹饪油另记",
+      "description": "CARROTS,RAW",
+      "kcal": 41
+    },
+    {
+      "id": "bok-choy",
+      "name": "小白菜",
+      "category": "蔬菜",
+      "ndb": "11116",
+      "portion": 150,
+      "note": "可食生重，烹饪油另记",
+      "description": "CABBAGE,CHINESE (PAK-CHOI),RAW",
+      "kcal": 13
+    },
+    {
+      "id": "zucchini",
+      "name": "西葫芦",
+      "category": "蔬菜",
+      "ndb": "11477",
+      "portion": 150,
+      "note": "带皮可食生重，烹饪油另记",
+      "description": "SQUASH,SMMR,ZUCCHINI,INCL SKN,RAW",
+      "kcal": 17
+    },
+    {
+      "id": "sweet-potato",
+      "name": "红薯（原料）",
+      "category": "主食",
+      "ndb": "11507",
+      "portion": 150,
+      "note": "生重，不直接套用到烤红薯熟重",
+      "description": "SWEET POTATO,RAW,UNPREP",
+      "kcal": 86
+    },
+    {
+      "id": "raw-salmon",
+      "name": "三文鱼（大西洋野生参考）",
+      "category": "蛋白来源",
+      "ndb": "15076",
+      "portion": 150,
+      "note": "可食生重，鱼种、养殖方式不同会变化，烹饪油另记",
+      "description": "SALMON,ATLANTIC,WILD,RAW",
+      "kcal": 142
+    },
+    {
+      "id": "black-beans",
+      "name": "熟黑豆",
+      "category": "蛋白来源",
+      "ndb": "16015",
+      "portion": 100,
+      "note": "成熟豆煮熟沥水，不加盐，不是生豆重量",
+      "description": "BEANS,BLACK,MATURE SEEDS,CKD,BLD,WO/SALT",
+      "kcal": 132
+    },
+    {
+      "id": "almond",
+      "name": "杏仁",
+      "category": "坚果零食",
+      "ndb": "12061",
+      "portion": 20,
+      "note": "可食原重，不含糖衣、额外油",
+      "description": "ALMONDS",
+      "kcal": 579
+    },
+    {
+      "id": "walnut",
+      "name": "核桃仁",
+      "category": "坚果零食",
+      "ndb": "12155",
+      "portion": 20,
+      "note": "去壳可食原重，不含额外糖油",
+      "description": "WALNUTS,ENGLISH",
+      "kcal": 654
+    },
+    {
+      "id": "sunflower",
+      "name": "葵花籽仁",
+      "category": "坚果零食",
+      "ndb": "12036",
+      "portion": 20,
+      "note": "干籽仁，不含壳和额外糖油",
+      "description": "SUNFLOWER SD KRNLS,DRIED",
+      "kcal": 584
+    },
+    {
+      "id": "popcorn",
+      "name": "空气爆米花（无额外糖油）",
+      "category": "坚果零食",
+      "ndb": "19034",
+      "portion": 25,
+      "note": "成品克重，不等同影院奶油爆米花",
+      "description": "POPCORN,AIR-POPPED",
+      "kcal": 387
+    },
+    {
+      "id": "milk-chocolate",
+      "name": "牛奶巧克力（通用参考）",
+      "category": "坚果零食",
+      "ndb": "19120",
+      "portion": 20,
+      "note": "按实际成品克重，品牌包装标签优先",
+      "description": "CANDIES,MILK CHOC",
+      "kcal": 535
+    },
+    {
+      "id": "white-chocolate",
+      "name": "白巧克力（通用参考）",
+      "category": "坚果零食",
+      "ndb": "19087",
+      "portion": 20,
+      "note": "按实际成品克重，品牌包装标签优先",
+      "description": "CANDIES,WHITE CHOC",
+      "kcal": 539
+    },
+    {
+      "id": "chocolate-icecream",
+      "name": "巧克力冰淇淋（通用参考）",
+      "category": "奶蛋豆",
+      "ndb": "19270",
+      "portion": 70,
+      "note": "按成品克重，配方差异较大，包装标签优先",
+      "description": "ICE CREAMS,CHOC",
+      "kcal": 216
+    },
+    {
+      "id": "cheddar",
+      "name": "切达奶酪",
+      "category": "奶蛋豆",
+      "ndb": "01009",
+      "portion": 20,
+      "note": "按可食克重，包装标签优先",
+      "description": "CHEESE,CHEDDAR",
+      "kcal": 404
+    },
+    {
+      "id": "lowfat-milk",
+      "name": "低脂牛奶（1%乳脂，按克）",
+      "category": "饮料",
+      "ndb": "01082",
+      "portion": 250,
+      "note": "按g记录，不把ml直接当g，包装标签优先",
+      "description": "MILK,LOWFAT,FLUID,1% MILKFAT,W/ ADDED VIT A & VITAMIN D",
+      "kcal": 42
+    }
+  ]
+}
