@@ -155,7 +155,7 @@ public final class MainActivity extends Activity implements AppUpdater.Listener 
             if (file == null || file.equals("/")) file = "/index.html";
             if (file.contains("..") || file.contains("\\")) return errorResponse(403, "Forbidden");
             String mime = file.endsWith(".html") ? "text/html" : file.endsWith(".js") ? "application/javascript"
-                : file.endsWith(".css") ? "text/css" : file.endsWith(".svg") ? "image/svg+xml" : "application/octet-stream";
+                : file.endsWith(".css") ? "text/css" : file.endsWith(".svg") ? "image/svg+xml" : file.endsWith(".png") ? "image/png" : "application/octet-stream";
             try {
                 return new WebResourceResponse(mime, "UTF-8", 200, "OK",
                     Collections.singletonMap("Cache-Control", "no-cache"), getAssets().open("www" + file));

@@ -266,3 +266,26 @@ button.history-row{display:grid;grid-template-columns:38px minmax(0,1fr) 16px;al
 .home-training-resume .home-training-start>span{display:none}
 @media(min-width:1051px){.home-dashboard-body>.home-activity-card{grid-column:1/-1;height:auto}.home-dashboard-body>.home-week-review{grid-row:auto}.home-dashboard-body>.home-training-resume{height:auto}}
 @media(max-width:350px){.home-training-resume{padding:12px}.home-training-resume .home-training-start{padding:0 10px}.home-training-resume .home-training-start svg{display:none}}
+
+/* 今日信息集中在同一栏，分隔线区分内容，本周回顾独立展示。 */
+.home-dashboard-body{grid-template-columns:minmax(0,1fr)}
+.home-dashboard-body>.home-today{margin:0;padding:22px 24px;min-width:0;border:1px solid #e8ecf2;border-radius:20px;box-shadow:none}
+.home-today-heading{gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.home-today-heading h2{font-size:18px}
+.home-today-heading .home-simple-plan{margin:0;padding:0;border:0;flex-wrap:wrap;gap:6px}
+.home-today>.home-activity-card,.home-today>.home-nutrition,.home-today>.home-recent{margin:0;padding:18px 0;background:transparent;border:0;border-top:1px solid #edf0f5;border-radius:0;box-shadow:none;min-width:0}
+.home-today>.home-activity-card{padding-top:0;border-top:0}
+.home-today>.home-recent{padding-bottom:0}
+.home-today .card-head h2{font-size:15px}
+.home-today>.home-training-resume{margin-bottom:20px}
+.home-today .home-training-resume>.home-simple-plan{display:none}
+.home-today .home-recent>.small-label{padding:8px 0}
+.home-dashboard-body>.home-week-review{grid-column:1;grid-row:auto}
+@media(max-width:700px){
+ .home-dashboard-body>.home-today{padding:18px 16px;border-radius:18px}
+ .home-today-heading{margin-bottom:16px;gap:8px}
+ .home-today-heading .home-simple-plan{font-size:10px;line-height:1.7}
+ .home-today>.home-activity-card,.home-today>.home-nutrition,.home-today>.home-recent{padding:16px 0}
+ .home-today>.home-activity-card{padding-top:0}
+ .home-today>.home-recent{padding-bottom:0}
+}

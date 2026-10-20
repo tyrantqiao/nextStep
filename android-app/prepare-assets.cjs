@@ -13,4 +13,6 @@ for (const name of ['index.html', 'styles.css', 'home.css', 'nutrition.css', 'fo
   }
   fs.writeFileSync(path.join(target, name), content);
 }
+fs.mkdirSync(path.join(target, 'images'), {recursive:true});
+for(const name of ['food-samples.png','food-samples-more.png','food-samples-dishes.png'])fs.copyFileSync(path.join(source, 'images',name), path.join(target, 'images',name));
 console.log('Shared web assets bundled for offline Android use.');

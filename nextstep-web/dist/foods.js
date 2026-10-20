@@ -1,6 +1,7 @@
 /* Offline references. Recipe portions are editable, never personal measurements. */
-const foodDataVersion='2026-10-15.3';
+const foodDataVersion='2026-10-20.1';
 const foodSources={
+  gangrongLabel:{type:'包装标签参考',name:'用户提供的港荣淡糖蒸蛋糕包装照片',url:null,license:'按本次包装营养表录入；每100g，实际包装为准。单个重量未提供，需按实际食用克数填写。'},
   grains:{type:'食物成分参考',name:'USDA Standard Reference 28 · 谷物与意面',url:'https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg20.pdf',license:'USDA 公共领域数据；仅选用基础食物参考值'},
   eggs:{type:'食物成分参考',name:'USDA SR28 · 鸡蛋 NDB 01129',url:'https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/reports/sr28fg01.pdf',license:'USDA 公共领域数据'},
   chicken:{type:'食物成分参考',name:'USDA · 烤去皮鸡胸肉 NDB 05064',url:'https://www.ars.usda.gov/ARSUserFiles/80400525/articles/ift2006_chicken.pdf',license:'USDA 基础成分参考'},
@@ -739,6 +740,11 @@ foodRecipe('snack-fruit-yogurt','蓝莓核桃酸奶（配方估算）','加餐',
 foodRecipe('night-noodle-soup','鸡蛋青菜米粉（配方估算）','家常',[['rice-noodles',150],['bok-choy',100],['egg',1],['water',300],['oil',3]],'熟米粉150g＋小白菜生重100g＋熟蛋1个＋水300ml＋油3g；参考汤汁全部食用');
 
 // Browse tags describe common ways to find foods, not actual storage or dietary advice.
+const gangrongCake=foodEntry('gangrong-light-sugar-cake','港荣淡糖蒸蛋糕','早餐','g',100,1335/4.184,100,'gangrongLabel','包装每100g为1335kJ（约319kcal）；单个重量未提供，请填写实际食用克数。',['蛋糕','蒸蛋糕','淡糖蛋糕','港荣','早餐蛋糕']);
+gangrongCake.checkedAt='2026-10-20';
+gangrongCake.browseTags=['breakfast','staple','snacks','home','cupboard','night'];
+gangrongCake.label={basisGrams:100,energyKj:1335,proteinGrams:6.5,fatGrams:10.2,saturatedFatGrams:3.4,transFatGrams:0,carbohydrateGrams:49.8,sugarGrams:13.7,sodiumMg:313};
+foodCatalog.push(gangrongCake);
 const foodBrowseGroups={
   place:{label:'地点',items:[['restaurant','餐馆','🍽️'],['home','家里','🏠'],['fridge','冰箱','🧊'],['cupboard','零食柜','🍪']]},
   kind:{label:'食材',items:[['fruit','水果','🍎'],['meat','肉类海鲜','🥩'],['vegetable','蔬菜','🥬'],['staple','主食','🍚'],['dairy','奶蛋豆','🥚'],['snacks','零食坚果','🥜'],['drink','饮料','🥤'],['custom','我的食品','📝']]},
@@ -770,4 +776,20 @@ function foodBrowseTags(food){
   if(food.recipe&&category!=='加餐'||['主食','蛋白来源','蔬菜','沙拉','披萨',...restaurantCategories].includes(category)){tags.add('lunch');tags.add('dinner')}
   if(['水果','坚果零食','加餐'].includes(category)||dairyFoodIds.includes(food.id)||food.id==='night-noodle-soup')tags.add('night');
   return [...tags];
+}
+
+// Local AI illustration atlases; thumbnails never determine energy or portion.
+function foodSampleIndex(food){
+  const name=String(food?.name||''),id=food?.id||food?.foodId||'';
+  const dishes=[[/蛋挞/,0],[/薯条/,1],[/红酒醋/,2],[/辣椒炒肉/,3],[/包菜/,4],[/麻辣拌/,5],[/油醋汁/,6],[/茄子/,7],[/葵花籽/,8],[/爆米花/,9],[/小白菜/,10],[/西葫芦炒蛋/,11]];
+  for(const [pattern,index]of dishes)if(pattern.test(name))return 72+index;
+  const more=[[/毛豆/,0],[/黑豆/,1],[/蓝莓/,2],[/猕猴桃|奇异果/,3],[/菠萝|凤梨/,4],[/芒果/,5],[/梨/,6],[/桃子|水蜜桃/,7],[/橘|柑/,8],[/圣女果|樱桃番茄/,9],[/菠菜/,10],[/生菜/,11],[/黄瓜/,12],[/胡萝卜/,13],[/土豆|马铃薯/,14],[/红薯|地瓜/,15],[/玉米/,16],[/蘑菇|香菇|菌菇/,17],[/牛油果/,18],[/花生酱/,19],[/食用油|橄榄油|菜籽油/,20],[/白糖|砂糖|蜂蜜/,21],[/食盐/,22],[/酱油/,23],[/酸奶碗|燕麦酸奶/,24],[/鸡蛋奶酪吐司/,25],[/番茄炒蛋/,26],[/面汤|汤面|面条汤/,27],[/红烧鸡|葱油鸡|老乡鸡.*鸡|炖鸡/,28],[/红烧肉|五花|回锅肉/,29],[/小炒牛肉|辣椒炒牛肉/,30],[/炒蔬菜|炒青菜/,31],[/冰淇淋/,32],[/柠檬茶|茶饮/,33],[/豆浆/,34],[/炒饭/,35]];
+  for(const [pattern,index]of more)if(pattern.test(name))return 36+index;
+  const rules=[[/蛋糕|蒸糕/,23],[/汉堡|巨无霸|麦香|板烧/,24],[/披萨/,25],[/炸鸡|鸡块|鸡翅|劲脆|吮指/,26],[/饺|馄饨/,27],[/火锅|麻辣烫|香锅/,29],[/汤|羹/,28],[/咖啡/,33],[/可乐/,30],[/果汁|雪碧|奶茶|茶饮/,31],[/饮用水|纯净水|白水/,32],[/酸奶|冰淇淋/,19],[/牛奶|豆浆|奶饮/,18],[/奶酪|芝士|切达/,20],[/燕麦/,22],[/吐司|面包|馒头|包子/,21],[/巧克力/,35],[/花生|坚果|核桃|杏仁/,34],[/香蕉/,12],[/苹果/,13],[/橙|柑|橘/,14],[/西瓜/,15],[/草莓/,16],[/葡萄|蓝莓/,17],[/西兰花/,9],[/番茄|西红柿/,10],[/沙拉|生菜|菠菜|蔬菜|黄瓜|胡萝卜/,11],[/豆腐|豆干|毛豆|豆类/,7],[/虾/,8],[/鱼|三文|金枪/,6],[/鸡蛋|水煮蛋|煎蛋/,2],[/牛肉|牛排/,4],[/猪肉|五花|红烧肉|培根|排骨/,5],[/鸡|鸭|鹅/,3],[/意面|面条|粉|面食/,1],[/米饭|糙米|杂粮|米粥|拌饭|盖饭/,0]];
+  for(const [pattern,index]of rules)if(pattern.test(name))return index;
+  if(id==='water')return 32;
+  if(food?.category==='水果')return 13;
+  if(food?.category==='蔬菜')return 11;
+  if(food?.category==='主食')return 0;
+  return null;
 }

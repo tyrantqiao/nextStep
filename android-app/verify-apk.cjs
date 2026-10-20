@@ -32,6 +32,12 @@ for (const name of ['AndroidManifest.xml', 'resources.arsc', 'res/drawable-nodpi
   assert(entries.has(name) && entries.get(name).data.length > 0, `Missing ${name}`);
 }
 const table = entries.get('resources.arsc');
+for(const name of ['food-samples.png','food-samples-more.png','food-samples-dishes.png']){
+  const image=entries.get('assets/www/images/'+name);
+  assert(image&&image.data.length>8,'Missing offline food sample '+name);
+  assert.equal(image.data.subarray(0,8).toString('hex'),'89504e470d0a1a0a','Invalid food sample PNG');
+  assert(entries.get('assets/www/nutrition.css').data.toString('utf8').includes('images/'+name),'Food image reference missing');
+}
 assert.equal(table.method, 0, 'Android requires resources.arsc to be stored uncompressed');
 assert.equal(table.dataOffset % 4, 0, 'Android requires resources.arsc aligned to four bytes');
 const dex = entries.get('classes.dex').data;
