@@ -1,0 +1,115 @@
+{
+  "viewports": [
+    {
+      "width": 320,
+      "height": 740
+    },
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 1280,
+      "height": 900
+    }
+  ],
+  "storage": "Temporary sessionStorage-backed localStorage adapter; production training storage unchanged",
+  "measurements": [
+    {
+      "bodyWidth": 305,
+      "dialogClient": 267,
+      "dialogWidth": 267,
+      "footerBottom": 713.266674041748,
+      "height": 740,
+      "page": "shop",
+      "width": 320
+    },
+    {
+      "bodyWidth": 375,
+      "dialogClient": 337,
+      "dialogWidth": 337,
+      "footerBottom": 817.2667350769043,
+      "height": 844,
+      "page": "shop",
+      "width": 390
+    },
+    {
+      "bodyWidth": 1265,
+      "dialogClient": 880,
+      "dialogWidth": 880,
+      "footerBottom": 828.133373260498,
+      "height": 900,
+      "page": "shop",
+      "width": 1280
+    },
+    {
+      "bodyWidth": 305,
+      "dialogClient": 252,
+      "dialogWidth": 252,
+      "page": "summary",
+      "width": 320
+    },
+    {
+      "bodyWidth": 375,
+      "dialogClient": 337,
+      "dialogWidth": 337,
+      "page": "summary",
+      "width": 390
+    },
+    {
+      "bodyWidth": 1265,
+      "dialogClient": 640,
+      "dialogWidth": 640,
+      "page": "summary",
+      "width": 1280
+    },
+    {
+      "bodyWidth": 305,
+      "dialogClient": 267,
+      "dialogWidth": 267,
+      "page": "prepare",
+      "width": 320
+    },
+    {
+      "bodyWidth": 375,
+      "dialogClient": 337,
+      "dialogWidth": 337,
+      "page": "prepare",
+      "width": 390
+    },
+    {
+      "bodyWidth": 1265,
+      "dialogClient": 640,
+      "dialogWidth": 640,
+      "page": "prepare",
+      "width": 1280
+    },
+    {
+      "bodyWidth": 305,
+      "page": "today",
+      "width": 320
+    },
+    {
+      "bodyWidth": 375,
+      "page": "today",
+      "width": 390
+    },
+    {
+      "bodyWidth": 1265,
+      "page": "today",
+      "width": 1280
+    }
+  ],
+  "verified": [
+    "fresh home launch",
+    "shared today and journal preparation",
+    "cart parameters and back navigation",
+    "single-day save isolation",
+    "plan workout partial end summary",
+    "pending save survives reload",
+    "time confirmation and save",
+    "free timer sport end summary",
+    "saved home totals",
+    "old draft time check without mutation"
+  ]
+}

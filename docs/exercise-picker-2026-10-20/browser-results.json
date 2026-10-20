@@ -1,0 +1,126 @@
+{
+  "viewports": [
+    {
+      "width": 320,
+      "height": 740
+    },
+    {
+      "width": 390,
+      "height": 844
+    },
+    {
+      "width": 1280,
+      "height": 900
+    }
+  ],
+  "storage": "Temporary sessionStorage-backed localStorage adapter; user training storage unchanged",
+  "measurements": [
+    {
+      "body": 305,
+      "dialog": 267,
+      "dialogClient": 267,
+      "footerBottom": 713.266674041748,
+      "mode": "shop",
+      "resultsHeight": 291,
+      "viewportHeight": 740,
+      "width": 320
+    },
+    {
+      "body": 375,
+      "dialog": 337,
+      "dialogClient": 337,
+      "footerBottom": 817.2667350769043,
+      "mode": "shop",
+      "resultsHeight": 415,
+      "viewportHeight": 844,
+      "width": 390
+    },
+    {
+      "body": 1265,
+      "dialog": 880,
+      "dialogClient": 880,
+      "footerBottom": 828.133373260498,
+      "mode": "shop",
+      "resultsHeight": 392,
+      "viewportHeight": 900,
+      "width": 1280
+    },
+    {
+      "body": 305,
+      "dialog": 267,
+      "dialogClient": 267,
+      "dialogHeight": 647,
+      "dialogScrollHeight": 647,
+      "footerBottom": 672.516674041748,
+      "mode": "swap",
+      "viewportHeight": 740,
+      "width": 320
+    },
+    {
+      "body": 375,
+      "dialog": 337,
+      "dialogClient": 337,
+      "dialogHeight": 722,
+      "dialogScrollHeight": 722,
+      "footerBottom": 762.316722869873,
+      "mode": "swap",
+      "viewportHeight": 844,
+      "width": 390
+    },
+    {
+      "body": 1265,
+      "dialog": 640,
+      "dialogClient": 640,
+      "dialogHeight": 738,
+      "dialogScrollHeight": 738,
+      "footerBottom": 791.9000358581543,
+      "mode": "swap",
+      "viewportHeight": 900,
+      "width": 1280
+    },
+    {
+      "body": 305,
+      "dialog": 267,
+      "dialogClient": 267,
+      "dialogHeight": 611,
+      "dialogScrollHeight": 611,
+      "footerBottom": 654.516674041748,
+      "mode": "add",
+      "viewportHeight": 740,
+      "width": 320
+    },
+    {
+      "body": 375,
+      "dialog": 337,
+      "dialogClient": 337,
+      "dialogHeight": 704,
+      "dialogScrollHeight": 704,
+      "footerBottom": 753.316722869873,
+      "mode": "add",
+      "viewportHeight": 844,
+      "width": 390
+    },
+    {
+      "body": 1265,
+      "dialog": 640,
+      "dialogClient": 640,
+      "dialogHeight": 717,
+      "dialogScrollHeight": 717,
+      "footerBottom": 781.4000358581543,
+      "mode": "add",
+      "viewportHeight": 900,
+      "width": 1280
+    }
+  ],
+  "verified": [
+    "empty recent state",
+    "compound muscle + equipment + keyword filtering",
+    "preview pause and add to cart",
+    "custom action added to existing cart",
+    "same selection preserves 4 sets 13 reps 17.5 kg",
+    "reload resumes added action",
+    "replacement preview and custom back preserve filters",
+    "replacement retains completed groups",
+    "saved record has 2 sets and 227.5 kg volume"
+  ]
+}
