@@ -1,0 +1,914 @@
+{
+  "dataVersion": "2026-10-24.1",
+  "checkedAt": "2026-10-24",
+  "count": 17,
+  "foods": [
+    {
+      "id": "zero-cola",
+      "name": "无糖可乐",
+      "category": "饮料",
+      "unit": "ml",
+      "basis": {
+        "amount": 100,
+        "unit": "ml",
+        "energyKcal": 0
+      },
+      "portion": 330,
+      "source": "cocaZero",
+      "note": "品牌大陆官网无糖款0能量；按实际饮用ml，包装优先。",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "sourceDetails": {
+        "type": "品牌零能量参考",
+        "name": "可口可乐中国 · 无糖可口可乐",
+        "url": "https://www.coca-cola.com/cn/zh/brands/coca-cola",
+        "license": "品牌大陆官网明确标注无糖款0能量。仅适用于对应无糖款，不把所有无糖饮品自动算零；实际包装为准。2026-10-24核查。"
+      }
+    },
+    {
+      "id": "zero-sprite",
+      "name": "无糖雪碧（港版营养参考）",
+      "category": "饮料",
+      "unit": "ml",
+      "basis": {
+        "amount": 100,
+        "unit": "ml",
+        "energyKcal": 0
+      },
+      "portion": 330,
+      "source": "spriteZeroHK",
+      "note": "港版无糖款0kcal/100ml参考；未核实大陆包装，实际标签不同时请编辑。",
+      "aliases": [],
+      "region": "HK",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "sourceDetails": {
+        "type": "港版营养参考",
+        "name": "可口可乐香港 · 无糖雪碧营养标签",
+        "url": "https://www.coca-cola.com/hk/zh/brands/sprite",
+        "license": "香港版无糖雪碧每100ml为0kcal；不是已核实的大陆包装值，实际包装不同时请编辑。2026-10-24核查。"
+      }
+    },
+    {
+      "id": "bottle-tea",
+      "name": "瓶装柠檬茶（含糖配方估算）",
+      "category": "饮料",
+      "unit": "ml",
+      "basis": {
+        "amount": 100,
+        "unit": "ml",
+        "energyKcal": 40
+      },
+      "portion": 330,
+      "source": "recipe",
+      "note": "独立参考配方，非品牌官方热量；每100ml终体积假设含糖10g，按4kcal/g计算，忽略微量茶固形物；不是具体品牌标签，不适用于无糖或低糖款，实际包装优先。",
+      "aliases": [
+        "冰红茶",
+        "柠檬红茶"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "sugar",
+            "name": "额外白糖",
+            "quantity": 10,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 4
+            },
+            "energyKcal": 40,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的糖；4kcal/g"
+          }
+        ],
+        "totalKcal": 40,
+        "basisAmount": 100,
+        "basisUnit": "ml",
+        "description": "按分项投入量合计，非门店配方或实测。"
+      },
+      "sourceDetails": {
+        "type": "配方估算",
+        "name": "NextStep 参考配方",
+        "url": null,
+        "license": "独立参考配方；实际含水量、油和食材会改变热量"
+      }
+    },
+    {
+      "id": "mc-bigmac",
+      "name": "麦当劳 巨无霸",
+      "category": "麦当劳",
+      "unit": "个",
+      "basis": {
+        "amount": 1,
+        "unit": "个",
+        "energyKcal": 512.906309751434
+      },
+      "portion": 1,
+      "source": "mcBigmac",
+      "note": "大陆官网每个2146kJ ÷ 4.184；不含套餐配菜。",
+      "aliases": [
+        "麦记",
+        "汉堡"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "sourceDetails": {
+        "type": "大陆官方营养参考",
+        "name": "麦当劳中国 · 巨无霸（官网营养表2025-04）",
+        "url": "https://www.mcdonalds.com.cn/product/Big-Mac",
+        "license": "官网每个2146kJ，除以4.184换算kcal；2026-10-24核查。以实际门店配方和份量为准。"
+      }
+    },
+    {
+      "id": "mc-chicken",
+      "name": "麦当劳 麦香鸡",
+      "category": "麦当劳",
+      "unit": "个",
+      "basis": {
+        "amount": 1,
+        "unit": "个",
+        "energyKcal": 369.50286806883366
+      },
+      "portion": 1,
+      "source": "mcChicken",
+      "note": "大陆官网每个1546kJ ÷ 4.184；不含套餐配菜。",
+      "aliases": [
+        "麦记",
+        "汉堡"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "sourceDetails": {
+        "type": "大陆官方营养参考",
+        "name": "麦当劳中国 · 麦香鸡（官网营养表2025-04）",
+        "url": "https://www.mcdonalds.com.cn/product/McChicken",
+        "license": "官网每个1546kJ，除以4.184换算kcal；2026-10-24核查。以实际门店配方和份量为准。"
+      }
+    },
+    {
+      "id": "mc-grilled",
+      "name": "麦当劳 板烧鸡腿堡",
+      "category": "麦当劳",
+      "unit": "个",
+      "basis": {
+        "amount": 1,
+        "unit": "个",
+        "energyKcal": 391.491395793499
+      },
+      "portion": 1,
+      "source": "mcGrilled",
+      "note": "大陆官网营养表每个1638kJ ÷ 4.184；不混用旧介绍热量。",
+      "aliases": [
+        "麦记",
+        "汉堡"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "sourceDetails": {
+        "type": "大陆官方营养参考",
+        "name": "麦当劳中国 · 板烧鸡腿堡（官网营养表2025-04）",
+        "url": "https://www.mcdonalds.com.cn/product/Grilled-Chicken-Sandwich",
+        "license": "官网每个1638kJ，除以4.184换算kcal；采用营养表，未混用旧当家产品介绍的399kcal。2026-10-24核查。"
+      }
+    },
+    {
+      "id": "kfc-spicy",
+      "name": "肯德基 香辣鸡腿堡（配方估算）",
+      "category": "肯德基",
+      "unit": "个",
+      "basis": {
+        "amount": 1,
+        "unit": "个",
+        "energyKcal": 533.5
+      },
+      "portion": 1,
+      "source": "storeRecipe",
+      "note": "独立参考配方，非品牌官方热量；面包70g＋去皮熟鸡腿肉90g＋裹粉用白面包屑参考15g＋吸油7g＋蛋黄酱12g＋生菜10g；为1个参考汉堡，实际裹粉、皮、吸油及份量有差异。",
+      "aliases": [
+        "KFC",
+        "汉堡"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "white-bread",
+            "name": "白吐司",
+            "quantity": 70,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 266
+            },
+            "energyKcal": 186.2,
+            "source": "sr28",
+            "reference": {
+              "ndb": "18069",
+              "description": "BREAD,WHITE,COMMLY PREP (INCL SOFT BREAD CRUMBS)",
+              "kcalPer100g": 266
+            },
+            "note": "商业白面包参考，按实际克重；两片60g仅快捷参考；USDA SR28 NDB 18069"
+          },
+          {
+            "foodId": "cooked-chicken-thigh",
+            "name": "去皮熟鸡腿肉",
+            "quantity": 90,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 179
+            },
+            "energyKcal": 161.1,
+            "source": "sr28",
+            "reference": {
+              "ndb": "05098",
+              "description": "CHICKEN,BROILERS OR FRYERS,THIGH,MEAT ONLY,CKD,RSTD",
+              "kcalPer100g": 179
+            },
+            "note": "烤制熟可食部，不含骨、皮和额外酱汁；USDA SR28 NDB 05098"
+          },
+          {
+            "foodId": "white-bread",
+            "name": "白吐司",
+            "quantity": 15,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 266
+            },
+            "energyKcal": 39.9,
+            "source": "sr28",
+            "reference": {
+              "ndb": "18069",
+              "description": "BREAD,WHITE,COMMLY PREP (INCL SOFT BREAD CRUMBS)",
+              "kcalPer100g": 266
+            },
+            "note": "商业白面包参考，按实际克重；两片60g仅快捷参考；USDA SR28 NDB 18069"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 7,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 63,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          },
+          {
+            "foodId": "mayonnaise",
+            "name": "蛋黄酱（沙拉酱参考）",
+            "quantity": 12,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 680
+            },
+            "energyKcal": 81.6,
+            "source": "sr28",
+            "reference": {
+              "ndb": "04025",
+              "description": "SALAD DRSNG,MAYO,REG",
+              "kcalPer100g": 680
+            },
+            "note": "普通蛋黄酱参考；不是所有沙拉酱统一值；USDA SR28 NDB 04025"
+          },
+          {
+            "foodId": "lettuce",
+            "name": "生菜（罗马生菜）",
+            "quantity": 10,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 17
+            },
+            "energyKcal": 1.7000000000000002,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11251",
+              "description": "LETTUCE,COS OR ROMAINE,RAW",
+              "kcalPer100g": 17
+            },
+            "note": "可食生重，不含酱汁；USDA SR28 NDB 11251"
+          }
+        ],
+        "totalKcal": 533.5,
+        "basisAmount": 1,
+        "basisUnit": "个",
+        "description": "按分项投入量合计，非门店配方或实测。"
+      },
+      "menuSource": {
+        "name": "肯德基中国品牌介绍",
+        "url": "https://www.kfc.com.cn/",
+        "scope": "仅作品牌和菜名背景；未提供此条目的现行大陆热量，本应用独立配方为估算"
+      },
+      "sourceDetails": {
+        "type": "店铺搭配估算",
+        "name": "NextStep 店铺参考搭配",
+        "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/SR28/dnload/sr28abbr.zip",
+        "license": "按注明的食材、油和酱料假设计算，非门店官方营养值。原料克重与成品克重不混用；实际食材、份量与用油会改变热量。"
+      }
+    },
+    {
+      "id": "kfc-grilled",
+      "name": "肯德基 新奥尔良烤鸡腿堡（配方估算）",
+      "category": "肯德基",
+      "unit": "个",
+      "basis": {
+        "amount": 1,
+        "unit": "个",
+        "energyKcal": 424.99999999999994
+      },
+      "portion": 1,
+      "source": "storeRecipe",
+      "note": "独立参考配方，非品牌官方热量；面包70g＋去皮熟鸡腿肉90g＋蛋黄酱10g＋糖2g＋生菜10g；1个参考汉堡，不代表门店酱料或标准份重。",
+      "aliases": [
+        "KFC",
+        "汉堡"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "white-bread",
+            "name": "白吐司",
+            "quantity": 70,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 266
+            },
+            "energyKcal": 186.2,
+            "source": "sr28",
+            "reference": {
+              "ndb": "18069",
+              "description": "BREAD,WHITE,COMMLY PREP (INCL SOFT BREAD CRUMBS)",
+              "kcalPer100g": 266
+            },
+            "note": "商业白面包参考，按实际克重；两片60g仅快捷参考；USDA SR28 NDB 18069"
+          },
+          {
+            "foodId": "cooked-chicken-thigh",
+            "name": "去皮熟鸡腿肉",
+            "quantity": 90,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 179
+            },
+            "energyKcal": 161.1,
+            "source": "sr28",
+            "reference": {
+              "ndb": "05098",
+              "description": "CHICKEN,BROILERS OR FRYERS,THIGH,MEAT ONLY,CKD,RSTD",
+              "kcalPer100g": 179
+            },
+            "note": "烤制熟可食部，不含骨、皮和额外酱汁；USDA SR28 NDB 05098"
+          },
+          {
+            "foodId": "mayonnaise",
+            "name": "蛋黄酱（沙拉酱参考）",
+            "quantity": 10,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 680
+            },
+            "energyKcal": 68,
+            "source": "sr28",
+            "reference": {
+              "ndb": "04025",
+              "description": "SALAD DRSNG,MAYO,REG",
+              "kcalPer100g": 680
+            },
+            "note": "普通蛋黄酱参考；不是所有沙拉酱统一值；USDA SR28 NDB 04025"
+          },
+          {
+            "foodId": "sugar",
+            "name": "额外白糖",
+            "quantity": 2,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 4
+            },
+            "energyKcal": 8,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的糖；4kcal/g"
+          },
+          {
+            "foodId": "lettuce",
+            "name": "生菜（罗马生菜）",
+            "quantity": 10,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 17
+            },
+            "energyKcal": 1.7000000000000002,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11251",
+              "description": "LETTUCE,COS OR ROMAINE,RAW",
+              "kcalPer100g": 17
+            },
+            "note": "可食生重，不含酱汁；USDA SR28 NDB 11251"
+          }
+        ],
+        "totalKcal": 424.99999999999994,
+        "basisAmount": 1,
+        "basisUnit": "个",
+        "description": "按分项投入量合计，非门店配方或实测。"
+      },
+      "menuSource": {
+        "name": "肯德基中国品牌介绍",
+        "url": "https://www.kfc.com.cn/",
+        "scope": "仅作品牌和菜名背景；未提供此条目的现行大陆热量，本应用独立配方为估算"
+      },
+      "sourceDetails": {
+        "type": "店铺搭配估算",
+        "name": "NextStep 店铺参考搭配",
+        "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/SR28/dnload/sr28abbr.zip",
+        "license": "按注明的食材、油和酱料假设计算，非门店官方营养值。原料克重与成品克重不混用；实际食材、份量与用油会改变热量。"
+      }
+    },
+    {
+      "id": "kfc-tart",
+      "name": "肯德基 葡式蛋挞（台版原味参考）",
+      "category": "肯德基",
+      "unit": "个",
+      "basis": {
+        "amount": 1,
+        "unit": "个",
+        "energyKcal": 182
+      },
+      "portion": 1,
+      "source": "kfcTartTW",
+      "note": "台版原味蛋挞每个52g、182kcal参考；不是大陆葡式蛋挞的官方热量。",
+      "aliases": [
+        "KFC",
+        "汉堡",
+        "蛋挞"
+      ],
+      "region": "TW",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "sourceDetails": {
+        "type": "台版营养参考",
+        "name": "台北市食材登录平台 · 肯德基原味蛋挞",
+        "url": "https://foodtracer.health.gov.taipei/UniPages/CustPageView?company_id=97161500&fid=df2a1a9a-6c79-4efd-942c-4acfcf11b659&itemno=36&mid=b9f0aa7c-8b7e-4eb0-8017-f3c0a2e93a39&pt=%E7%94%9C%E9%BB%9E%E9%A1%9E",
+        "license": "业者公开台版原味每个52g、182kcal，非大陆葡式蛋挞实测；仅作跨地区参考，实际包装或点餐营养表优先。2026-10-24核查。"
+      }
+    },
+    {
+      "id": "mc-fries-small",
+      "name": "麦当劳 薯条（小份）",
+      "category": "麦当劳",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 209.60803059273422
+      },
+      "portion": 1,
+      "source": "mcFries",
+      "note": "大陆官网小份877kJ ÷ 4.184，不是迷你份；不含额外蘸酱。",
+      "aliases": [
+        "薯条",
+        "麦记"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "sourceDetails": {
+        "type": "大陆官方营养参考",
+        "name": "麦当劳中国 · 薯条（官网营养表2025-04）",
+        "url": "https://www.mcdonalds.com.cn/product/french-fries",
+        "license": "小/中/大各877/1210/1587kJ，除以4.184换算kcal；迷你444kJ不作小份。2026-10-24核查，不含额外蘸酱。"
+      }
+    },
+    {
+      "id": "mc-fries-medium",
+      "name": "麦当劳 薯条（中份）",
+      "category": "麦当劳",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 289.19694072657745
+      },
+      "portion": 1,
+      "source": "mcFries",
+      "note": "大陆官网中份1210kJ ÷ 4.184；不含额外蘸酱。",
+      "aliases": [
+        "薯条",
+        "麦记"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "sourceDetails": {
+        "type": "大陆官方营养参考",
+        "name": "麦当劳中国 · 薯条（官网营养表2025-04）",
+        "url": "https://www.mcdonalds.com.cn/product/french-fries",
+        "license": "小/中/大各877/1210/1587kJ，除以4.184换算kcal；迷你444kJ不作小份。2026-10-24核查，不含额外蘸酱。"
+      }
+    },
+    {
+      "id": "mc-fries-large",
+      "name": "麦当劳 薯条（大份）",
+      "category": "麦当劳",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 379.302103250478
+      },
+      "portion": 1,
+      "source": "mcFries",
+      "note": "大陆官网大份1587kJ ÷ 4.184；不含额外蘸酱。",
+      "aliases": [
+        "薯条",
+        "麦记"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "sourceDetails": {
+        "type": "大陆官方营养参考",
+        "name": "麦当劳中国 · 薯条（官网营养表2025-04）",
+        "url": "https://www.mcdonalds.com.cn/product/french-fries",
+        "license": "小/中/大各877/1210/1587kJ，除以4.184换算kcal；迷你444kJ不作小份。2026-10-24核查，不含额外蘸酱。"
+      }
+    },
+    {
+      "id": "kfc-fries-small",
+      "name": "肯德基 薯条（小份，配方估算）",
+      "category": "肯德基",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 223.5
+      },
+      "portion": 1,
+      "source": "storeRecipe",
+      "note": "独立参考配方，非品牌官方热量；土豆生重150g＋吸油12g；小/中/大为本应用参考配方，不是门店官方份重；原料重量不能当成炸后重量，不含额外蘸酱。",
+      "aliases": [
+        "薯条",
+        "KFC"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "potato-raw",
+            "name": "土豆（原料）",
+            "quantity": 150,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 77
+            },
+            "energyKcal": 115.5,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11352",
+              "description": "POTATOES,FLESH & SKN,RAW",
+              "kcalPer100g": 77
+            },
+            "note": "生重，不是炸薯条或熟成品重量；USDA SR28 NDB 11352"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 12,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 108,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          }
+        ],
+        "totalKcal": 223.5,
+        "basisAmount": 1,
+        "basisUnit": "份",
+        "description": "按分项投入量合计，非门店配方或实测。"
+      },
+      "menuSource": {
+        "name": "肯德基中国品牌介绍",
+        "url": "https://www.kfc.com.cn/",
+        "scope": "仅作品牌和菜名背景；未提供此条目的现行大陆热量，本应用独立配方为估算"
+      },
+      "sourceDetails": {
+        "type": "店铺搭配估算",
+        "name": "NextStep 店铺参考搭配",
+        "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/SR28/dnload/sr28abbr.zip",
+        "license": "按注明的食材、油和酱料假设计算，非门店官方营养值。原料克重与成品克重不混用；实际食材、份量与用油会改变热量。"
+      }
+    },
+    {
+      "id": "kfc-fries-medium",
+      "name": "肯德基 薯条（中份，配方估算）",
+      "category": "肯德基",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 314.70000000000005
+      },
+      "portion": 1,
+      "source": "storeRecipe",
+      "note": "独立参考配方，非品牌官方热量；土豆生重210g＋吸油17g；小/中/大为本应用参考配方，不是门店官方份重；原料重量不能当成炸后重量，不含额外蘸酱。",
+      "aliases": [
+        "薯条",
+        "KFC"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "potato-raw",
+            "name": "土豆（原料）",
+            "quantity": 210,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 77
+            },
+            "energyKcal": 161.70000000000002,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11352",
+              "description": "POTATOES,FLESH & SKN,RAW",
+              "kcalPer100g": 77
+            },
+            "note": "生重，不是炸薯条或熟成品重量；USDA SR28 NDB 11352"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 17,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 153,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          }
+        ],
+        "totalKcal": 314.70000000000005,
+        "basisAmount": 1,
+        "basisUnit": "份",
+        "description": "按分项投入量合计，非门店配方或实测。"
+      },
+      "menuSource": {
+        "name": "肯德基中国品牌介绍",
+        "url": "https://www.kfc.com.cn/",
+        "scope": "仅作品牌和菜名背景；未提供此条目的现行大陆热量，本应用独立配方为估算"
+      },
+      "sourceDetails": {
+        "type": "店铺搭配估算",
+        "name": "NextStep 店铺参考搭配",
+        "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/SR28/dnload/sr28abbr.zip",
+        "license": "按注明的食材、油和酱料假设计算，非门店官方营养值。原料克重与成品克重不混用；实际食材、份量与用油会改变热量。"
+      }
+    },
+    {
+      "id": "kfc-fries-large",
+      "name": "肯德基 薯条（大份，配方估算）",
+      "category": "肯德基",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 405.9
+      },
+      "portion": 1,
+      "source": "storeRecipe",
+      "note": "独立参考配方，非品牌官方热量；土豆生重270g＋吸油22g；小/中/大为本应用参考配方，不是门店官方份重；原料重量不能当成炸后重量，不含额外蘸酱。",
+      "aliases": [
+        "薯条",
+        "KFC"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "potato-raw",
+            "name": "土豆（原料）",
+            "quantity": 270,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 77
+            },
+            "energyKcal": 207.9,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11352",
+              "description": "POTATOES,FLESH & SKN,RAW",
+              "kcalPer100g": 77
+            },
+            "note": "生重，不是炸薯条或熟成品重量；USDA SR28 NDB 11352"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 22,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 198,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          }
+        ],
+        "totalKcal": 405.9,
+        "basisAmount": 1,
+        "basisUnit": "份",
+        "description": "按分项投入量合计，非门店配方或实测。"
+      },
+      "menuSource": {
+        "name": "肯德基中国品牌介绍",
+        "url": "https://www.kfc.com.cn/",
+        "scope": "仅作品牌和菜名背景；未提供此条目的现行大陆热量，本应用独立配方为估算"
+      },
+      "sourceDetails": {
+        "type": "店铺搭配估算",
+        "name": "NextStep 店铺参考搭配",
+        "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/SR28/dnload/sr28abbr.zip",
+        "license": "按注明的食材、油和酱料假设计算，非门店官方营养值。原料克重与成品克重不混用；实际食材、份量与用油会改变热量。"
+      }
+    },
+    {
+      "id": "mc-nuggets",
+      "name": "麦当劳 麦乐鸡（5块）",
+      "category": "麦当劳",
+      "unit": "块",
+      "basis": {
+        "amount": 5,
+        "unit": "块",
+        "energyKcal": 215
+      },
+      "portion": 5,
+      "source": "mcNuggets",
+      "note": "大陆官网当家产品介绍：5块215kcal；不含额外蘸酱。",
+      "aliases": [
+        "鸡块",
+        "麦记"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "sourceDetails": {
+        "type": "大陆官方营养参考",
+        "name": "麦当劳中国 · 麦乐鸡当家产品介绍",
+        "url": "https://www.mcdonalds.com.cn/know_your_icon/McNuggets-star-product",
+        "license": "官网公开5块215kcal，按块数比例计算，不含额外蘸酱。2026-10-24核查；以实际规格为准。"
+      }
+    },
+    {
+      "id": "kfc-nuggets",
+      "name": "肯德基 上校鸡块（配方估算）",
+      "category": "肯德基",
+      "unit": "块",
+      "basis": {
+        "amount": 1,
+        "unit": "块",
+        "energyKcal": 45.14
+      },
+      "portion": 5,
+      "source": "storeRecipe",
+      "note": "独立参考配方，非品牌官方热量；每1块按熟鸡胸10g＋白面包屑4g＋吸油2g合计；默认5块按比例计算。实际肉、裹粉、大小与吸油不同，不含蘸酱。",
+      "aliases": [
+        "鸡块",
+        "KFC"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-24.1",
+      "checkedAt": "2026-10-24",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "chicken",
+            "name": "去皮烤鸡胸肉",
+            "quantity": 10,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 165
+            },
+            "energyKcal": 16.5,
+            "source": "chicken",
+            "reference": null,
+            "note": "熟可食部，不含额外酱汁"
+          },
+          {
+            "foodId": "white-bread",
+            "name": "白吐司",
+            "quantity": 4,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 266
+            },
+            "energyKcal": 10.64,
+            "source": "sr28",
+            "reference": {
+              "ndb": "18069",
+              "description": "BREAD,WHITE,COMMLY PREP (INCL SOFT BREAD CRUMBS)",
+              "kcalPer100g": 266
+            },
+            "note": "商业白面包参考，按实际克重；两片60g仅快捷参考；USDA SR28 NDB 18069"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 2,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 18,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          }
+        ],
+        "totalKcal": 45.14,
+        "basisAmount": 1,
+        "basisUnit": "块",
+        "description": "按分项投入量合计，非门店配方或实测。"
+      },
+      "menuSource": {
+        "name": "肯德基中国品牌介绍",
+        "url": "https://www.kfc.com.cn/",
+        "scope": "仅作品牌和菜名背景；未提供此条目的现行大陆热量，本应用独立配方为估算"
+      },
+      "sourceDetails": {
+        "type": "店铺搭配估算",
+        "name": "NextStep 店铺参考搭配",
+        "url": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/SR28/dnload/sr28abbr.zip",
+        "license": "按注明的食材、油和酱料假设计算，非门店官方营养值。原料克重与成品克重不混用；实际食材、份量与用油会改变热量。"
+      }
+    }
+  ]
+}

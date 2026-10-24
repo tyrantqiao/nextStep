@@ -354,3 +354,47 @@ button.history-row{display:grid;grid-template-columns:38px minmax(0,1fr) 16px;al
 .exercise-shop-custom{flex-shrink:0;padding-top:4px}
 #workout-dialog:has(.project-demo){overflow-y:auto}
 @media(max-width:600px){.exercise-browser-menu{grid-template-columns:56px minmax(0,1fr);gap:9px}.exercise-browser-search{grid-template-columns:minmax(0,1fr) 100px}.exercise-browser-search input,.exercise-browser-search select{padding:9px 7px;font-size:12px}.exercise-preview{width:60px;height:68px}.exercise-product{gap:7px}.exercise-product strong{font-size:13px}.exercise-product small{font-size:10px}.exercise-browser-menu>nav button{font-size:12px}.exercise-select.secondary-button{padding:8px;font-size:11px}.exercise-picker-footer>span{font-size:10px}}
+/* Task-focused home: today and plans are separate, parallel views. */
+.home-view-tabs{display:flex;gap:6px;background:#e9edf5;padding:5px;border-radius:13px;margin:0 0 22px;max-width:400px}
+.home-view-tabs button{flex:1;min-height:44px;border-radius:10px;background:transparent;color:#67748d;font-size:15px}
+.home-view-tabs button[aria-pressed=true]{background:white;color:#3155cb;font-weight:700;box-shadow:0 2px 8px #2439610b}
+.home-today-content,.home-plan-card{max-width:860px}
+.home-today-content>.home-training-card{padding:26px;margin:0 0 14px;border-radius:18px}
+.home-today-content .home-training-main{display:flex;flex-direction:column;align-items:stretch;gap:22px}
+.home-today-content .home-training-eyebrow{font-size:12px;margin-bottom:12px}
+.home-today-content .home-training-copy h2{font-size:26px;line-height:1.4}
+.home-today-content .home-training-description{font-size:13px;line-height:1.8;margin-top:10px}
+.home-today-content .home-training-start{width:100%;font-size:15px;min-height:50px;justify-content:center}
+.home-today-content .home-training-start strong{font-size:15px}
+.home-training-alternatives{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:24px}
+.home-training-alternatives button{padding:15px 8px;font-size:14px;min-width:0}
+.home-training-alternatives small{display:block;margin-top:6px;font-size:11px;color:#7c879b;font-weight:400}
+.home-today-content .home-recent{padding:22px;border:1px solid #e8ecf2;box-shadow:none;margin:0;border-radius:18px}
+.home-today-content .home-recent h2{font-size:17px}
+.home-today-content .home-recent>.small-label{line-height:1.9;margin:0}
+.home-saved-summary{font-size:12px;color:#77839a;margin:0 0 10px}
+.home-statistics-link{display:block;margin:16px auto;min-height:44px;font-size:13px}
+.home-plan-card{padding:24px;border:1px solid #e8ecf2;box-shadow:none;margin:0;border-radius:18px;min-width:0}
+.home-plan-card>.card-head{gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.home-plan-card>.card-head h2{font-size:18px}
+.home-plan-card>.card-head .small-label{font-size:11px;line-height:1.7;margin:5px 0 0}
+.home-plan-week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:6px;padding-bottom:20px;border-bottom:1px solid #edf0f5;margin-bottom:20px}
+.home-plan-date{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:0;min-height:98px;background:#f5f7fa;border:1px solid transparent;border-radius:10px;padding:10px 2px;color:#748098;font-size:12px}
+.home-plan-date small{font-size:10px}.home-plan-date strong{font-size:12px;white-space:nowrap;font-weight:500}
+.home-plan-date.is-today>span:first-child{color:#3155cb;font-weight:700}
+.home-plan-date[aria-pressed=true]{border-color:#3155cb;background:#edf1ff;color:#3155cb}
+.home-plan-marker{font-size:9px;min-height:12px;color:#508466}
+.home-plan-source{font-size:12px;color:#7d879b;line-height:1.8;margin:8px 0 14px}
+.home-plan-card .weekly-plan-selected{align-items:flex-start;gap:10px}.home-plan-card .weekly-plan-selected h3{font-size:19px;overflow-wrap:anywhere}
+.home-plan-card .weekly-plan-exercise{min-width:0}.home-plan-card .weekly-plan-exercise>div{min-width:0;overflow-wrap:anywhere}
+.home-plan-card .weekly-plan-edit{width:100%;min-height:46px;margin-top:20px}
+.home-plan-defaults{max-width:860px;padding:22px 4px;display:flex;align-items:center;gap:20px}
+.home-plan-defaults>div{flex:1;min-width:0}.home-plan-defaults h2{font-size:14px;font-weight:600;margin:0 0 8px}
+.home-plan-defaults p{font-size:12px;line-height:1.9;margin:0;overflow-wrap:anywhere}
+.home-plan-defaults button{font-size:12px;flex-shrink:0;min-height:44px}
+.home-view-tabs button:focus-visible,.home-plan-date:focus-visible{outline:3px solid #d99439;outline-offset:2px}
+@media(max-width:700px){.home-view-tabs{max-width:none;margin-bottom:18px}.home-today-content>.home-training-card{padding:22px 18px}.home-today-content .home-training-copy h2{font-size:23px}.home-today-content .home-recent{padding:18px}.home-plan-card{padding:18px 12px}.home-plan-week{gap:3px}.home-plan-date{font-size:11px;padding:9px 1px;gap:6px}.home-plan-date strong{font-size:10px}.home-plan-date small{font-size:9px}.home-plan-defaults{flex-direction:column;align-items:stretch;gap:12px;padding:20px 4px}.home-plan-defaults button{align-self:flex-start}.home-training-alternatives{gap:10px}}
+@media(max-width:350px){.home-plan-card{padding:16px 10px}.home-plan-week{gap:2px}.home-plan-date{font-size:10px}.home-plan-date strong{font-size:9px}.home-plan-date small{font-size:8px}.home-plan-marker{font-size:8px}.home-training-alternatives small{font-size:10px}.home-today-content .home-training-description{font-size:12px}}
+.home-training-alternatives button{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:0;background:#fff;border:1px solid #e4e9f2;border-radius:12px}
+.training-repeat-entry{flex-shrink:0;min-height:40px;align-self:center;font-size:12px;margin-top:6px}
+.home-plan-defaults .secondary-button{border:1px solid #e0e6f0;border-radius:10px;padding:12px;background:#fff}

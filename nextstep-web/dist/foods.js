@@ -1,6 +1,14 @@
 /* Offline references. Recipe portions are editable, never personal measurements. */
-const foodDataVersion='2026-10-20.1';
+const foodDataVersion='2026-10-24.1';
 const foodSources={
+  mcBigmac:{type:'大陆官方营养参考',name:'麦当劳中国 · 巨无霸（官网营养表2025-04）',url:'https://www.mcdonalds.com.cn/product/Big-Mac',license:'官网每个2146kJ，除以4.184换算kcal；2026-10-24核查。以实际门店配方和份量为准。'},
+  mcChicken:{type:'大陆官方营养参考',name:'麦当劳中国 · 麦香鸡（官网营养表2025-04）',url:'https://www.mcdonalds.com.cn/product/McChicken',license:'官网每个1546kJ，除以4.184换算kcal；2026-10-24核查。以实际门店配方和份量为准。'},
+  mcGrilled:{type:'大陆官方营养参考',name:'麦当劳中国 · 板烧鸡腿堡（官网营养表2025-04）',url:'https://www.mcdonalds.com.cn/product/Grilled-Chicken-Sandwich',license:'官网每个1638kJ，除以4.184换算kcal；采用营养表，未混用旧当家产品介绍的399kcal。2026-10-24核查。'},
+  mcFries:{type:'大陆官方营养参考',name:'麦当劳中国 · 薯条（官网营养表2025-04）',url:'https://www.mcdonalds.com.cn/product/french-fries',license:'小/中/大各877/1210/1587kJ，除以4.184换算kcal；迷你444kJ不作小份。2026-10-24核查，不含额外蘸酱。'},
+  mcNuggets:{type:'大陆官方营养参考',name:'麦当劳中国 · 麦乐鸡当家产品介绍',url:'https://www.mcdonalds.com.cn/know_your_icon/McNuggets-star-product',license:'官网公开5块215kcal，按块数比例计算，不含额外蘸酱。2026-10-24核查；以实际规格为准。'},
+  cocaZero:{type:'品牌零能量参考',name:'可口可乐中国 · 无糖可口可乐',url:'https://www.coca-cola.com/cn/zh/brands/coca-cola',license:'品牌大陆官网明确标注无糖款0能量。仅适用于对应无糖款，不把所有无糖饮品自动算零；实际包装为准。2026-10-24核查。'},
+  spriteZeroHK:{type:'港版营养参考',name:'可口可乐香港 · 无糖雪碧营养标签',url:'https://www.coca-cola.com/hk/zh/brands/sprite',license:'香港版无糖雪碧每100ml为0kcal；不是已核实的大陆包装值，实际包装不同时请编辑。2026-10-24核查。'},
+  kfcTartTW:{type:'台版营养参考',name:'台北市食材登录平台 · 肯德基原味蛋挞',url:'https://foodtracer.health.gov.taipei/UniPages/CustPageView?company_id=97161500&fid=df2a1a9a-6c79-4efd-942c-4acfcf11b659&itemno=36&mid=b9f0aa7c-8b7e-4eb0-8017-f3c0a2e93a39&pt=%E7%94%9C%E9%BB%9E%E9%A1%9E',license:'业者公开台版原味每个52g、182kcal，非大陆葡式蛋挞实测；仅作跨地区参考，实际包装或点餐营养表优先。2026-10-24核查。'},
   gangrongLabel:{type:'包装标签参考',name:'用户提供的港荣淡糖蒸蛋糕包装照片',url:null,license:'按本次包装营养表录入；每100g，实际包装为准。单个重量未提供，需按实际食用克数填写。'},
   grains:{type:'食物成分参考',name:'USDA Standard Reference 28 · 谷物与意面',url:'https://www.ars.usda.gov/ARSUserFiles/80400535/Data/SR/SR28/reports/sr28fg20.pdf',license:'USDA 公共领域数据；仅选用基础食物参考值'},
   eggs:{type:'食物成分参考',name:'USDA SR28 · 鸡蛋 NDB 01129',url:'https://www.ars.usda.gov/ARSUserFiles/80400525/Data/SR/SR28/reports/sr28fg01.pdf',license:'USDA 公共领域数据'},
@@ -745,6 +753,34 @@ gangrongCake.checkedAt='2026-10-20';
 gangrongCake.browseTags=['breakfast','staple','snacks','home','cupboard','night'];
 gangrongCake.label={basisGrams:100,energyKj:1335,proteinGrams:6.5,fatGrams:10.2,saturatedFatGrams:3.4,transFatGrams:0,carbohydrateGrams:49.8,sugarGrams:13.7,sodiumMg:313};
 foodCatalog.push(gangrongCake);
+
+/* Fill the remaining 17 catalog references. Saved meal/draft snapshots are never rewritten. */
+const foodEnergyReferences=[
+  ['mc-bigmac',2146/4.184,'mcBigmac','大陆官网每个2146kJ ÷ 4.184；不含套餐配菜。'],
+  ['mc-chicken',1546/4.184,'mcChicken','大陆官网每个1546kJ ÷ 4.184；不含套餐配菜。'],
+  ['mc-grilled',1638/4.184,'mcGrilled','大陆官网营养表每个1638kJ ÷ 4.184；不混用旧介绍热量。'],
+  ['mc-fries-small',877/4.184,'mcFries','大陆官网小份877kJ ÷ 4.184，不是迷你份；不含额外蘸酱。'],
+  ['mc-fries-medium',1210/4.184,'mcFries','大陆官网中份1210kJ ÷ 4.184；不含额外蘸酱。'],
+  ['mc-fries-large',1587/4.184,'mcFries','大陆官网大份1587kJ ÷ 4.184；不含额外蘸酱。'],
+  ['mc-nuggets',215,'mcNuggets','大陆官网当家产品介绍：5块215kcal；不含额外蘸酱。'],
+  ['zero-cola',0,'cocaZero','品牌大陆官网无糖款0能量；按实际饮用ml，包装优先。'],
+  ['zero-sprite',0,'spriteZeroHK','港版无糖款0kcal/100ml参考；未核实大陆包装，实际标签不同时请编辑。'],
+  ['kfc-tart',182,'kfcTartTW','台版原味蛋挞每个52g、182kcal参考；不是大陆葡式蛋挞的官方热量。']
+];
+for(const [id,kcal,source,note]of foodEnergyReferences){const f=foodCatalog.find(f=>f.id===id);f.basis.energyKcal=kcal;f.source=source;f.note=note;f.checkedAt='2026-10-24'}
+Object.assign(foodCatalog.find(f=>f.id==='zero-sprite'),{name:'无糖雪碧（港版营养参考）',region:'HK'});
+Object.assign(foodCatalog.find(f=>f.id==='kfc-tart'),{name:'肯德基 葡式蛋挞（台版原味参考）',region:'TW'});
+function foodReferenceRecipe(id,parts,note){
+ const entry=foodCatalog.find(f=>f.id===id),components=parts.map(([foodId,quantity])=>{const f=foodCatalog.find(f=>f.id===foodId);return {foodId,name:f.name,quantity,unit:f.unit,basis:{...f.basis},energyKcal:quantity/f.basis.amount*f.basis.energyKcal,source:f.source,reference:f.reference||null,note:f.note}}),total=components.reduce((sum,c)=>sum+c.energyKcal,0);
+ entry.basis.energyKcal=total;entry.source=entry.category==='肯德基'?'storeRecipe':'recipe';entry.checkedAt='2026-10-24';entry.note='独立参考配方，非品牌官方热量；'+note;entry.recipe={components,totalKcal:total,basisAmount:entry.basis.amount,basisUnit:entry.unit,description:'按分项投入量合计，非门店配方或实测。'};
+ if(entry.category==='肯德基'){entry.name=entry.name.replace(/）$/,'，配方估算）');if(!entry.name.includes('配方估算'))entry.name+='（配方估算）';entry.menuSource={name:'肯德基中国品牌介绍',url:'https://www.kfc.com.cn/',scope:'仅作品牌和菜名背景；未提供此条目的现行大陆热量，本应用独立配方为估算'}}
+}
+foodReferenceRecipe('kfc-spicy',[['white-bread',70],['cooked-chicken-thigh',90],['white-bread',15],['oil',7],['mayonnaise',12],['lettuce',10]],'面包70g＋去皮熟鸡腿肉90g＋裹粉用白面包屑参考15g＋吸油7g＋蛋黄酱12g＋生菜10g；为1个参考汉堡，实际裹粉、皮、吸油及份量有差异。');
+foodReferenceRecipe('kfc-grilled',[['white-bread',70],['cooked-chicken-thigh',90],['mayonnaise',10],['sugar',2],['lettuce',10]],'面包70g＋去皮熟鸡腿肉90g＋蛋黄酱10g＋糖2g＋生菜10g；1个参考汉堡，不代表门店酱料或标准份重。');
+for(const [size,potato,oil]of [['small',150,12],['medium',210,17],['large',270,22]])foodReferenceRecipe('kfc-fries-'+size,[['potato-raw',potato],['oil',oil]],'土豆生重'+potato+'g＋吸油'+oil+'g；小/中/大为本应用参考配方，不是门店官方份重；原料重量不能当成炸后重量，不含额外蘸酱。');
+foodReferenceRecipe('kfc-nuggets',[['chicken',10],['white-bread',4],['oil',2]],'每1块按熟鸡胸10g＋白面包屑4g＋吸油2g合计；默认5块按比例计算。实际肉、裹粉、大小与吸油不同，不含蘸酱。');
+foodReferenceRecipe('bottle-tea',[['sugar',10]],'每100ml终体积假设含糖10g，按4kcal/g计算，忽略微量茶固形物；不是具体品牌标签，不适用于无糖或低糖款，实际包装优先。');
+Object.assign(foodCatalog.find(f=>f.id==='bottle-tea'),{name:'瓶装柠檬茶（含糖配方估算）',aliases:['冰红茶','柠檬红茶']});
 const foodBrowseGroups={
   place:{label:'地点',items:[['restaurant','餐馆','🍽️'],['home','家里','🏠'],['fridge','冰箱','🧊'],['cupboard','零食柜','🍪']]},
   kind:{label:'食材',items:[['fruit','水果','🍎'],['meat','肉类海鲜','🥩'],['vegetable','蔬菜','🥬'],['staple','主食','🍚'],['dairy','奶蛋豆','🥚'],['snacks','零食坚果','🥜'],['drink','饮料','🥤'],['custom','我的食品','📝']]},
