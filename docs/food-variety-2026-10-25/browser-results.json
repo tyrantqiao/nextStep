@@ -1,0 +1,150 @@
+{
+  "results": [
+    {
+      "name": "Eleven stores fit 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Pizza Hut menu and portions 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Haidilao menu and separate broth 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Menu footer stays visible 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Eleven stores fit 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Pizza Hut menu and portions 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Haidilao menu and separate broth 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Menu footer stays visible 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Eleven stores fit 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Pizza Hut menu and portions 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Haidilao menu and separate broth 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Menu footer stays visible 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Store search finds Pizza Hut",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Inside store search matches shrimp paste",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Reload restores store query and cross-store cart",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Pizza portion halves before confirmation",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Cross-store cart fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Cross-store cart fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Cross-store cart fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Review contains both estimated foods",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Shrimp paste source shows independent recipe",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Source dialog fits",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Failed save keeps cart and half portion",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Retry saves once with correct energy",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Sources and calories remain saved after reload",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "New basic food is searchable by type",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Switching to stores retains new fruit",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "All foods have calories and existing energy features work",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "No browser runtime errors",
+      "passed": true,
+      "value": true
+    }
+  ],
+  "errors": []
+}

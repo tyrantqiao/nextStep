@@ -1,0 +1,205 @@
+{
+  "results": [
+    {
+      "name": "Empty nutrition fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Incomplete profile stays unknown 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Basis dialog fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Profile form fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Today recommendation fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Empty nutrition fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Incomplete profile stays unknown 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Basis dialog fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Profile form fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Today recommendation fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Empty nutrition fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Incomplete profile stays unknown 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Basis dialog fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Profile form fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Today recommendation fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Profile saved through real form",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Formula settings survive reload",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Partial food does not claim daily balance",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Complete food shows daily balance",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Filled nutrition fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Filled basis fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Filled today fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Preview fits and waits for confirmation 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Training history fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Filled nutrition fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Filled basis fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Filled today fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Preview fits and waits for confirmation 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Training history fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Filled nutrition fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Filled basis fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Filled today fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Preview fits and waits for confirmation 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Training history fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Confirmation starts suggested groups",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Current draft survives reload",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Saving updates advice to recovery",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Nutrition previous date is local and independent",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Statistics retain scroll position",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "No browser runtime errors",
+      "passed": true,
+      "value": true
+    }
+  ],
+  "errors": []
+}

@@ -128,11 +128,64 @@ function nMealTimeline(day){
         nRepeatMealEntry(key,label))+'</div></li>';
   }).join('')+'</ol><div class="n-timeline-footer"><p class="small-label">'+(day.complete?'已确认当天记全；修改记录后需重新确认。':'热量为参考估算。核对饮料、酱料和加餐后，再标记记全。')+'</p><button class="secondary-button" data-nut-action="confirm-day" '+(!day.meals.length?'disabled':'')+'>'+(day.complete?'已确认记全 · 取消确认':'确认当天饮食已记全')+'</button></div></section>';
 }
+// Recompute saved records without changing manual targets or historical snapshots.
+function nDailyExpenditure(date=nDate()){
+  const weight=Number(profile.weight),height=Number(profile.height),age=Number(profile.energyAge),sex=profile.energySex;
+  const factor=[1.2,1.4,1.6].includes(Number(profile.energyFactor))?Number(profile.energyFactor):1.2;
+  const ready=nFinite(weight,20,300)&&nFinite(height,100,250)&&Number.isInteger(age)&&age>=19&&age<=78&&['male','female'].includes(sex);
+  const resting=ready?10*weight+6.25*height-5*age+(sex==='male'?5:-161):null;
+  if(resting!==null&&resting<=0)return {ready:false,total:null};
+  const baseline=ready?resting*factor:null,selected=records.filter(r=>r.date===date);
+  let extra=0,estimated=0,missing=0;
+  for(const record of selected){
+    const parts=recordEstimates(record);
+    missing+=completedItems(record).filter(e=>!e.calorieEstimate).length;
+    if(!parts.length&&!completedItems(record).length)missing++;
+    for(const part of parts){
+      const minutes=Number(part.minutes),met=Number(part.met),bodyWeight=Number(part.bodyWeight);
+      if(!nFinite(minutes,0.1,1440)||!nFinite(met,1,30)||!nFinite(bodyWeight,20,300)){missing++;continue}
+      estimated++;
+      if(ready)extra+=Math.max(0,met*bodyWeight*minutes/60-baseline*minutes/1440);
+    }
+  }
+  return {ready,resting:ready?Math.round(resting):null,baseline:ready?Math.round(baseline):null,extra:ready?Math.round(extra):null,total:ready?Math.round(baseline+extra):null,factor,weight,height,age,sex,estimated,missing,count:selected.length};
+}
+function nExpenditureSummary(day){
+  const e=nDailyExpenditure(day.date),valid=day.complete&&!day.unknown&&!nutritionProblem,balance=valid&&e.ready?e.total-Math.round(day.known):null;
+  return '<div class="n-expenditure"><div class="card-head"><h3>全天预估消耗</h3><button class="text-button" data-action="energy-basis" data-energy-date="'+day.date+'">计算依据 ›</button></div><strong class="n-expenditure-value">'+(e.ready?e.total.toLocaleString():'—')+'<small> kcal / 天</small></strong><p class="small-label">'+(e.ready?'日常基线 '+e.baseline+' ＋ 已记训练额外消耗 '+e.extra+' kcal'+(e.missing?' · 部分训练待补估算':''):'补充资料身高、体重、年龄和公式性别后显示')+'</p><p class="small-label">'+(balance!==null?(balance>=0?'按已记数据估算缺口约 ':'按已记数据估算盈余约 ')+Math.abs(balance)+' kcal'+(e.missing?'（训练估算未全）':''):'饮食记全且热量完整后显示摄入与消耗差额')+'</p></div>';
+}
+function nEnergyBasis(date=nDate()){
+  if(!nValidDate(date))return;
+  const e=nDailyExpenditure(date);
+  openDialog(dialogHeader('全天消耗计算依据')+'<p class="subtitle">'+date+' · 全天估算，非截至此刻的消耗</p><p>静息消耗采用 Mifflin–St Jeor 公式：10 × kg ＋ 6.25 × cm − 5 × 年龄 ＋ 性别常数（男 +5，女 −161）。适用参考为 19–78 岁成人。</p><p class="small-label">'+(e.ready?'使用资料：'+e.height+' cm / '+e.weight+' kg / '+e.age+' 岁；静息约 '+e.resting+' kcal。':'资料尚不完整或不在公式参考范围内，不自动猜测年龄和性别。')+'</p><p>日常基线＝静息消耗 × 日常活动系数。1.2 久坐、1.4 经常走动、1.6 体力活动较多，是粗略模型假设，均不含专门训练；未设置时按 1.2。</p><p>每项训练额外消耗＝max(0，MET × 记录时体重 × 分钟 ÷ 60 − 日常基线 × 分钟 ÷ 1440)。以运动替换同一时段的日常基线，避免把含静息的运动热量直接重复相加。</p><p class="small-label">仅合计当天已保存且填写了实际运动用时、MET、体重的项目；不按整次时长推算力量运动，不额外叠加步数或草稿。未记录的运动不代表零消耗。历史日期按当前资料重算，非历史测量；手填维持消耗和饮食目标保持独立。</p><p class="small-label"><a href="https://ajcn.nutrition.org/article/S0002-9165(23)16698-6/abstract" target="_blank" rel="noopener">Mifflin 等，1990 原始研究</a> · <a href="https://pacompendium.com/" target="_blank" rel="noopener">2024 体力活动汇编</a></p><button class="primary-button" data-action="edit-personal">完善估算资料</button>');
+}
+function nTodayTrainingAdvice(){
+  const day=nutritionDay(nDate()),energy=nDailyExpenditure(),scheduled=scheduledSession((new Date().getDay()+6)%7),done=records.some(r=>r.date===nDate());
+  const known=day.complete&&!day.unknown&&!nutritionProblem;
+  const base={day,energy,items:[],title:'今日训练方案',reason:'',steps:[],action:''};
+  if(draft)return {...base,title:draft.finishedAt?'先保存本次训练':'继续当前训练',reason:'保留进行中的动作和组数；饮食变化不会重写训练草稿。',steps:['按当前状态完成或结束本次训练。'],action:'continue-draft'};
+  if(done)return {...base,title:'今天以恢复为主',reason:'今天已有训练记录，优先休息和补充饮食，不因摄入增加继续叠加训练。',steps:['可轻松走动 10–15 分钟，疲劳时直接休息。']};
+  if(known&&energy.ready&&day.known<energy.resting)return {...base,title:'今天先安排轻松活动',reason:'已确认的全天摄入低于静息消耗估算，先核对漏记、补充饮食并观察恢复；不据此诊断供能状态。',steps:['今天可休息，或轻松走动 10–15 分钟。','有疲劳或不适时停止，暂缓高强度训练。']};
+  if(scheduled&&!scheduled.items.length)return {...base,title:'今天按计划休息',reason:'保留今日休息安排；单日饮食热量不改变训练周期。',steps:['可轻松走动 10–15 分钟，按体感选择。']};
+  const items=scheduled?.items.length?nClone(scheduled.items):[{name:'椅子深蹲',type:'bodyweight',sets:2,reps:8},{name:'墙壁俯卧撑',type:'bodyweight',sets:2,reps:8},{name:'臀桥',type:'bodyweight',sets:2,reps:10}];
+  return {...base,items,mode:scheduled?.items.length?'plan':'free',title:scheduled?.name||'轻量全身训练参考',reason:!known?'饮食尚未记全或有热量待填，暂不按摄入增减训练量。':!energy.ready?'饮食已记全；完善估算资料后可结合消耗回看，当前按原安排或轻量参考执行。':day.known>energy.total?'已记摄入高于预估消耗，仍按常规训练，不追加抵消热量的运动。':'饮食已记全，按今日安排训练，结合体感调整；热量差额不用于推算负重。',steps:['先轻松热身 5 分钟；组间休息 60–90 秒。','动作保持轻松可控，感到吃力可提前结束。'],action:'nutrition-training-preview'};
+}
+function nTrainingAdviceCard(){
+  const a=nTodayTrainingAdvice();
+  return '<section class="card n-training-advice" aria-label="饮食与今日训练方案"><div class="card-head"><h2>'+escapeHTML(a.title)+'</h2><button class="text-button" data-page="nutrition">查看饮食 ›</button></div><p class="small-label">今日'+(a.day.meals.length?(a.day.unknown?'已知部分 ':'已记 ')+Math.round(a.day.known)+' kcal':'饮食未记录')+' · '+(a.day.complete&&!a.day.unknown?'已记全':'待补全')+(a.energy.ready?' · 全天预估消耗 '+a.energy.total+' kcal':'')+'</p><p>'+escapeHTML(a.reason)+'</p>'+(a.items.length?'<ul class="n-advice-exercises">'+a.items.map(e=>'<li>'+escapeHTML(e.name)+' · '+escapeHTML(e.sets)+' 组 × '+escapeHTML(e.reps)+' 次</li>').join('')+'</ul>':'')+'<p class="small-label">'+a.steps.map(escapeHTML).join('<br>')+'</p>'+(a.action?'<button class="secondary-button" data-action="'+a.action+'">'+(a.action==='continue-draft'?'返回本次训练':'查看并确认方案')+'</button>':'')+'<p class="small-label n-advice-note">规则参考，非个性化处方；先确认再开练，不自动修改已有计划。</p></section>';
+}
+function nPreviewTrainingAdvice(start=false){
+  const a=nTodayTrainingAdvice();
+  if(draft){resumeDraft();return}
+  if(!a.items.length){openDialog(dialogHeader(a.title)+'<p>'+escapeHTML(a.reason)+'</p><p class="small-label">'+a.steps.map(escapeHTML).join('<br>')+'</p>');return}
+  if(start){startWorkout({name:a.title,items:a.items,mode:a.mode});return}
+  openDialog(dialogHeader('确认今日建议方案')+'<p>'+escapeHTML(a.reason)+'</p><ul class="n-advice-exercises">'+a.items.map(e=>'<li>'+escapeHTML(e.name)+' · '+escapeHTML(e.sets)+' 组 × '+escapeHTML(e.reps)+' 次</li>').join('')+'</ul><p class="small-label">'+a.steps.map(escapeHTML).join('<br>')+'<br>只创建本次训练，确认开始后计时。</p><button class="primary-button" data-action="nutrition-training-start">确认并开始训练</button>');
+}
 function nDayEnergyCard(day){
   const logged=mealTypes.filter(([key])=>day.meals.some(m=>m.mealType===key)).length,items=day.meals.reduce((n,m)=>n+m.items.length,0),progress=day.plan?Math.min(100,Math.max(0,day.known/day.plan.targetKcal*100)):0;
   return '<section class="card n-energy n-day-energy"><div class="card-head"><h2>'+(day.unknown?'已知部分摄入':'全天已记摄入')+'</h2><button class="text-button" data-nut-action="target">'+(day.plan?'调整目标':'设置饮食目标')+'</button></div><div class="n-day-energy-main"><strong class="n-big">'+(day.meals.length?Math.round(day.known).toLocaleString():'—')+'<small> kcal</small></strong><div class="n-energy-target"><strong>'+escapeHTML(nDifference(day.remaining))+'</strong><small>'+(day.plan?'每日目标 '+day.plan.targetKcal+' kcal':'设置目标后显示差额')+'</small></div></div>'+
     (day.plan?'<div class="n-intake-progress" role="img" aria-label="已知摄入达到目标的'+Math.round(day.known/day.plan.targetKcal*100)+'%"><i style="width:'+progress+'%"></i></div>':'')+
-    '<div class="n-day-facts"><span><strong>'+logged+' / 4</strong> 已记餐次</span><span><strong>'+items+'</strong> 食品项</span><span><strong>'+(day.unknown?day.unknown+'项待填':day.complete?'已记全':'待确认')+'</strong> '+(day.unknown?'热量':'当天状态')+'</span></div>'+(day.meals.length?'<p class="n-energy-note">'+escapeHTML(nGapText(day))+'</p>':'')+'</section>';
+    nExpenditureSummary(day)+'<div class="n-day-facts"><span><strong>'+logged+' / 4</strong> 已记餐次</span><span><strong>'+items+'</strong> 食品项</span><span><strong>'+(day.unknown?day.unknown+'项待填':day.complete?'已记全':'待确认')+'</strong> '+(day.unknown?'热量':'当天状态')+'</span></div>'+(day.meals.length&&day.plan?.tdeeKcal?'<p class="n-energy-note">手填维持消耗对照：'+escapeHTML(nGapText(day))+'</p>':'')+'</section>';
 }
 function nutritionPage(){
   const day=nutritionDay(nutritionDate);
@@ -191,13 +244,13 @@ function nMenuLabel(){return nMenuCategories.find(([id])=>id===(mealEditor.brows
 function nStoreResults(){
  const e=mealEditor;
  if(restaurantCategories.includes(e.store)){
-  const found=nFoodList(e.storeQuery||'',e.store,'restaurant');
-  return '<div class="n-menu-list-heading" role="status"><strong>'+escapeHTML(e.store)+'菜单</strong><span>'+found.length+'项</span></div><p class="n-store-note">已收录的参考菜品，非门店完整实时菜单；估算项目已单独标注。</p>'+found.map(f=>nFoodRow(f)).join('')+(!found.length?'<p class="n-empty">没有匹配菜品，换个关键词试试。</p>':'');
+  const found=nFoodList(e.storeQuery||'',e.store,'restaurant').sort((a,b)=>e.store==='海底捞'?Number(/broth|sauce/.test(a.id))-Number(/broth|sauce/.test(b.id)):0),note=e.store==='海底捞'?'按个人吃进的食材份量记录；汤底、附着油和蘸料分开选择，整锅不等于一人摄入。':e.store==='必胜客'?'披萨的参考片或100g已分别注明；尺寸、饼底不同，按实际食用量修改。估算不是品牌官方营养值。':'已收录的参考菜品，非门店完整实时菜单；估算项目已单独标注。';
+  return '<div class="n-menu-list-heading" role="status"><strong>'+escapeHTML(e.store)+'菜单</strong><span>'+found.length+'项</span></div><p class="n-store-note">'+escapeHTML(note)+'</p>'+found.map(f=>nFoodRow(f)).join('')+(!found.length?'<p class="n-empty">没有匹配菜品，换个关键词试试。</p>':'');
  }
  const query=(e.storeListQuery||'').trim().toLowerCase(),stores=restaurantCategories.filter(name=>name.toLowerCase().includes(query)||nFoodList(query,name,'restaurant').length);
  return '<div class="n-menu-list-heading" role="status"><strong>店铺与餐饮类型</strong><span>'+stores.length+'家 / 类</span></div><div class="n-store-list">'+stores.map((name,index)=>{const foods=nFoodList('',name,'restaurant');return '<button class="n-store-card" data-nut-action="store-open" data-value="'+escapeHTML(name)+'" aria-label="进入'+escapeHTML(name)+'菜单">'+nFoodThumb(foods[0]||{})+'<span><strong>'+escapeHTML(name)+'</strong><small>'+foods.length+'款已收录菜品</small><small>'+escapeHTML(foods.slice(0,2).map(f=>f.name.replace(name+' ','')).join(' · '))+'</small></span><span aria-hidden="true">›</span></button>'}).join('')+'</div>'+(!stores.length?'<p class="n-empty">没有找到店铺，可切换搜索查找单个食品。</p>':'');
 }
-function nStoreSearch(){const e=mealEditor,inside=restaurantCategories.includes(e.store);return '<div class="n-menu-search">'+nField('nutrition-store-search',inside?'搜索'+e.store+'菜品':'搜索店铺',inside?e.storeQuery||'':e.storeListQuery||'','search','placeholder="'+(inside?'搜索本店菜品':'搜索麦当劳、肯德基或菜品')+'" autocomplete="off"')+'</div>'}
+function nStoreSearch(){const e=mealEditor,inside=restaurantCategories.includes(e.store);return '<div class="n-menu-search">'+nField('nutrition-store-search',inside?'搜索'+e.store+'菜品':'搜索店铺',inside?e.storeQuery||'':e.storeListQuery||'','search','placeholder="'+(inside?'搜索本店菜品':'搜索店铺或菜品，如必胜客、海底捞')+'" autocomplete="off"')+'</div>'}
 function nOpenStore(name){if(!mealEditor||!restaurantCategories.includes(name))return;if(!mealEditor.store)mealEditor.storeListScroll=document.getElementById('nutrition-picker-results')?.scrollTop||0;mealEditor.picker='stores';if(mealEditor.lastStore!==name)mealEditor.storeQuery='';mealEditor.store=name;mealEditor.lastStore=name;nMealRender();nQueueEditor()}
 function nStoreList(){if(!mealEditor)return;mealEditor.picker='stores';mealEditor.lastStore=mealEditor.store||mealEditor.lastStore;mealEditor.store='';nMealRender();const results=document.getElementById('nutrition-picker-results');if(results)results.scrollTop=mealEditor.storeListScroll||0;document.querySelector('[data-nut-action="store-open"][data-value="'+mealEditor.lastStore+'"]')?.focus?.({preventScroll:true});nQueueEditor()}
 function nMenuNav(){return '<nav class="n-menu-categories" aria-label="食品分类">'+nMenuCategories.filter(([id])=>id!=='restaurant').map(([id,label])=>'<button data-nut-action="menu-category" data-value="'+id+'" aria-pressed="'+((mealEditor.browse||'')===id)+'">'+label+'</button>').join('')+'</nav>'}

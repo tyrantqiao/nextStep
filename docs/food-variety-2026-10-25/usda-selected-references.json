@@ -1,0 +1,139 @@
+{
+  "checkedAt": "2026-10-25",
+  "sourceUrl": "https://www.ars.usda.gov/ARSUserFiles/80400535/DATA/SR/SR28/dnload/sr28abbr.zip",
+  "dataset": "USDA SR28 ABBREV.txt kcal per 100g edible portion",
+  "foods": [
+    {
+      "ndb": "05103",
+      "description": "CHICKEN,BROILERS OR FRYERS,WING,MEAT&SKN,CKD,RSTD",
+      "water": 59.4,
+      "energyKcal": 254.0
+    },
+    {
+      "ndb": "09070",
+      "description": "CHERRIES,SWEET,RAW",
+      "water": 82.25,
+      "energyKcal": 63.0
+    },
+    {
+      "ndb": "09164",
+      "description": "LITCHIS,RAW",
+      "water": 81.76,
+      "energyKcal": 66.0
+    },
+    {
+      "ndb": "09226",
+      "description": "PAPAYAS,RAW",
+      "water": 88.06,
+      "energyKcal": 43.0
+    },
+    {
+      "ndb": "09279",
+      "description": "PLUMS,RAW",
+      "water": 87.23,
+      "energyKcal": 46.0
+    },
+    {
+      "ndb": "09302",
+      "description": "RASPBERRIES,RAW",
+      "water": 85.75,
+      "energyKcal": 52.0
+    },
+    {
+      "ndb": "10219",
+      "description": "PORK,FRESH,GROUND,RAW",
+      "water": 61.06,
+      "energyKcal": 263.0
+    },
+    {
+      "ndb": "11026",
+      "description": "BAMBOO SHOOTS,RAW",
+      "water": 91.0,
+      "energyKcal": 27.0
+    },
+    {
+      "ndb": "11043",
+      "description": "MUNG BNS,MATURE SEEDS,SPROUTED,RAW",
+      "water": 90.4,
+      "energyKcal": 30.0
+    },
+    {
+      "ndb": "11143",
+      "description": "CELERY,RAW",
+      "water": 95.43,
+      "energyKcal": 16.0
+    },
+    {
+      "ndb": "11254",
+      "description": "LOTUS ROOT,RAW",
+      "water": 79.1,
+      "energyKcal": 74.0
+    },
+    {
+      "ndb": "11422",
+      "description": "PUMPKIN,RAW",
+      "water": 91.6,
+      "energyKcal": 26.0
+    },
+    {
+      "ndb": "11593",
+      "description": "WAXGOURD,(CHINESE PRESERVING MELON),RAW",
+      "water": 96.1,
+      "energyKcal": 13.0
+    },
+    {
+      "ndb": "11950",
+      "description": "MUSHROOMS,ENOKI,RAW",
+      "water": 88.34,
+      "energyKcal": 37.0
+    },
+    {
+      "ndb": "12016",
+      "description": "PUMPKIN&SQUASH SD KRNLS,RSTD,WO/SALT",
+      "water": 2.03,
+      "energyKcal": 574.0
+    },
+    {
+      "ndb": "12085",
+      "description": "CASHEW NUTS,DRY RSTD,WO/SALT",
+      "water": 1.7,
+      "energyKcal": 574.0
+    },
+    {
+      "ndb": "12166",
+      "description": "SESAME BUTTER,TAHINI,FROM RSTD&TSTD KRNLS (MOST COMMON TYPE)",
+      "water": 3.05,
+      "energyKcal": 595.0
+    },
+    {
+      "ndb": "13341",
+      "description": "BEEF,VAR MEATS&BY-PRODUCTS,TRIPE,RAW",
+      "water": 84.16,
+      "energyKcal": 85.0
+    },
+    {
+      "ndb": "15149",
+      "description": "CRUSTACEANS,SHRIMP,MXD SP,RAW (MAYBE PREVIOUSLY FROZEN)",
+      "water": 83.01,
+      "energyKcal": 71.0
+    },
+    {
+      "ndb": "20035",
+      "description": "QUINOA,UNCKD",
+      "water": 13.28,
+      "energyKcal": 368.0
+    },
+    {
+      "ndb": "20081",
+      "description": "WHEAT FLR,WHITE,ALL-PURPOSE,ENR,BLEACHED",
+      "water": 11.92,
+      "energyKcal": 364.0
+    },
+    {
+      "ndb": "23567",
+      "description": "BEEF,GROUND,85% LN MEAT / 15% FAT,RAW",
+      "water": 65.66,
+      "energyKcal": 215.0
+    }
+  ]
+}

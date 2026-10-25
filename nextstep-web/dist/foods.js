@@ -1,5 +1,5 @@
 /* Offline references. Recipe portions are editable, never personal measurements. */
-const foodDataVersion='2026-10-24.1';
+const foodDataVersion='2026-10-25.1';
 const foodSources={
   mcBigmac:{type:'大陆官方营养参考',name:'麦当劳中国 · 巨无霸（官网营养表2025-04）',url:'https://www.mcdonalds.com.cn/product/Big-Mac',license:'官网每个2146kJ，除以4.184换算kcal；2026-10-24核查。以实际门店配方和份量为准。'},
   mcChicken:{type:'大陆官方营养参考',name:'麦当劳中国 · 麦香鸡（官网营养表2025-04）',url:'https://www.mcdonalds.com.cn/product/McChicken',license:'官网每个1546kJ，除以4.184换算kcal；2026-10-24核查。以实际门店配方和份量为准。'},
@@ -781,13 +781,1042 @@ for(const [size,potato,oil]of [['small',150,12],['medium',210,17],['large',270,2
 foodReferenceRecipe('kfc-nuggets',[['chicken',10],['white-bread',4],['oil',2]],'每1块按熟鸡胸10g＋白面包屑4g＋吸油2g合计；默认5块按比例计算。实际肉、裹粉、大小与吸油不同，不含蘸酱。');
 foodReferenceRecipe('bottle-tea',[['sugar',10]],'每100ml终体积假设含糖10g，按4kcal/g计算，忽略微量茶固形物；不是具体品牌标签，不适用于无糖或低糖款，实际包装优先。');
 Object.assign(foodCatalog.find(f=>f.id==='bottle-tea'),{name:'瓶装柠檬茶（含糖配方估算）',aliases:['冰红茶','柠檬红茶']});
+
+/* 2026-10-25: selected USDA references, everyday dishes and two store menus. */
+const additionalFoodReferences=[
+  {
+    "id": "lychee",
+    "name": "荔枝",
+    "category": "水果",
+    "ndb": "09164",
+    "portion": 100,
+    "note": "去皮去核可食生重",
+    "description": "LITCHIS,RAW",
+    "kcal": 66
+  },
+  {
+    "id": "cherry",
+    "name": "甜樱桃",
+    "category": "水果",
+    "ndb": "09070",
+    "portion": 100,
+    "note": "去梗去核可食生重",
+    "description": "CHERRIES,SWEET,RAW",
+    "kcal": 63
+  },
+  {
+    "id": "papaya",
+    "name": "木瓜",
+    "category": "水果",
+    "ndb": "09226",
+    "portion": 150,
+    "note": "去皮去籽可食生重",
+    "description": "PAPAYAS,RAW",
+    "kcal": 43
+  },
+  {
+    "id": "plum",
+    "name": "李子",
+    "category": "水果",
+    "ndb": "09279",
+    "portion": 100,
+    "note": "去核可食生重",
+    "description": "PLUMS,RAW",
+    "kcal": 46
+  },
+  {
+    "id": "raspberry",
+    "name": "树莓",
+    "category": "水果",
+    "ndb": "09302",
+    "portion": 80,
+    "note": "可食生重",
+    "description": "RASPBERRIES,RAW",
+    "kcal": 52
+  },
+  {
+    "id": "celery",
+    "name": "芹菜",
+    "category": "蔬菜",
+    "ndb": "11143",
+    "portion": 150,
+    "note": "可食生重，烹饪油另算",
+    "description": "CELERY,RAW",
+    "kcal": 16
+  },
+  {
+    "id": "bamboo-shoot",
+    "name": "竹笋（原料）",
+    "category": "蔬菜",
+    "ndb": "11026",
+    "portion": 100,
+    "note": "可食生重，仅用于配方记录；需按品种充分处理煮熟后食用",
+    "description": "BAMBOO SHOOTS,RAW",
+    "kcal": 27
+  },
+  {
+    "id": "lotus-root",
+    "name": "莲藕（原料）",
+    "category": "蔬菜",
+    "ndb": "11254",
+    "portion": 100,
+    "note": "可食生重，烹饪油另算",
+    "description": "LOTUS ROOT,RAW",
+    "kcal": 74
+  },
+  {
+    "id": "pumpkin",
+    "name": "南瓜（原料）",
+    "category": "蔬菜",
+    "ndb": "11422",
+    "portion": 150,
+    "note": "去皮去籽可食生重，不是熟成品重量",
+    "description": "PUMPKIN,RAW",
+    "kcal": 26
+  },
+  {
+    "id": "winter-melon",
+    "name": "冬瓜（原料）",
+    "category": "蔬菜",
+    "ndb": "11593",
+    "portion": 150,
+    "note": "去皮去籽可食生重",
+    "description": "WAXGOURD,(CHINESE PRESERVING MELON),RAW",
+    "kcal": 13
+  },
+  {
+    "id": "enoki",
+    "name": "金针菇（原料）",
+    "category": "蔬菜",
+    "ndb": "11950",
+    "portion": 100,
+    "note": "可食生重，需充分煮熟；烹饪油另算",
+    "description": "MUSHROOMS,ENOKI,RAW",
+    "kcal": 37
+  },
+  {
+    "id": "mung-sprouts",
+    "name": "绿豆芽",
+    "category": "蔬菜",
+    "ndb": "11043",
+    "portion": 150,
+    "note": "可食生重，烹饪油另算",
+    "description": "MUNG BNS,MATURE SEEDS,SPROUTED,RAW",
+    "kcal": 30
+  },
+  {
+    "id": "cashew",
+    "name": "腰果仁（无盐干烤）",
+    "category": "坚果零食",
+    "ndb": "12085",
+    "portion": 20,
+    "note": "不含壳，不适用于额外裹糖或油炸款",
+    "description": "CASHEW NUTS,DRY RSTD,WO/SALT",
+    "kcal": 574
+  },
+  {
+    "id": "pumpkin-seeds",
+    "name": "南瓜籽仁（无盐烤制）",
+    "category": "坚果零食",
+    "ndb": "12016",
+    "portion": 20,
+    "note": "只记籽仁，不含壳",
+    "description": "PUMPKIN&SQUASH SD KRNLS,RSTD,WO/SALT",
+    "kcal": 574
+  },
+  {
+    "id": "tahini",
+    "name": "芝麻酱（通用参考）",
+    "category": "调味",
+    "ndb": "12166",
+    "portion": 15,
+    "note": "烤芝麻酱参考；不是门店调制蘸料，包装和稀释比例优先",
+    "description": "SESAME BUTTER,TAHINI,FROM RSTD&TSTD KRNLS (MOST COMMON TYPE)",
+    "kcal": 595
+  },
+  {
+    "id": "raw-shrimp",
+    "name": "虾仁（生，可食部）",
+    "category": "蛋白来源",
+    "ndb": "15149",
+    "portion": 100,
+    "note": "混合虾种SR28历史参考71kcal/100g；去壳可食生重，不套用熟虾或所有虾种",
+    "description": "CRUSTACEANS,SHRIMP,MXD SP,RAW (MAYBE PREVIOUSLY FROZEN)",
+    "kcal": 71
+  },
+  {
+    "id": "raw-tripe",
+    "name": "牛肚（生，通用参考）",
+    "category": "蛋白来源",
+    "ndb": "13341",
+    "portion": 100,
+    "note": "可食生重，不同加工毛肚含水量不同；煮熟后食用",
+    "description": "BEEF,VAR MEATS&BY-PRODUCTS,TRIPE,RAW",
+    "kcal": 85
+  },
+  {
+    "id": "raw-beef85",
+    "name": "牛肉（生，85%瘦肉参考）",
+    "category": "蛋白来源",
+    "ndb": "23567",
+    "portion": 100,
+    "note": "85%瘦肉15%脂肪生绞牛肉参考；不是特定肥牛片或品牌部位实测",
+    "description": "BEEF,GROUND,85% LN MEAT / 15% FAT,RAW",
+    "kcal": 215
+  },
+  {
+    "id": "raw-ground-pork",
+    "name": "猪肉馅（生，通用参考）",
+    "category": "蛋白来源",
+    "ndb": "10219",
+    "portion": 100,
+    "note": "生绞猪肉参考，肥瘦比例不同时请编辑热量",
+    "description": "PORK,FRESH,GROUND,RAW",
+    "kcal": 263
+  },
+  {
+    "id": "wheat-flour",
+    "name": "小麦粉（干重）",
+    "category": "主食",
+    "ndb": "20081",
+    "portion": 50,
+    "note": "通用白面粉干重，不直接套用馒头、饺子皮或煮熟面条重量",
+    "description": "WHEAT FLR,WHITE,ALL-PURPOSE,ENR,BLEACHED",
+    "kcal": 364
+  },
+  {
+    "id": "roast-wing",
+    "name": "烤鸡翅（带皮熟可食部）",
+    "category": "蛋白来源",
+    "ndb": "05103",
+    "portion": 80,
+    "note": "熟肉和皮，不含骨及额外酱汁；80g仅为快捷可食部参考，不等于两只鸡翅",
+    "description": "CHICKEN,BROILERS OR FRYERS,WING,MEAT&SKN,CKD,RSTD",
+    "kcal": 254
+  },
+  {
+    "id": "quinoa-dry",
+    "name": "藜麦（干重）",
+    "category": "主食",
+    "ndb": "20035",
+    "portion": 50,
+    "note": "烹饪前干重，不直接套用煮熟重量",
+    "description": "QUINOA,UNCKD",
+    "kcal": 368
+  }
+];
+for(const r of additionalFoodReferences){const f=foodEntry(r.id,r.name,r.category,'g',100,r.kcal,r.portion,'sr28',r.note+'；USDA SR28 NDB '+r.ndb);f.reference={ndb:r.ndb,description:r.description,kcalPer100g:r.kcal};f.checkedAt='2026-10-25';foodCatalog.push(f)}
+storeMenus.pizzaHut={name:'必胜客中国菜单与百胜中国品牌介绍',url:'https://www.pizzahut.com.cn/Product',scope:'仅作品牌和餐饮类别背景，不提供本条目的大陆官方热量；所列为本应用参考搭配，不保证当店在售'};
+storeMenus.haidilao={name:'海底捞官方网站特色菜',url:'https://www.haidilao.com/cate/dish/specialty',scope:'仅作捞派虾滑等菜名和品牌背景，不作为本应用配方热量来源；份量不是门店标准份'};
+const additionalFoodRecipes=[
+  [
+    "steamed-bun",
+    "原味馒头（配方估算）",
+    "早餐",
+    [
+      [
+        "wheat-flour",
+        50
+      ],
+      [
+        "water",
+        30
+      ]
+    ],
+    "1个参考配方使用干面粉50g＋水30ml，忽略少量酵母热量；未核实蒸后克重，不适用于成品每80g",
+    [
+      "馒头",
+      "白馒头"
+    ]
+  ],
+  [
+    "pork-bao",
+    "猪肉白菜包（配方估算）",
+    "早餐",
+    [
+      [
+        "wheat-flour",
+        40
+      ],
+      [
+        "raw-ground-pork",
+        25
+      ],
+      [
+        "napa-cabbage",
+        30
+      ],
+      [
+        "water",
+        25
+      ],
+      [
+        "oil",
+        2
+      ],
+      [
+        "soy-sauce",
+        3
+      ]
+    ],
+    "1个参考包：面粉干重40g＋生肉馅25g＋白菜生重30g＋水25ml＋油2g＋酱油3g；不是门店标准份",
+    [
+      "包子",
+      "肉包"
+    ]
+  ],
+  [
+    "pork-dumplings",
+    "猪肉白菜水饺（6个参考，配方估算）",
+    "家常",
+    [
+      [
+        "wheat-flour",
+        60
+      ],
+      [
+        "raw-ground-pork",
+        50
+      ],
+      [
+        "napa-cabbage",
+        60
+      ],
+      [
+        "water",
+        40
+      ],
+      [
+        "oil",
+        3
+      ],
+      [
+        "soy-sauce",
+        5
+      ]
+    ],
+    "本配方分成6个参考水饺，按1份记录；生面粉/肉馅/白菜投入量，不是煮后克重；蘸料另记",
+    [
+      "饺子",
+      "水饺"
+    ]
+  ],
+  [
+    "scallion-pancake",
+    "葱油饼（配方估算）",
+    "早餐",
+    [
+      [
+        "wheat-flour",
+        60
+      ],
+      [
+        "water",
+        35
+      ],
+      [
+        "onion",
+        10
+      ],
+      [
+        "oil",
+        10
+      ]
+    ],
+    "1份以面粉干重60g＋水35ml＋洋葱10g近似葱类＋油10g，成品大小和吸油量可不同",
+    [
+      "手抓饼",
+      "葱饼"
+    ]
+  ],
+  [
+    "chicken-congee",
+    "鸡肉粥（配方估算）",
+    "早餐",
+    [
+      [
+        "rice",
+        100
+      ],
+      [
+        "chicken",
+        40
+      ],
+      [
+        "water",
+        250
+      ]
+    ],
+    "熟米饭100g＋熟鸡胸40g＋水250ml；1参考碗，非生米100g；不含额外油",
+    [
+      "粥",
+      "鸡丝粥"
+    ]
+  ],
+  [
+    "pumpkin-congee",
+    "南瓜玉米粥（配方估算）",
+    "早餐",
+    [
+      [
+        "rice",
+        80
+      ],
+      [
+        "pumpkin",
+        100
+      ],
+      [
+        "corn",
+        30
+      ],
+      [
+        "water",
+        250
+      ]
+    ],
+    "熟饭80g＋南瓜生可食100g＋熟玉米粒30g＋水250ml；不含糖",
+    [
+      "粥",
+      "南瓜粥"
+    ]
+  ],
+  [
+    "celery-pork",
+    "芹菜炒肉（配方估算）",
+    "家常",
+    [
+      [
+        "celery",
+        150
+      ],
+      [
+        "cooked-pork",
+        80
+      ],
+      [
+        "oil",
+        8
+      ],
+      [
+        "soy-sauce",
+        8
+      ]
+    ],
+    "芹菜生重150g＋熟猪肉80g＋油8g＋酱油8g；不含米饭",
+    []
+  ],
+  [
+    "lotus-stirfry",
+    "清炒藕片（配方估算）",
+    "家常",
+    [
+      [
+        "lotus-root",
+        150
+      ],
+      [
+        "oil",
+        8
+      ],
+      [
+        "soy-sauce",
+        5
+      ]
+    ],
+    "莲藕生重150g＋油8g＋酱油5g；不含饭",
+    []
+  ],
+  [
+    "shrimp-egg",
+    "虾仁炒蛋（配方估算）",
+    "家常",
+    [
+      [
+        "raw-shrimp",
+        100
+      ],
+      [
+        "egg",
+        2
+      ],
+      [
+        "oil",
+        8
+      ]
+    ],
+    "虾仁生可食100g＋2个鸡蛋按熟蛋参考近似＋油8g；不含饭",
+    []
+  ],
+  [
+    "mushroom-chicken",
+    "菌菇鸡肉（配方估算）",
+    "家常",
+    [
+      [
+        "mushroom",
+        100
+      ],
+      [
+        "enoki",
+        80
+      ],
+      [
+        "chicken",
+        100
+      ],
+      [
+        "oil",
+        8
+      ],
+      [
+        "soy-sauce",
+        10
+      ]
+    ],
+    "鲜蘑菇和金针菇生重100g/80g＋熟鸡胸100g＋油8g＋酱油10g；不含饭",
+    []
+  ],
+  [
+    "tomato-beef-noodles",
+    "番茄牛肉面（含面配方估算）",
+    "家常",
+    [
+      [
+        "pasta",
+        180
+      ],
+      [
+        "cooked-beef",
+        60
+      ],
+      [
+        "tomato",
+        150
+      ],
+      [
+        "water",
+        250
+      ],
+      [
+        "oil",
+        5
+      ],
+      [
+        "soy-sauce",
+        8
+      ]
+    ],
+    "用熟原味意面180g近似面条＋熟牛肉60g＋番茄生重150g＋水250ml＋油5g＋酱油8g；面已含，汤全计",
+    [
+      "牛肉面",
+      "汤面"
+    ]
+  ],
+  [
+    "mapo-tofu",
+    "肉末豆腐（配方估算）",
+    "家常",
+    [
+      [
+        "tofu",
+        200
+      ],
+      [
+        "raw-ground-pork",
+        40
+      ],
+      [
+        "oil",
+        10
+      ],
+      [
+        "soy-sauce",
+        10
+      ]
+    ],
+    "豆腐原重200g＋生猪肉馅40g＋油10g＋酱油10g；不含米饭及额外辣油",
+    [
+      "麻婆豆腐"
+    ]
+  ],
+  [
+    "cucumber-salad",
+    "凉拌黄瓜（配方估算）",
+    "家常",
+    [
+      [
+        "cucumber",
+        200
+      ],
+      [
+        "oil",
+        5
+      ],
+      [
+        "soy-sauce",
+        10
+      ],
+      [
+        "vinegar",
+        5
+      ]
+    ],
+    "黄瓜生可食200g＋油5g＋酱油10g＋红酒醋参考5g；未包含额外糖",
+    [
+      "拍黄瓜"
+    ]
+  ],
+  [
+    "winter-melon-soup",
+    "冬瓜虾仁汤（配方估算）",
+    "家常",
+    [
+      [
+        "winter-melon",
+        200
+      ],
+      [
+        "raw-shrimp",
+        80
+      ],
+      [
+        "water",
+        300
+      ],
+      [
+        "oil",
+        3
+      ]
+    ],
+    "冬瓜生可食200g＋虾仁生可食80g＋水300ml＋油3g；参考汤全计",
+    []
+  ],
+  [
+    "ph-supreme",
+    "必胜客 超级至尊风味披萨（参考片，配方估算）",
+    "必胜客",
+    [
+      [
+        "wheat-flour",
+        30
+      ],
+      [
+        "water",
+        18
+      ],
+      [
+        "mozzarella",
+        20
+      ],
+      [
+        "cooked-beef",
+        15
+      ],
+      [
+        "green-pepper",
+        10
+      ],
+      [
+        "onion",
+        5
+      ],
+      [
+        "tomato",
+        15
+      ],
+      [
+        "oil",
+        3
+      ]
+    ],
+    "1份为自定参考片：面粉干重30g等投入量；非品牌配方、标准切片、尺寸或饼底热量，未核实烤后重量",
+    [
+      "超级至尊",
+      "比萨",
+      "Pizza Hut"
+    ],
+    "pizzaHut"
+  ],
+  [
+    "ph-cheese",
+    "必胜客 芝士披萨（100g通用食物估算）",
+    "必胜客",
+    [
+      [
+        "cheese-pizza",
+        100
+      ]
+    ],
+    "1份按100g普通饼底芝士披萨通用食物参考；不是品牌官方营养，不等于固定一片，各尺寸饼底需按实际食用量改份数",
+    [
+      "芝士比萨",
+      "Pizza Hut"
+    ],
+    "pizzaHut"
+  ],
+  [
+    "ph-beef-pasta",
+    "必胜客 番茄牛肉意面（配方估算）",
+    "必胜客",
+    [
+      [
+        "pasta",
+        200
+      ],
+      [
+        "cooked-beef",
+        60
+      ],
+      [
+        "tomato",
+        100
+      ],
+      [
+        "onion",
+        30
+      ],
+      [
+        "oil",
+        8
+      ],
+      [
+        "soy-sauce",
+        5
+      ]
+    ],
+    "熟意面200g＋熟牛肉60g＋生番茄100g＋洋葱30g＋油8g＋酱油5g；独立参考肉酱，面已含",
+    [
+      "肉酱面",
+      "意大利面",
+      "Pizza Hut"
+    ],
+    "pizzaHut"
+  ],
+  [
+    "ph-mushroom-pasta",
+    "必胜客 奶香蘑菇意面（配方估算）",
+    "必胜客",
+    [
+      [
+        "pasta",
+        200
+      ],
+      [
+        "mushroom",
+        80
+      ],
+      [
+        "full-milk",
+        80
+      ],
+      [
+        "mozzarella",
+        15
+      ],
+      [
+        "oil",
+        8
+      ]
+    ],
+    "熟意面200g＋生蘑菇80g＋全脂奶80g＋芝士15g＋油8g；非品牌奶油酱配方，面和参考酱已含",
+    [
+      "奶油意面",
+      "Pizza Hut"
+    ],
+    "pizzaHut"
+  ],
+  [
+    "ph-roast-wing",
+    "必胜客 风味烤翅（熟可食80g配方估算）",
+    "必胜客",
+    [
+      [
+        "roast-wing",
+        80
+      ],
+      [
+        "sugar",
+        5
+      ],
+      [
+        "soy-sauce",
+        8
+      ]
+    ],
+    "带皮烤翅熟可食80g＋糖5g＋酱油8g；不含骨，80g不等于固定几只；独立酱汁参考",
+    [
+      "鸡翅",
+      "烤翅",
+      "Pizza Hut"
+    ],
+    "pizzaHut"
+  ],
+  [
+    "ph-cheese-corn",
+    "必胜客 芝士玉米（配方估算）",
+    "必胜客",
+    [
+      [
+        "corn",
+        120
+      ],
+      [
+        "mozzarella",
+        25
+      ],
+      [
+        "oil",
+        3
+      ]
+    ],
+    "熟玉米粒120g＋马苏里拉25g＋油3g；不是门店标准份",
+    [
+      "焗玉米",
+      "Pizza Hut"
+    ],
+    "pizzaHut"
+  ],
+  [
+    "ph-salad",
+    "必胜客 蔬菜沙拉（不含酱估算）",
+    "必胜客",
+    [
+      [
+        "lettuce",
+        100
+      ],
+      [
+        "cucumber",
+        60
+      ],
+      [
+        "tomato",
+        60
+      ],
+      [
+        "corn",
+        40
+      ]
+    ],
+    "生菜100g＋黄瓜60g＋番茄60g＋熟玉米粒40g；不含沙拉酱，按实际另记",
+    [
+      "轻食",
+      "Pizza Hut"
+    ],
+    "pizzaHut"
+  ],
+  [
+    "hdl-shrimp-paste",
+    "海底捞 捞派虾滑（配方估算）",
+    "海底捞",
+    [
+      [
+        "raw-shrimp",
+        90
+      ],
+      [
+        "wheat-flour",
+        5
+      ],
+      [
+        "water",
+        5
+      ]
+    ],
+    "本应用90g生虾仁＋5g面粉＋5ml水的独立参考100g配方，不声称为品牌虾肉比例或工艺；不含汤底与蘸料",
+    [
+      "虾滑",
+      "HDL"
+    ],
+    "haidilao"
+  ],
+  [
+    "hdl-tomato-broth",
+    "海底捞 番茄汤食用量（配方估算）",
+    "海底捞",
+    [
+      [
+        "tomato",
+        100
+      ],
+      [
+        "water",
+        200
+      ],
+      [
+        "oil",
+        3
+      ],
+      [
+        "sugar",
+        3
+      ]
+    ],
+    "番茄生重100g＋水200ml＋油3g＋糖3g；1份为本参考汤汁全部食用量，非整锅；不含涮菜、其他配料或蘸料",
+    [
+      "番茄锅",
+      "汤底",
+      "HDL"
+    ],
+    "haidilao"
+  ],
+  [
+    "hdl-spicy-broth",
+    "海底捞 麻辣汤食用量（配方估算）",
+    "海底捞",
+    [
+      [
+        "water",
+        250
+      ],
+      [
+        "oil",
+        10
+      ],
+      [
+        "soy-sauce",
+        10
+      ]
+    ],
+    "水250ml＋食用油10g＋酱油10g为个人吃进汤汁与附着油的独立参考，非整锅、非品牌牛油锅配方；不喝汤也可能吃进附着油",
+    [
+      "麻辣锅",
+      "牛油锅",
+      "汤底",
+      "HDL"
+    ],
+    "haidilao"
+  ],
+  [
+    "hdl-sesame-sauce",
+    "海底捞 芝麻酱蘸料（配方估算）",
+    "海底捞",
+    [
+      [
+        "tahini",
+        20
+      ],
+      [
+        "soy-sauce",
+        5
+      ],
+      [
+        "water",
+        15
+      ]
+    ],
+    "纯芝麻酱通用参考20g＋酱油5g＋水15ml，1份参考蘸料约40g；不是门店小料标准配方，按实际吃进量调整",
+    [
+      "麻酱",
+      "蘸碟",
+      "小料",
+      "HDL"
+    ],
+    "haidilao"
+  ]
+];
+for(const [id,name,category,parts,note,aliases,menu]of additionalFoodRecipes){const f=foodRecipe(id,name,category,parts,note,aliases,menu?storeMenus[menu]:null);f.checkedAt='2026-10-25'}
+const additionalHotpotFoods=[
+  [
+    "hdl-beef",
+    "海底捞 牛肉片（生肉通用参考）",
+    "raw-beef85",
+    100,
+    [
+      "肥牛",
+      "涮牛肉"
+    ]
+  ],
+  [
+    "hdl-tripe",
+    "海底捞 牛肚（生牛肚通用参考）",
+    "raw-tripe",
+    100,
+    [
+      "毛肚",
+      "牛百叶"
+    ]
+  ],
+  [
+    "hdl-shrimp",
+    "海底捞 虾仁（生可食部参考）",
+    "raw-shrimp",
+    100,
+    [
+      "鲜虾"
+    ]
+  ],
+  [
+    "hdl-tofu",
+    "海底捞 豆腐（食材参考）",
+    "tofu",
+    100,
+    [
+      "嫩豆腐"
+    ]
+  ],
+  [
+    "hdl-lotus",
+    "海底捞 藕片（生食材参考）",
+    "lotus-root",
+    100,
+    [
+      "莲藕"
+    ]
+  ],
+  [
+    "hdl-potato",
+    "海底捞 土豆片（生食材参考）",
+    "potato-raw",
+    100,
+    [
+      "土豆"
+    ]
+  ],
+  [
+    "hdl-lettuce",
+    "海底捞 生菜（生食材参考）",
+    "lettuce",
+    100,
+    [
+      "蔬菜"
+    ]
+  ],
+  [
+    "hdl-enoki",
+    "海底捞 金针菇（生食材参考）",
+    "enoki",
+    100,
+    [
+      "菌菇"
+    ]
+  ],
+  [
+    "hdl-corn",
+    "海底捞 玉米粒（熟食材参考）",
+    "corn",
+    100,
+    [
+      "玉米"
+    ]
+  ]
+];
+for(const [id,name,reference,portion,aliases]of additionalHotpotFoods){const base=foodCatalog.find(f=>f.id===reference),f=foodEntry(id,name,'海底捞','g',100,base.basis.energyKcal,portion,'sr28',base.note+'；按个人实际食用的对应生/熟食材可食量记录，不是门店整份或下锅后称重；汤底、附着油、蘸料另记',aliases.concat('HDL'));f.reference={...base.reference};f.menuSource=storeMenus.haidilao;f.checkedAt='2026-10-25';f.browseTags=['restaurant','lunch','dinner',...(['hdl-beef','hdl-tripe','hdl-shrimp'].includes(id)?['meat']:id==='hdl-tofu'?['dairy']:id==='hdl-corn'?['staple']:['vegetable'])];foodCatalog.push(f)}
+foodCombos.push(
+ {id:'ph-pasta-salad',name:'必胜客 牛肉意面配沙拉（参考）',category:'必胜客',items:[['ph-beef-pasta',1],['ph-salad',1]]},
+ {id:'ph-pizza-wing',name:'必胜客 芝士披萨100g配烤翅（参考）',category:'必胜客',items:[['ph-cheese',1],['ph-roast-wing',1]]},
+ {id:'hdl-ingredients',name:'海底捞 牛肉豆腐蔬菜（汤料另记）',category:'海底捞',items:[['hdl-beef',100],['hdl-tofu',100],['hdl-lettuce',100],['hdl-enoki',100]]},
+ {id:'hdl-shrimp-ingredients',name:'海底捞 虾滑藕片组合（汤料另记）',category:'海底捞',items:[['hdl-shrimp-paste',1],['hdl-lotus',100],['hdl-potato',100]]}
+);
+
 const foodBrowseGroups={
   place:{label:'地点',items:[['restaurant','餐馆','🍽️'],['home','家里','🏠'],['fridge','冰箱','🧊'],['cupboard','零食柜','🍪']]},
   kind:{label:'食材',items:[['fruit','水果','🍎'],['meat','肉类海鲜','🥩'],['vegetable','蔬菜','🥬'],['staple','主食','🍚'],['dairy','奶蛋豆','🥚'],['snacks','零食坚果','🥜'],['drink','饮料','🥤'],['custom','我的食品','📝']]},
   time:{label:'餐次',items:[['breakfast','早餐','🌅'],['lunch','午餐','☀️'],['dinner','晚餐','🌇'],['night','宵夜加餐','🌙']]}
 };
-const restaurantCategories=['麦当劳','肯德基','老乡鸡','大米先生','米村拌饭','杨国福','麻辣香锅','沙拉','披萨'];
-const meatFoodIds=['chicken','cooked-beef','raw-pork-belly','cooked-pork','cooked-chicken-thigh','tuna','raw-salmon','lxj-chicken-soup','lxj-winter-soup','lxj-scallion-chicken','lxj-edamame-chicken','lxj-broccoli-chicken','mc-bigmac','mc-chicken','mc-grilled','kfc-spicy','kfc-grilled','mc-nuggets','kfc-nuggets'];
+const restaurantCategories=['麦当劳','肯德基','必胜客','海底捞','老乡鸡','大米先生','米村拌饭','杨国福','麻辣香锅','沙拉','披萨'];
+const meatFoodIds=['raw-shrimp','raw-tripe','raw-beef85','raw-ground-pork','roast-wing','chicken','cooked-beef','raw-pork-belly','cooked-pork','cooked-chicken-thigh','tuna','raw-salmon','lxj-chicken-soup','lxj-winter-soup','lxj-scallion-chicken','lxj-edamame-chicken','lxj-broccoli-chicken','mc-bigmac','mc-chicken','mc-grilled','kfc-spicy','kfc-grilled','mc-nuggets','kfc-nuggets'];
 const dairyFoodIds=['egg','tofu','edamame','black-beans','full-milk','lowfat-milk','plain-yogurt','mozzarella','cheddar','chocolate-icecream'];
 function foodBrowseTags(food){
   if(food.browseTags)return food.browseTags;
@@ -817,11 +1846,12 @@ function foodBrowseTags(food){
 // Local AI illustration atlases; thumbnails never determine energy or portion.
 function foodSampleIndex(food){
   const name=String(food?.name||''),id=food?.id||food?.foodId||'';
+  const newSamples={'ph-beef-pasta':1,'ph-mushroom-pasta':1,'tomato-beef-noodles':1,'hdl-sesame-sauce':55,'tahini':55};if(Object.hasOwn(newSamples,id))return newSamples[id];
   const dishes=[[/蛋挞/,0],[/薯条/,1],[/红酒醋/,2],[/辣椒炒肉/,3],[/包菜/,4],[/麻辣拌/,5],[/油醋汁/,6],[/茄子/,7],[/葵花籽/,8],[/爆米花/,9],[/小白菜/,10],[/西葫芦炒蛋/,11]];
   for(const [pattern,index]of dishes)if(pattern.test(name))return 72+index;
   const more=[[/毛豆/,0],[/黑豆/,1],[/蓝莓/,2],[/猕猴桃|奇异果/,3],[/菠萝|凤梨/,4],[/芒果/,5],[/梨/,6],[/桃子|水蜜桃/,7],[/橘|柑/,8],[/圣女果|樱桃番茄/,9],[/菠菜/,10],[/生菜/,11],[/黄瓜/,12],[/胡萝卜/,13],[/土豆|马铃薯/,14],[/红薯|地瓜/,15],[/玉米/,16],[/蘑菇|香菇|菌菇/,17],[/牛油果/,18],[/花生酱/,19],[/食用油|橄榄油|菜籽油/,20],[/白糖|砂糖|蜂蜜/,21],[/食盐/,22],[/酱油/,23],[/酸奶碗|燕麦酸奶/,24],[/鸡蛋奶酪吐司/,25],[/番茄炒蛋/,26],[/面汤|汤面|面条汤/,27],[/红烧鸡|葱油鸡|老乡鸡.*鸡|炖鸡/,28],[/红烧肉|五花|回锅肉/,29],[/小炒牛肉|辣椒炒牛肉/,30],[/炒蔬菜|炒青菜/,31],[/冰淇淋/,32],[/柠檬茶|茶饮/,33],[/豆浆/,34],[/炒饭/,35]];
   for(const [pattern,index]of more)if(pattern.test(name))return 36+index;
-  const rules=[[/蛋糕|蒸糕/,23],[/汉堡|巨无霸|麦香|板烧/,24],[/披萨/,25],[/炸鸡|鸡块|鸡翅|劲脆|吮指/,26],[/饺|馄饨/,27],[/火锅|麻辣烫|香锅/,29],[/汤|羹/,28],[/咖啡/,33],[/可乐/,30],[/果汁|雪碧|奶茶|茶饮/,31],[/饮用水|纯净水|白水/,32],[/酸奶|冰淇淋/,19],[/牛奶|豆浆|奶饮/,18],[/奶酪|芝士|切达/,20],[/燕麦/,22],[/吐司|面包|馒头|包子/,21],[/巧克力/,35],[/花生|坚果|核桃|杏仁/,34],[/香蕉/,12],[/苹果/,13],[/橙|柑|橘/,14],[/西瓜/,15],[/草莓/,16],[/葡萄|蓝莓/,17],[/西兰花/,9],[/番茄|西红柿/,10],[/沙拉|生菜|菠菜|蔬菜|黄瓜|胡萝卜/,11],[/豆腐|豆干|毛豆|豆类/,7],[/虾/,8],[/鱼|三文|金枪/,6],[/鸡蛋|水煮蛋|煎蛋/,2],[/牛肉|牛排/,4],[/猪肉|五花|红烧肉|培根|排骨/,5],[/鸡|鸭|鹅/,3],[/意面|面条|粉|面食/,1],[/米饭|糙米|杂粮|米粥|拌饭|盖饭/,0]];
+  const rules=[[/葱油饼/,21],[/牛肚|毛肚|肥牛/,4],[/芝麻酱|腰果|南瓜籽/,34],[/烤翅/,26],[/芹菜|藕片|金针菇/,11],[/蛋糕|蒸糕/,23],[/汉堡|巨无霸|麦香|板烧/,24],[/披萨/,25],[/炸鸡|鸡块|鸡翅|劲脆|吮指/,26],[/饺|馄饨/,27],[/火锅|麻辣烫|香锅/,29],[/汤|羹/,28],[/咖啡/,33],[/可乐/,30],[/果汁|雪碧|奶茶|茶饮/,31],[/饮用水|纯净水|白水/,32],[/酸奶|冰淇淋/,19],[/牛奶|豆浆|奶饮/,18],[/奶酪|芝士|切达/,20],[/燕麦/,22],[/吐司|面包|馒头|包子/,21],[/巧克力/,35],[/花生|坚果|核桃|杏仁/,34],[/香蕉/,12],[/苹果/,13],[/橙|柑|橘/,14],[/西瓜/,15],[/草莓/,16],[/葡萄|蓝莓/,17],[/西兰花/,9],[/番茄|西红柿/,10],[/沙拉|生菜|菠菜|蔬菜|黄瓜|胡萝卜/,11],[/豆腐|豆干|毛豆|豆类/,7],[/虾/,8],[/鱼|三文|金枪/,6],[/鸡蛋|水煮蛋|煎蛋/,2],[/牛肉|牛排/,4],[/猪肉|五花|红烧肉|培根|排骨/,5],[/鸡|鸭|鹅/,3],[/意面|面条|粉|面食/,1],[/米饭|糙米|杂粮|米粥|拌饭|盖饭/,0]];
   for(const [pattern,index]of rules)if(pattern.test(name))return index;
   if(id==='water')return 32;
   if(food?.category==='水果')return 13;

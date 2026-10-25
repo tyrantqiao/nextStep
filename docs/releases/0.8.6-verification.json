@@ -1,0 +1,19 @@
+{
+  "verified": true,
+  "versionName": "0.8.6",
+  "versionCode": 37,
+  "sha256": "ab2238444c43b6af6c0adea870f7ef706d76a2eb107561b7ec5a6c8e4e901445",
+  "bytes": 8504582,
+  "assets": [
+    "index.html",
+    "app.js",
+    "styles.css",
+    "home.css",
+    "nutrition.css",
+    "foods.js",
+    "nutrition.js",
+    "images/food-samples.png",
+    "images/food-samples-more.png",
+    "images/food-samples-dishes.png"
+  ]
+}

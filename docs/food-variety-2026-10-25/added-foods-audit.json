@@ -1,0 +1,3322 @@
+{
+  "version": "2026-10-25.1",
+  "foods": [
+    {
+      "id": "lychee",
+      "name": "荔枝",
+      "category": "水果",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 66
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "去皮去核可食生重；USDA SR28 NDB 09164",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "09164",
+        "description": "LITCHIS,RAW",
+        "kcalPer100g": 66
+      }
+    },
+    {
+      "id": "cherry",
+      "name": "甜樱桃",
+      "category": "水果",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 63
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "去梗去核可食生重；USDA SR28 NDB 09070",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "09070",
+        "description": "CHERRIES,SWEET,RAW",
+        "kcalPer100g": 63
+      }
+    },
+    {
+      "id": "papaya",
+      "name": "木瓜",
+      "category": "水果",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 43
+      },
+      "portion": 150,
+      "source": "sr28",
+      "note": "去皮去籽可食生重；USDA SR28 NDB 09226",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "09226",
+        "description": "PAPAYAS,RAW",
+        "kcalPer100g": 43
+      }
+    },
+    {
+      "id": "plum",
+      "name": "李子",
+      "category": "水果",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 46
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "去核可食生重；USDA SR28 NDB 09279",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "09279",
+        "description": "PLUMS,RAW",
+        "kcalPer100g": 46
+      }
+    },
+    {
+      "id": "raspberry",
+      "name": "树莓",
+      "category": "水果",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 52
+      },
+      "portion": 80,
+      "source": "sr28",
+      "note": "可食生重；USDA SR28 NDB 09302",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "09302",
+        "description": "RASPBERRIES,RAW",
+        "kcalPer100g": 52
+      }
+    },
+    {
+      "id": "celery",
+      "name": "芹菜",
+      "category": "蔬菜",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 16
+      },
+      "portion": 150,
+      "source": "sr28",
+      "note": "可食生重，烹饪油另算；USDA SR28 NDB 11143",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "11143",
+        "description": "CELERY,RAW",
+        "kcalPer100g": 16
+      }
+    },
+    {
+      "id": "bamboo-shoot",
+      "name": "竹笋（原料）",
+      "category": "蔬菜",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 27
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "可食生重，仅用于配方记录；需按品种充分处理煮熟后食用；USDA SR28 NDB 11026",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "11026",
+        "description": "BAMBOO SHOOTS,RAW",
+        "kcalPer100g": 27
+      }
+    },
+    {
+      "id": "lotus-root",
+      "name": "莲藕（原料）",
+      "category": "蔬菜",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 74
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "可食生重，烹饪油另算；USDA SR28 NDB 11254",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "11254",
+        "description": "LOTUS ROOT,RAW",
+        "kcalPer100g": 74
+      }
+    },
+    {
+      "id": "pumpkin",
+      "name": "南瓜（原料）",
+      "category": "蔬菜",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 26
+      },
+      "portion": 150,
+      "source": "sr28",
+      "note": "去皮去籽可食生重，不是熟成品重量；USDA SR28 NDB 11422",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "11422",
+        "description": "PUMPKIN,RAW",
+        "kcalPer100g": 26
+      }
+    },
+    {
+      "id": "winter-melon",
+      "name": "冬瓜（原料）",
+      "category": "蔬菜",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 13
+      },
+      "portion": 150,
+      "source": "sr28",
+      "note": "去皮去籽可食生重；USDA SR28 NDB 11593",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "11593",
+        "description": "WAXGOURD,(CHINESE PRESERVING MELON),RAW",
+        "kcalPer100g": 13
+      }
+    },
+    {
+      "id": "enoki",
+      "name": "金针菇（原料）",
+      "category": "蔬菜",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 37
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "可食生重，需充分煮熟；烹饪油另算；USDA SR28 NDB 11950",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "11950",
+        "description": "MUSHROOMS,ENOKI,RAW",
+        "kcalPer100g": 37
+      }
+    },
+    {
+      "id": "mung-sprouts",
+      "name": "绿豆芽",
+      "category": "蔬菜",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 30
+      },
+      "portion": 150,
+      "source": "sr28",
+      "note": "可食生重，烹饪油另算；USDA SR28 NDB 11043",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "11043",
+        "description": "MUNG BNS,MATURE SEEDS,SPROUTED,RAW",
+        "kcalPer100g": 30
+      }
+    },
+    {
+      "id": "cashew",
+      "name": "腰果仁（无盐干烤）",
+      "category": "坚果零食",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 574
+      },
+      "portion": 20,
+      "source": "sr28",
+      "note": "不含壳，不适用于额外裹糖或油炸款；USDA SR28 NDB 12085",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "12085",
+        "description": "CASHEW NUTS,DRY RSTD,WO/SALT",
+        "kcalPer100g": 574
+      }
+    },
+    {
+      "id": "pumpkin-seeds",
+      "name": "南瓜籽仁（无盐烤制）",
+      "category": "坚果零食",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 574
+      },
+      "portion": 20,
+      "source": "sr28",
+      "note": "只记籽仁，不含壳；USDA SR28 NDB 12016",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "12016",
+        "description": "PUMPKIN&SQUASH SD KRNLS,RSTD,WO/SALT",
+        "kcalPer100g": 574
+      }
+    },
+    {
+      "id": "tahini",
+      "name": "芝麻酱（通用参考）",
+      "category": "调味",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 595
+      },
+      "portion": 15,
+      "source": "sr28",
+      "note": "烤芝麻酱参考；不是门店调制蘸料，包装和稀释比例优先；USDA SR28 NDB 12166",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "12166",
+        "description": "SESAME BUTTER,TAHINI,FROM RSTD&TSTD KRNLS (MOST COMMON TYPE)",
+        "kcalPer100g": 595
+      }
+    },
+    {
+      "id": "raw-shrimp",
+      "name": "虾仁（生，可食部）",
+      "category": "蛋白来源",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 71
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "混合虾种SR28历史参考71kcal/100g；去壳可食生重，不套用熟虾或所有虾种；USDA SR28 NDB 15149",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "15149",
+        "description": "CRUSTACEANS,SHRIMP,MXD SP,RAW (MAYBE PREVIOUSLY FROZEN)",
+        "kcalPer100g": 71
+      }
+    },
+    {
+      "id": "raw-tripe",
+      "name": "牛肚（生，通用参考）",
+      "category": "蛋白来源",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 85
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "可食生重，不同加工毛肚含水量不同；煮熟后食用；USDA SR28 NDB 13341",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "13341",
+        "description": "BEEF,VAR MEATS&BY-PRODUCTS,TRIPE,RAW",
+        "kcalPer100g": 85
+      }
+    },
+    {
+      "id": "raw-beef85",
+      "name": "牛肉（生，85%瘦肉参考）",
+      "category": "蛋白来源",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 215
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "85%瘦肉15%脂肪生绞牛肉参考；不是特定肥牛片或品牌部位实测；USDA SR28 NDB 23567",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "23567",
+        "description": "BEEF,GROUND,85% LN MEAT / 15% FAT,RAW",
+        "kcalPer100g": 215
+      }
+    },
+    {
+      "id": "raw-ground-pork",
+      "name": "猪肉馅（生，通用参考）",
+      "category": "蛋白来源",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 263
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "生绞猪肉参考，肥瘦比例不同时请编辑热量；USDA SR28 NDB 10219",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "10219",
+        "description": "PORK,FRESH,GROUND,RAW",
+        "kcalPer100g": 263
+      }
+    },
+    {
+      "id": "wheat-flour",
+      "name": "小麦粉（干重）",
+      "category": "主食",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 364
+      },
+      "portion": 50,
+      "source": "sr28",
+      "note": "通用白面粉干重，不直接套用馒头、饺子皮或煮熟面条重量；USDA SR28 NDB 20081",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "20081",
+        "description": "WHEAT FLR,WHITE,ALL-PURPOSE,ENR,BLEACHED",
+        "kcalPer100g": 364
+      }
+    },
+    {
+      "id": "roast-wing",
+      "name": "烤鸡翅（带皮熟可食部）",
+      "category": "蛋白来源",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 254
+      },
+      "portion": 80,
+      "source": "sr28",
+      "note": "熟肉和皮，不含骨及额外酱汁；80g仅为快捷可食部参考，不等于两只鸡翅；USDA SR28 NDB 05103",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "05103",
+        "description": "CHICKEN,BROILERS OR FRYERS,WING,MEAT&SKN,CKD,RSTD",
+        "kcalPer100g": 254
+      }
+    },
+    {
+      "id": "quinoa-dry",
+      "name": "藜麦（干重）",
+      "category": "主食",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 368
+      },
+      "portion": 50,
+      "source": "sr28",
+      "note": "烹饪前干重，不直接套用煮熟重量；USDA SR28 NDB 20035",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "20035",
+        "description": "QUINOA,UNCKD",
+        "kcalPer100g": 368
+      }
+    },
+    {
+      "id": "steamed-bun",
+      "name": "原味馒头（配方估算）",
+      "category": "早餐",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 182
+      },
+      "portion": 1,
+      "source": "recipe",
+      "note": "参考配方；1个参考配方使用干面粉50g＋水30ml，忽略少量酵母热量；未核实蒸后克重，不适用于成品每80g",
+      "aliases": [
+        "馒头",
+        "白馒头"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "wheat-flour",
+            "name": "小麦粉（干重）",
+            "quantity": 50,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 364
+            },
+            "energyKcal": 182,
+            "source": "sr28",
+            "reference": {
+              "ndb": "20081",
+              "description": "WHEAT FLR,WHITE,ALL-PURPOSE,ENR,BLEACHED",
+              "kcalPer100g": 364
+            },
+            "note": "通用白面粉干重，不直接套用馒头、饺子皮或煮熟面条重量；USDA SR28 NDB 20081"
+          },
+          {
+            "foodId": "water",
+            "name": "水",
+            "quantity": 30,
+            "unit": "ml",
+            "basis": {
+              "amount": 100,
+              "unit": "ml",
+              "energyKcal": 0
+            },
+            "energyKcal": 0,
+            "source": "recipe",
+            "reference": null,
+            "note": "纯水，不含糖或奶"
+          }
+        ],
+        "totalKcal": 182,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": null
+    },
+    {
+      "id": "pork-bao",
+      "name": "猪肉白菜包（配方估算）",
+      "category": "早餐",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 235.74
+      },
+      "portion": 1,
+      "source": "recipe",
+      "note": "参考配方；1个参考包：面粉干重40g＋生肉馅25g＋白菜生重30g＋水25ml＋油2g＋酱油3g；不是门店标准份",
+      "aliases": [
+        "包子",
+        "肉包"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "wheat-flour",
+            "name": "小麦粉（干重）",
+            "quantity": 40,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 364
+            },
+            "energyKcal": 145.6,
+            "source": "sr28",
+            "reference": {
+              "ndb": "20081",
+              "description": "WHEAT FLR,WHITE,ALL-PURPOSE,ENR,BLEACHED",
+              "kcalPer100g": 364
+            },
+            "note": "通用白面粉干重，不直接套用馒头、饺子皮或煮熟面条重量；USDA SR28 NDB 20081"
+          },
+          {
+            "foodId": "raw-ground-pork",
+            "name": "猪肉馅（生，通用参考）",
+            "quantity": 25,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 263
+            },
+            "energyKcal": 65.75,
+            "source": "sr28",
+            "reference": {
+              "ndb": "10219",
+              "description": "PORK,FRESH,GROUND,RAW",
+              "kcalPer100g": 263
+            },
+            "note": "生绞猪肉参考，肥瘦比例不同时请编辑热量；USDA SR28 NDB 10219"
+          },
+          {
+            "foodId": "napa-cabbage",
+            "name": "大白菜",
+            "quantity": 30,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 16
+            },
+            "energyKcal": 4.8,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11119",
+              "description": "CABBAGE,CHINESE (PE-TSAI),RAW",
+              "kcalPer100g": 16
+            },
+            "note": "可食生重，烹饪油另算；USDA SR28 NDB 11119"
+          },
+          {
+            "foodId": "water",
+            "name": "水",
+            "quantity": 25,
+            "unit": "ml",
+            "basis": {
+              "amount": 100,
+              "unit": "ml",
+              "energyKcal": 0
+            },
+            "energyKcal": 0,
+            "source": "recipe",
+            "reference": null,
+            "note": "纯水，不含糖或奶"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 2,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 18,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          },
+          {
+            "foodId": "soy-sauce",
+            "name": "酱油",
+            "quantity": 3,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 53
+            },
+            "energyKcal": 1.5899999999999999,
+            "source": "sr28",
+            "reference": {
+              "ndb": "16123",
+              "description": "SOY SAU MADE FROM SOY&WHEAT (SHOYU)",
+              "kcalPer100g": 53
+            },
+            "note": "酿造酱油参考，按g；不能据热量判断钠摄入；USDA SR28 NDB 16123"
+          }
+        ],
+        "totalKcal": 235.74,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": null
+    },
+    {
+      "id": "pork-dumplings",
+      "name": "猪肉白菜水饺（6个参考，配方估算）",
+      "category": "家常",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 389.15
+      },
+      "portion": 1,
+      "source": "recipe",
+      "note": "参考配方；本配方分成6个参考水饺，按1份记录；生面粉/肉馅/白菜投入量，不是煮后克重；蘸料另记",
+      "aliases": [
+        "饺子",
+        "水饺"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "wheat-flour",
+            "name": "小麦粉（干重）",
+            "quantity": 60,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 364
+            },
+            "energyKcal": 218.4,
+            "source": "sr28",
+            "reference": {
+              "ndb": "20081",
+              "description": "WHEAT FLR,WHITE,ALL-PURPOSE,ENR,BLEACHED",
+              "kcalPer100g": 364
+            },
+            "note": "通用白面粉干重，不直接套用馒头、饺子皮或煮熟面条重量；USDA SR28 NDB 20081"
+          },
+          {
+            "foodId": "raw-ground-pork",
+            "name": "猪肉馅（生，通用参考）",
+            "quantity": 50,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 263
+            },
+            "energyKcal": 131.5,
+            "source": "sr28",
+            "reference": {
+              "ndb": "10219",
+              "description": "PORK,FRESH,GROUND,RAW",
+              "kcalPer100g": 263
+            },
+            "note": "生绞猪肉参考，肥瘦比例不同时请编辑热量；USDA SR28 NDB 10219"
+          },
+          {
+            "foodId": "napa-cabbage",
+            "name": "大白菜",
+            "quantity": 60,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 16
+            },
+            "energyKcal": 9.6,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11119",
+              "description": "CABBAGE,CHINESE (PE-TSAI),RAW",
+              "kcalPer100g": 16
+            },
+            "note": "可食生重，烹饪油另算；USDA SR28 NDB 11119"
+          },
+          {
+            "foodId": "water",
+            "name": "水",
+            "quantity": 40,
+            "unit": "ml",
+            "basis": {
+              "amount": 100,
+              "unit": "ml",
+              "energyKcal": 0
+            },
+            "energyKcal": 0,
+            "source": "recipe",
+            "reference": null,
+            "note": "纯水，不含糖或奶"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 3,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 27,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          },
+          {
+            "foodId": "soy-sauce",
+            "name": "酱油",
+            "quantity": 5,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 53
+            },
+            "energyKcal": 2.6500000000000004,
+            "source": "sr28",
+            "reference": {
+              "ndb": "16123",
+              "description": "SOY SAU MADE FROM SOY&WHEAT (SHOYU)",
+              "kcalPer100g": 53
+            },
+            "note": "酿造酱油参考，按g；不能据热量判断钠摄入；USDA SR28 NDB 16123"
+          }
+        ],
+        "totalKcal": 389.15,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": null
+    },
+    {
+      "id": "scallion-pancake",
+      "name": "葱油饼（配方估算）",
+      "category": "早餐",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 312.4
+      },
+      "portion": 1,
+      "source": "recipe",
+      "note": "参考配方；1份以面粉干重60g＋水35ml＋洋葱10g近似葱类＋油10g，成品大小和吸油量可不同",
+      "aliases": [
+        "手抓饼",
+        "葱饼"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "wheat-flour",
+            "name": "小麦粉（干重）",
+            "quantity": 60,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 364
+            },
+            "energyKcal": 218.4,
+            "source": "sr28",
+            "reference": {
+              "ndb": "20081",
+              "description": "WHEAT FLR,WHITE,ALL-PURPOSE,ENR,BLEACHED",
+              "kcalPer100g": 364
+            },
+            "note": "通用白面粉干重，不直接套用馒头、饺子皮或煮熟面条重量；USDA SR28 NDB 20081"
+          },
+          {
+            "foodId": "water",
+            "name": "水",
+            "quantity": 35,
+            "unit": "ml",
+            "basis": {
+              "amount": 100,
+              "unit": "ml",
+              "energyKcal": 0
+            },
+            "energyKcal": 0,
+            "source": "recipe",
+            "reference": null,
+            "note": "纯水，不含糖或奶"
+          },
+          {
+            "foodId": "onion",
+            "name": "洋葱",
+            "quantity": 10,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 40
+            },
+            "energyKcal": 4,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11282",
+              "description": "ONIONS,RAW",
+              "kcalPer100g": 40
+            },
+            "note": "可食生重；USDA SR28 NDB 11282"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 10,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 90,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          }
+        ],
+        "totalKcal": 312.4,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": null
+    },
+    {
+      "id": "chicken-congee",
+      "name": "鸡肉粥（配方估算）",
+      "category": "早餐",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 196
+      },
+      "portion": 1,
+      "source": "recipe",
+      "note": "参考配方；熟米饭100g＋熟鸡胸40g＋水250ml；1参考碗，非生米100g；不含额外油",
+      "aliases": [
+        "粥",
+        "鸡丝粥"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "rice",
+            "name": "米饭",
+            "quantity": 100,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 130
+            },
+            "energyKcal": 130,
+            "source": "grains",
+            "reference": null,
+            "note": "熟重，可食部；长粒白米参考 NDB 20445，1碗参考150g"
+          },
+          {
+            "foodId": "chicken",
+            "name": "去皮烤鸡胸肉",
+            "quantity": 40,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 165
+            },
+            "energyKcal": 66,
+            "source": "chicken",
+            "reference": null,
+            "note": "熟可食部，不含额外酱汁"
+          },
+          {
+            "foodId": "water",
+            "name": "水",
+            "quantity": 250,
+            "unit": "ml",
+            "basis": {
+              "amount": 100,
+              "unit": "ml",
+              "energyKcal": 0
+            },
+            "energyKcal": 0,
+            "source": "recipe",
+            "reference": null,
+            "note": "纯水，不含糖或奶"
+          }
+        ],
+        "totalKcal": 196,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": null
+    },
+    {
+      "id": "pumpkin-congee",
+      "name": "南瓜玉米粥（配方估算）",
+      "category": "早餐",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 158.8
+      },
+      "portion": 1,
+      "source": "recipe",
+      "note": "参考配方；熟饭80g＋南瓜生可食100g＋熟玉米粒30g＋水250ml；不含糖",
+      "aliases": [
+        "粥",
+        "南瓜粥"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "rice",
+            "name": "米饭",
+            "quantity": 80,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 130
+            },
+            "energyKcal": 104,
+            "source": "grains",
+            "reference": null,
+            "note": "熟重，可食部；长粒白米参考 NDB 20445，1碗参考150g"
+          },
+          {
+            "foodId": "pumpkin",
+            "name": "南瓜（原料）",
+            "quantity": 100,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 26
+            },
+            "energyKcal": 26,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11422",
+              "description": "PUMPKIN,RAW",
+              "kcalPer100g": 26
+            },
+            "note": "去皮去籽可食生重，不是熟成品重量；USDA SR28 NDB 11422"
+          },
+          {
+            "foodId": "corn",
+            "name": "甜玉米粒",
+            "quantity": 30,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 96
+            },
+            "energyKcal": 28.799999999999997,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11168",
+              "description": "CORN,SWT,YEL,CKD,BLD,DRND,WO/SALT",
+              "kcalPer100g": 96
+            },
+            "note": "煮熟沥水，不含玉米芯与额外油；USDA SR28 NDB 11168"
+          },
+          {
+            "foodId": "water",
+            "name": "水",
+            "quantity": 250,
+            "unit": "ml",
+            "basis": {
+              "amount": 100,
+              "unit": "ml",
+              "energyKcal": 0
+            },
+            "energyKcal": 0,
+            "source": "recipe",
+            "reference": null,
+            "note": "纯水，不含糖或奶"
+          }
+        ],
+        "totalKcal": 158.8,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": null
+    },
+    {
+      "id": "celery-pork",
+      "name": "芹菜炒肉（配方估算）",
+      "category": "家常",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 293.84000000000003
+      },
+      "portion": 1,
+      "source": "recipe",
+      "note": "参考配方；芹菜生重150g＋熟猪肉80g＋油8g＋酱油8g；不含米饭",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "celery",
+            "name": "芹菜",
+            "quantity": 150,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 16
+            },
+            "energyKcal": 24,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11143",
+              "description": "CELERY,RAW",
+              "kcalPer100g": 16
+            },
+            "note": "可食生重，烹饪油另算；USDA SR28 NDB 11143"
+          },
+          {
+            "foodId": "cooked-pork",
+            "name": "熟猪肉（肥瘦参考）",
+            "quantity": 80,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 242
+            },
+            "energyKcal": 193.60000000000002,
+            "source": "sr28",
+            "reference": {
+              "ndb": "10022",
+              "description": "PORK,FRSH,LOIN,WHL,LN&FAT,CKD,BRLD",
+              "kcalPer100g": 242
+            },
+            "note": "猪里脊肥瘦合计烤制参考，熟可食部；USDA SR28 NDB 10022"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 8,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 72,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          },
+          {
+            "foodId": "soy-sauce",
+            "name": "酱油",
+            "quantity": 8,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 53
+            },
+            "energyKcal": 4.24,
+            "source": "sr28",
+            "reference": {
+              "ndb": "16123",
+              "description": "SOY SAU MADE FROM SOY&WHEAT (SHOYU)",
+              "kcalPer100g": 53
+            },
+            "note": "酿造酱油参考，按g；不能据热量判断钠摄入；USDA SR28 NDB 16123"
+          }
+        ],
+        "totalKcal": 293.84000000000003,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": null
+    },
+    {
+      "id": "lotus-stirfry",
+      "name": "清炒藕片（配方估算）",
+      "category": "家常",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 185.65
+      },
+      "portion": 1,
+      "source": "recipe",
+      "note": "参考配方；莲藕生重150g＋油8g＋酱油5g；不含饭",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "lotus-root",
+            "name": "莲藕（原料）",
+            "quantity": 150,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 74
+            },
+            "energyKcal": 111,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11254",
+              "description": "LOTUS ROOT,RAW",
+              "kcalPer100g": 74
+            },
+            "note": "可食生重，烹饪油另算；USDA SR28 NDB 11254"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 8,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 72,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          },
+          {
+            "foodId": "soy-sauce",
+            "name": "酱油",
+            "quantity": 5,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 53
+            },
+            "energyKcal": 2.6500000000000004,
+            "source": "sr28",
+            "reference": {
+              "ndb": "16123",
+              "description": "SOY SAU MADE FROM SOY&WHEAT (SHOYU)",
+              "kcalPer100g": 53
+            },
+            "note": "酿造酱油参考，按g；不能据热量判断钠摄入；USDA SR28 NDB 16123"
+          }
+        ],
+        "totalKcal": 185.65,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": null
+    },
+    {
+      "id": "shrimp-egg",
+      "name": "虾仁炒蛋（配方估算）",
+      "category": "家常",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 298
+      },
+      "portion": 1,
+      "source": "recipe",
+      "note": "参考配方；虾仁生可食100g＋2个鸡蛋按熟蛋参考近似＋油8g；不含饭",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "raw-shrimp",
+            "name": "虾仁（生，可食部）",
+            "quantity": 100,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 71
+            },
+            "energyKcal": 71,
+            "source": "sr28",
+            "reference": {
+              "ndb": "15149",
+              "description": "CRUSTACEANS,SHRIMP,MXD SP,RAW (MAYBE PREVIOUSLY FROZEN)",
+              "kcalPer100g": 71
+            },
+            "note": "混合虾种SR28历史参考71kcal/100g；去壳可食生重，不套用熟虾或所有虾种；USDA SR28 NDB 15149"
+          },
+          {
+            "foodId": "egg",
+            "name": "水煮鸡蛋",
+            "quantity": 2,
+            "unit": "个",
+            "basis": {
+              "amount": 1,
+              "unit": "个",
+              "energyKcal": 77.5
+            },
+            "energyKcal": 155,
+            "source": "eggs",
+            "reference": null,
+            "note": "1个参考可食50g×155kcal/100g，不含蛋壳"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 8,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 72,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          }
+        ],
+        "totalKcal": 298,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": null
+    },
+    {
+      "id": "mushroom-chicken",
+      "name": "菌菇鸡肉（配方估算）",
+      "category": "家常",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 293.90000000000003
+      },
+      "portion": 1,
+      "source": "recipe",
+      "note": "参考配方；鲜蘑菇和金针菇生重100g/80g＋熟鸡胸100g＋油8g＋酱油10g；不含饭",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "mushroom",
+            "name": "鲜蘑菇",
+            "quantity": 100,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 22
+            },
+            "energyKcal": 22,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11260",
+              "description": "MUSHROOMS,WHITE,RAW",
+              "kcalPer100g": 22
+            },
+            "note": "白蘑菇可食生重；其他菌菇可能不同；USDA SR28 NDB 11260"
+          },
+          {
+            "foodId": "enoki",
+            "name": "金针菇（原料）",
+            "quantity": 80,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 37
+            },
+            "energyKcal": 29.6,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11950",
+              "description": "MUSHROOMS,ENOKI,RAW",
+              "kcalPer100g": 37
+            },
+            "note": "可食生重，需充分煮熟；烹饪油另算；USDA SR28 NDB 11950"
+          },
+          {
+            "foodId": "chicken",
+            "name": "去皮烤鸡胸肉",
+            "quantity": 100,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 165
+            },
+            "energyKcal": 165,
+            "source": "chicken",
+            "reference": null,
+            "note": "熟可食部，不含额外酱汁"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 8,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 72,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          },
+          {
+            "foodId": "soy-sauce",
+            "name": "酱油",
+            "quantity": 10,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 53
+            },
+            "energyKcal": 5.300000000000001,
+            "source": "sr28",
+            "reference": {
+              "ndb": "16123",
+              "description": "SOY SAU MADE FROM SOY&WHEAT (SHOYU)",
+              "kcalPer100g": 53
+            },
+            "note": "酿造酱油参考，按g；不能据热量判断钠摄入；USDA SR28 NDB 16123"
+          }
+        ],
+        "totalKcal": 293.90000000000003,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": null
+    },
+    {
+      "id": "tomato-beef-noodles",
+      "name": "番茄牛肉面（含面配方估算）",
+      "category": "家常",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 510.64000000000004
+      },
+      "portion": 1,
+      "source": "recipe",
+      "note": "参考配方；用熟原味意面180g近似面条＋熟牛肉60g＋番茄生重150g＋水250ml＋油5g＋酱油8g；面已含，汤全计",
+      "aliases": [
+        "牛肉面",
+        "汤面"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "pasta",
+            "name": "原味意面",
+            "quantity": 180,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 158
+            },
+            "energyKcal": 284.40000000000003,
+            "source": "grains",
+            "reference": null,
+            "note": "煮熟沥水重量，不含酱汁；NDB 20121"
+          },
+          {
+            "foodId": "cooked-beef",
+            "name": "熟牛肉（配方参考）",
+            "quantity": 60,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 250
+            },
+            "energyKcal": 150,
+            "source": "sr28",
+            "reference": {
+              "ndb": "23568",
+              "description": "BEEF,GROUND,85% LN MEAT / 15% FAT,PATTY,CKD,BRLD",
+              "kcalPer100g": 250
+            },
+            "note": "85%瘦肉/15%脂肪烤牛肉饼参考；牛肉部位不同会变化；USDA SR28 NDB 23568"
+          },
+          {
+            "foodId": "tomato",
+            "name": "番茄",
+            "quantity": 150,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 18
+            },
+            "energyKcal": 27,
+            "source": "recipe",
+            "reference": null,
+            "note": "基础食材参考18kcal/100g；可食生重，见USDA NDB 11529与来源说明"
+          },
+          {
+            "foodId": "water",
+            "name": "水",
+            "quantity": 250,
+            "unit": "ml",
+            "basis": {
+              "amount": 100,
+              "unit": "ml",
+              "energyKcal": 0
+            },
+            "energyKcal": 0,
+            "source": "recipe",
+            "reference": null,
+            "note": "纯水，不含糖或奶"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 5,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 45,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          },
+          {
+            "foodId": "soy-sauce",
+            "name": "酱油",
+            "quantity": 8,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 53
+            },
+            "energyKcal": 4.24,
+            "source": "sr28",
+            "reference": {
+              "ndb": "16123",
+              "description": "SOY SAU MADE FROM SOY&WHEAT (SHOYU)",
+              "kcalPer100g": 53
+            },
+            "note": "酿造酱油参考，按g；不能据热量判断钠摄入；USDA SR28 NDB 16123"
+          }
+        ],
+        "totalKcal": 510.64000000000004,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": null
+    },
+    {
+      "id": "mapo-tofu",
+      "name": "肉末豆腐（配方估算）",
+      "category": "家常",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 352.5
+      },
+      "portion": 1,
+      "source": "recipe",
+      "note": "参考配方；豆腐原重200g＋生猪肉馅40g＋油10g＋酱油10g；不含米饭及额外辣油",
+      "aliases": [
+        "麻婆豆腐"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "tofu",
+            "name": "嫩豆腐（未油炸）",
+            "quantity": 200,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 76
+            },
+            "energyKcal": 152,
+            "source": "sr28",
+            "reference": {
+              "ndb": "16427",
+              "description": "TOFU,RAW,REG,PREP W/CA SULFATE",
+              "kcalPer100g": 76
+            },
+            "note": "石膏豆腐原重参考，不含额外油；USDA SR28 NDB 16427"
+          },
+          {
+            "foodId": "raw-ground-pork",
+            "name": "猪肉馅（生，通用参考）",
+            "quantity": 40,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 263
+            },
+            "energyKcal": 105.2,
+            "source": "sr28",
+            "reference": {
+              "ndb": "10219",
+              "description": "PORK,FRESH,GROUND,RAW",
+              "kcalPer100g": 263
+            },
+            "note": "生绞猪肉参考，肥瘦比例不同时请编辑热量；USDA SR28 NDB 10219"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 10,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 90,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          },
+          {
+            "foodId": "soy-sauce",
+            "name": "酱油",
+            "quantity": 10,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 53
+            },
+            "energyKcal": 5.300000000000001,
+            "source": "sr28",
+            "reference": {
+              "ndb": "16123",
+              "description": "SOY SAU MADE FROM SOY&WHEAT (SHOYU)",
+              "kcalPer100g": 53
+            },
+            "note": "酿造酱油参考，按g；不能据热量判断钠摄入；USDA SR28 NDB 16123"
+          }
+        ],
+        "totalKcal": 352.5,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": null
+    },
+    {
+      "id": "cucumber-salad",
+      "name": "凉拌黄瓜（配方估算）",
+      "category": "家常",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 81.25
+      },
+      "portion": 1,
+      "source": "recipe",
+      "note": "参考配方；黄瓜生可食200g＋油5g＋酱油10g＋红酒醋参考5g；未包含额外糖",
+      "aliases": [
+        "拍黄瓜"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "cucumber",
+            "name": "黄瓜",
+            "quantity": 200,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 15
+            },
+            "energyKcal": 30,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11205",
+              "description": "CUCUMBER,WITH PEEL,RAW",
+              "kcalPer100g": 15
+            },
+            "note": "带皮可食生重；USDA SR28 NDB 11205"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 5,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 45,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          },
+          {
+            "foodId": "soy-sauce",
+            "name": "酱油",
+            "quantity": 10,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 53
+            },
+            "energyKcal": 5.300000000000001,
+            "source": "sr28",
+            "reference": {
+              "ndb": "16123",
+              "description": "SOY SAU MADE FROM SOY&WHEAT (SHOYU)",
+              "kcalPer100g": 53
+            },
+            "note": "酿造酱油参考，按g；不能据热量判断钠摄入；USDA SR28 NDB 16123"
+          },
+          {
+            "foodId": "vinegar",
+            "name": "红酒醋",
+            "quantity": 5,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 19
+            },
+            "energyKcal": 0.9500000000000001,
+            "source": "sr28",
+            "reference": {
+              "ndb": "02068",
+              "description": "VINEGAR,RED WINE",
+              "kcalPer100g": 19
+            },
+            "note": "按g，不含额外糖；不能套用到加糖醋汁；USDA SR28 NDB 02068"
+          }
+        ],
+        "totalKcal": 81.25,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": null
+    },
+    {
+      "id": "winter-melon-soup",
+      "name": "冬瓜虾仁汤（配方估算）",
+      "category": "家常",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 109.80000000000001
+      },
+      "portion": 1,
+      "source": "recipe",
+      "note": "参考配方；冬瓜生可食200g＋虾仁生可食80g＋水300ml＋油3g；参考汤全计",
+      "aliases": [],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "winter-melon",
+            "name": "冬瓜（原料）",
+            "quantity": 200,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 13
+            },
+            "energyKcal": 26,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11593",
+              "description": "WAXGOURD,(CHINESE PRESERVING MELON),RAW",
+              "kcalPer100g": 13
+            },
+            "note": "去皮去籽可食生重；USDA SR28 NDB 11593"
+          },
+          {
+            "foodId": "raw-shrimp",
+            "name": "虾仁（生，可食部）",
+            "quantity": 80,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 71
+            },
+            "energyKcal": 56.800000000000004,
+            "source": "sr28",
+            "reference": {
+              "ndb": "15149",
+              "description": "CRUSTACEANS,SHRIMP,MXD SP,RAW (MAYBE PREVIOUSLY FROZEN)",
+              "kcalPer100g": 71
+            },
+            "note": "混合虾种SR28历史参考71kcal/100g；去壳可食生重，不套用熟虾或所有虾种；USDA SR28 NDB 15149"
+          },
+          {
+            "foodId": "water",
+            "name": "水",
+            "quantity": 300,
+            "unit": "ml",
+            "basis": {
+              "amount": 100,
+              "unit": "ml",
+              "energyKcal": 0
+            },
+            "energyKcal": 0,
+            "source": "recipe",
+            "reference": null,
+            "note": "纯水，不含糖或奶"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 3,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 27,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          }
+        ],
+        "totalKcal": 109.80000000000001,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": null
+    },
+    {
+      "id": "ph-supreme",
+      "name": "必胜客 超级至尊风味披萨（参考片，配方估算）",
+      "category": "必胜客",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 240.39999999999998
+      },
+      "portion": 1,
+      "source": "storeRecipe",
+      "note": "参考配方；1份为自定参考片：面粉干重30g等投入量；非品牌配方、标准切片、尺寸或饼底热量，未核实烤后重量",
+      "aliases": [
+        "超级至尊",
+        "比萨",
+        "Pizza Hut"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "wheat-flour",
+            "name": "小麦粉（干重）",
+            "quantity": 30,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 364
+            },
+            "energyKcal": 109.2,
+            "source": "sr28",
+            "reference": {
+              "ndb": "20081",
+              "description": "WHEAT FLR,WHITE,ALL-PURPOSE,ENR,BLEACHED",
+              "kcalPer100g": 364
+            },
+            "note": "通用白面粉干重，不直接套用馒头、饺子皮或煮熟面条重量；USDA SR28 NDB 20081"
+          },
+          {
+            "foodId": "water",
+            "name": "水",
+            "quantity": 18,
+            "unit": "ml",
+            "basis": {
+              "amount": 100,
+              "unit": "ml",
+              "energyKcal": 0
+            },
+            "energyKcal": 0,
+            "source": "recipe",
+            "reference": null,
+            "note": "纯水，不含糖或奶"
+          },
+          {
+            "foodId": "mozzarella",
+            "name": "马苏里拉芝士",
+            "quantity": 20,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 300
+            },
+            "energyKcal": 60,
+            "source": "sr28",
+            "reference": {
+              "ndb": "01026",
+              "description": "CHEESE,MOZZARELLA,WHL MILK",
+              "kcalPer100g": 300
+            },
+            "note": "全脂马苏里拉参考；USDA SR28 NDB 01026"
+          },
+          {
+            "foodId": "cooked-beef",
+            "name": "熟牛肉（配方参考）",
+            "quantity": 15,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 250
+            },
+            "energyKcal": 37.5,
+            "source": "sr28",
+            "reference": {
+              "ndb": "23568",
+              "description": "BEEF,GROUND,85% LN MEAT / 15% FAT,PATTY,CKD,BRLD",
+              "kcalPer100g": 250
+            },
+            "note": "85%瘦肉/15%脂肪烤牛肉饼参考；牛肉部位不同会变化；USDA SR28 NDB 23568"
+          },
+          {
+            "foodId": "green-pepper",
+            "name": "青椒",
+            "quantity": 10,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 20
+            },
+            "energyKcal": 2,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11333",
+              "description": "PEPPERS,SWT,GRN,RAW",
+              "kcalPer100g": 20
+            },
+            "note": "甜青椒可食生重，辣椒品种可能不同；USDA SR28 NDB 11333"
+          },
+          {
+            "foodId": "onion",
+            "name": "洋葱",
+            "quantity": 5,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 40
+            },
+            "energyKcal": 2,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11282",
+              "description": "ONIONS,RAW",
+              "kcalPer100g": 40
+            },
+            "note": "可食生重；USDA SR28 NDB 11282"
+          },
+          {
+            "foodId": "tomato",
+            "name": "番茄",
+            "quantity": 15,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 18
+            },
+            "energyKcal": 2.6999999999999997,
+            "source": "recipe",
+            "reference": null,
+            "note": "基础食材参考18kcal/100g；可食生重，见USDA NDB 11529与来源说明"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 3,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 27,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          }
+        ],
+        "totalKcal": 240.39999999999998,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": {
+        "name": "必胜客中国菜单与百胜中国品牌介绍",
+        "url": "https://www.pizzahut.com.cn/Product",
+        "scope": "仅作品牌和餐饮类别背景，不提供本条目的大陆官方热量；所列为本应用参考搭配，不保证当店在售"
+      }
+    },
+    {
+      "id": "ph-cheese",
+      "name": "必胜客 芝士披萨（100g通用食物估算）",
+      "category": "必胜客",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 266
+      },
+      "portion": 1,
+      "source": "storeRecipe",
+      "note": "参考配方；1份按100g普通饼底芝士披萨通用食物参考；不是品牌官方营养，不等于固定一片，各尺寸饼底需按实际食用量改份数",
+      "aliases": [
+        "芝士比萨",
+        "Pizza Hut"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "cheese-pizza",
+            "name": "芝士披萨（普通饼底）",
+            "quantity": 100,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 266
+            },
+            "energyKcal": 266,
+            "source": "sr28",
+            "reference": {
+              "ndb": "21299",
+              "description": "FAST FD,PIZZA CHAIN,14\" PIZZA,CHS TOPPING,REG CRUST",
+              "kcalPer100g": 266
+            },
+            "note": "14英寸连锁芝士披萨成分参考；按g，1片100g仅快捷参考，不等于特定店铺或所有尺寸；USDA SR28 NDB 21299"
+          }
+        ],
+        "totalKcal": 266,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": {
+        "name": "必胜客中国菜单与百胜中国品牌介绍",
+        "url": "https://www.pizzahut.com.cn/Product",
+        "scope": "仅作品牌和餐饮类别背景，不提供本条目的大陆官方热量；所列为本应用参考搭配，不保证当店在售"
+      }
+    },
+    {
+      "id": "ph-beef-pasta",
+      "name": "必胜客 番茄牛肉意面（配方估算）",
+      "category": "必胜客",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 570.65
+      },
+      "portion": 1,
+      "source": "storeRecipe",
+      "note": "参考配方；熟意面200g＋熟牛肉60g＋生番茄100g＋洋葱30g＋油8g＋酱油5g；独立参考肉酱，面已含",
+      "aliases": [
+        "肉酱面",
+        "意大利面",
+        "Pizza Hut"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "pasta",
+            "name": "原味意面",
+            "quantity": 200,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 158
+            },
+            "energyKcal": 316,
+            "source": "grains",
+            "reference": null,
+            "note": "煮熟沥水重量，不含酱汁；NDB 20121"
+          },
+          {
+            "foodId": "cooked-beef",
+            "name": "熟牛肉（配方参考）",
+            "quantity": 60,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 250
+            },
+            "energyKcal": 150,
+            "source": "sr28",
+            "reference": {
+              "ndb": "23568",
+              "description": "BEEF,GROUND,85% LN MEAT / 15% FAT,PATTY,CKD,BRLD",
+              "kcalPer100g": 250
+            },
+            "note": "85%瘦肉/15%脂肪烤牛肉饼参考；牛肉部位不同会变化；USDA SR28 NDB 23568"
+          },
+          {
+            "foodId": "tomato",
+            "name": "番茄",
+            "quantity": 100,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 18
+            },
+            "energyKcal": 18,
+            "source": "recipe",
+            "reference": null,
+            "note": "基础食材参考18kcal/100g；可食生重，见USDA NDB 11529与来源说明"
+          },
+          {
+            "foodId": "onion",
+            "name": "洋葱",
+            "quantity": 30,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 40
+            },
+            "energyKcal": 12,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11282",
+              "description": "ONIONS,RAW",
+              "kcalPer100g": 40
+            },
+            "note": "可食生重；USDA SR28 NDB 11282"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 8,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 72,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          },
+          {
+            "foodId": "soy-sauce",
+            "name": "酱油",
+            "quantity": 5,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 53
+            },
+            "energyKcal": 2.6500000000000004,
+            "source": "sr28",
+            "reference": {
+              "ndb": "16123",
+              "description": "SOY SAU MADE FROM SOY&WHEAT (SHOYU)",
+              "kcalPer100g": 53
+            },
+            "note": "酿造酱油参考，按g；不能据热量判断钠摄入；USDA SR28 NDB 16123"
+          }
+        ],
+        "totalKcal": 570.65,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": {
+        "name": "必胜客中国菜单与百胜中国品牌介绍",
+        "url": "https://www.pizzahut.com.cn/Product",
+        "scope": "仅作品牌和餐饮类别背景，不提供本条目的大陆官方热量；所列为本应用参考搭配，不保证当店在售"
+      }
+    },
+    {
+      "id": "ph-mushroom-pasta",
+      "name": "必胜客 奶香蘑菇意面（配方估算）",
+      "category": "必胜客",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 499.40000000000003
+      },
+      "portion": 1,
+      "source": "storeRecipe",
+      "note": "参考配方；熟意面200g＋生蘑菇80g＋全脂奶80g＋芝士15g＋油8g；非品牌奶油酱配方，面和参考酱已含",
+      "aliases": [
+        "奶油意面",
+        "Pizza Hut"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "pasta",
+            "name": "原味意面",
+            "quantity": 200,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 158
+            },
+            "energyKcal": 316,
+            "source": "grains",
+            "reference": null,
+            "note": "煮熟沥水重量，不含酱汁；NDB 20121"
+          },
+          {
+            "foodId": "mushroom",
+            "name": "鲜蘑菇",
+            "quantity": 80,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 22
+            },
+            "energyKcal": 17.6,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11260",
+              "description": "MUSHROOMS,WHITE,RAW",
+              "kcalPer100g": 22
+            },
+            "note": "白蘑菇可食生重；其他菌菇可能不同；USDA SR28 NDB 11260"
+          },
+          {
+            "foodId": "full-milk",
+            "name": "全脂牛奶（按克）",
+            "quantity": 80,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 61
+            },
+            "energyKcal": 48.800000000000004,
+            "source": "sr28",
+            "reference": {
+              "ndb": "01077",
+              "description": "MILK,WHL,3.25% MILKFAT,W/ ADDED VITAMIN D",
+              "kcalPer100g": 61
+            },
+            "note": "3.25%乳脂参考；此条按g记录，不把ml直接当g；USDA SR28 NDB 01077"
+          },
+          {
+            "foodId": "mozzarella",
+            "name": "马苏里拉芝士",
+            "quantity": 15,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 300
+            },
+            "energyKcal": 45,
+            "source": "sr28",
+            "reference": {
+              "ndb": "01026",
+              "description": "CHEESE,MOZZARELLA,WHL MILK",
+              "kcalPer100g": 300
+            },
+            "note": "全脂马苏里拉参考；USDA SR28 NDB 01026"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 8,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 72,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          }
+        ],
+        "totalKcal": 499.40000000000003,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": {
+        "name": "必胜客中国菜单与百胜中国品牌介绍",
+        "url": "https://www.pizzahut.com.cn/Product",
+        "scope": "仅作品牌和餐饮类别背景，不提供本条目的大陆官方热量；所列为本应用参考搭配，不保证当店在售"
+      }
+    },
+    {
+      "id": "ph-roast-wing",
+      "name": "必胜客 风味烤翅（熟可食80g配方估算）",
+      "category": "必胜客",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 227.44000000000003
+      },
+      "portion": 1,
+      "source": "storeRecipe",
+      "note": "参考配方；带皮烤翅熟可食80g＋糖5g＋酱油8g；不含骨，80g不等于固定几只；独立酱汁参考",
+      "aliases": [
+        "鸡翅",
+        "烤翅",
+        "Pizza Hut"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "roast-wing",
+            "name": "烤鸡翅（带皮熟可食部）",
+            "quantity": 80,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 254
+            },
+            "energyKcal": 203.20000000000002,
+            "source": "sr28",
+            "reference": {
+              "ndb": "05103",
+              "description": "CHICKEN,BROILERS OR FRYERS,WING,MEAT&SKN,CKD,RSTD",
+              "kcalPer100g": 254
+            },
+            "note": "熟肉和皮，不含骨及额外酱汁；80g仅为快捷可食部参考，不等于两只鸡翅；USDA SR28 NDB 05103"
+          },
+          {
+            "foodId": "sugar",
+            "name": "额外白糖",
+            "quantity": 5,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 4
+            },
+            "energyKcal": 20,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的糖；4kcal/g"
+          },
+          {
+            "foodId": "soy-sauce",
+            "name": "酱油",
+            "quantity": 8,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 53
+            },
+            "energyKcal": 4.24,
+            "source": "sr28",
+            "reference": {
+              "ndb": "16123",
+              "description": "SOY SAU MADE FROM SOY&WHEAT (SHOYU)",
+              "kcalPer100g": 53
+            },
+            "note": "酿造酱油参考，按g；不能据热量判断钠摄入；USDA SR28 NDB 16123"
+          }
+        ],
+        "totalKcal": 227.44000000000003,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": {
+        "name": "必胜客中国菜单与百胜中国品牌介绍",
+        "url": "https://www.pizzahut.com.cn/Product",
+        "scope": "仅作品牌和餐饮类别背景，不提供本条目的大陆官方热量；所列为本应用参考搭配，不保证当店在售"
+      }
+    },
+    {
+      "id": "ph-cheese-corn",
+      "name": "必胜客 芝士玉米（配方估算）",
+      "category": "必胜客",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 217.2
+      },
+      "portion": 1,
+      "source": "storeRecipe",
+      "note": "参考配方；熟玉米粒120g＋马苏里拉25g＋油3g；不是门店标准份",
+      "aliases": [
+        "焗玉米",
+        "Pizza Hut"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "corn",
+            "name": "甜玉米粒",
+            "quantity": 120,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 96
+            },
+            "energyKcal": 115.19999999999999,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11168",
+              "description": "CORN,SWT,YEL,CKD,BLD,DRND,WO/SALT",
+              "kcalPer100g": 96
+            },
+            "note": "煮熟沥水，不含玉米芯与额外油；USDA SR28 NDB 11168"
+          },
+          {
+            "foodId": "mozzarella",
+            "name": "马苏里拉芝士",
+            "quantity": 25,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 300
+            },
+            "energyKcal": 75,
+            "source": "sr28",
+            "reference": {
+              "ndb": "01026",
+              "description": "CHEESE,MOZZARELLA,WHL MILK",
+              "kcalPer100g": 300
+            },
+            "note": "全脂马苏里拉参考；USDA SR28 NDB 01026"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 3,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 27,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          }
+        ],
+        "totalKcal": 217.2,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": {
+        "name": "必胜客中国菜单与百胜中国品牌介绍",
+        "url": "https://www.pizzahut.com.cn/Product",
+        "scope": "仅作品牌和餐饮类别背景，不提供本条目的大陆官方热量；所列为本应用参考搭配，不保证当店在售"
+      }
+    },
+    {
+      "id": "ph-salad",
+      "name": "必胜客 蔬菜沙拉（不含酱估算）",
+      "category": "必胜客",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 75.2
+      },
+      "portion": 1,
+      "source": "storeRecipe",
+      "note": "参考配方；生菜100g＋黄瓜60g＋番茄60g＋熟玉米粒40g；不含沙拉酱，按实际另记",
+      "aliases": [
+        "轻食",
+        "Pizza Hut"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "lettuce",
+            "name": "生菜（罗马生菜）",
+            "quantity": 100,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 17
+            },
+            "energyKcal": 17,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11251",
+              "description": "LETTUCE,COS OR ROMAINE,RAW",
+              "kcalPer100g": 17
+            },
+            "note": "可食生重，不含酱汁；USDA SR28 NDB 11251"
+          },
+          {
+            "foodId": "cucumber",
+            "name": "黄瓜",
+            "quantity": 60,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 15
+            },
+            "energyKcal": 9,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11205",
+              "description": "CUCUMBER,WITH PEEL,RAW",
+              "kcalPer100g": 15
+            },
+            "note": "带皮可食生重；USDA SR28 NDB 11205"
+          },
+          {
+            "foodId": "tomato",
+            "name": "番茄",
+            "quantity": 60,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 18
+            },
+            "energyKcal": 10.799999999999999,
+            "source": "recipe",
+            "reference": null,
+            "note": "基础食材参考18kcal/100g；可食生重，见USDA NDB 11529与来源说明"
+          },
+          {
+            "foodId": "corn",
+            "name": "甜玉米粒",
+            "quantity": 40,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 96
+            },
+            "energyKcal": 38.400000000000006,
+            "source": "sr28",
+            "reference": {
+              "ndb": "11168",
+              "description": "CORN,SWT,YEL,CKD,BLD,DRND,WO/SALT",
+              "kcalPer100g": 96
+            },
+            "note": "煮熟沥水，不含玉米芯与额外油；USDA SR28 NDB 11168"
+          }
+        ],
+        "totalKcal": 75.2,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": {
+        "name": "必胜客中国菜单与百胜中国品牌介绍",
+        "url": "https://www.pizzahut.com.cn/Product",
+        "scope": "仅作品牌和餐饮类别背景，不提供本条目的大陆官方热量；所列为本应用参考搭配，不保证当店在售"
+      }
+    },
+    {
+      "id": "hdl-shrimp-paste",
+      "name": "海底捞 捞派虾滑（配方估算）",
+      "category": "海底捞",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 82.1
+      },
+      "portion": 1,
+      "source": "storeRecipe",
+      "note": "参考配方；本应用90g生虾仁＋5g面粉＋5ml水的独立参考100g配方，不声称为品牌虾肉比例或工艺；不含汤底与蘸料",
+      "aliases": [
+        "虾滑",
+        "HDL"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "raw-shrimp",
+            "name": "虾仁（生，可食部）",
+            "quantity": 90,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 71
+            },
+            "energyKcal": 63.9,
+            "source": "sr28",
+            "reference": {
+              "ndb": "15149",
+              "description": "CRUSTACEANS,SHRIMP,MXD SP,RAW (MAYBE PREVIOUSLY FROZEN)",
+              "kcalPer100g": 71
+            },
+            "note": "混合虾种SR28历史参考71kcal/100g；去壳可食生重，不套用熟虾或所有虾种；USDA SR28 NDB 15149"
+          },
+          {
+            "foodId": "wheat-flour",
+            "name": "小麦粉（干重）",
+            "quantity": 5,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 364
+            },
+            "energyKcal": 18.2,
+            "source": "sr28",
+            "reference": {
+              "ndb": "20081",
+              "description": "WHEAT FLR,WHITE,ALL-PURPOSE,ENR,BLEACHED",
+              "kcalPer100g": 364
+            },
+            "note": "通用白面粉干重，不直接套用馒头、饺子皮或煮熟面条重量；USDA SR28 NDB 20081"
+          },
+          {
+            "foodId": "water",
+            "name": "水",
+            "quantity": 5,
+            "unit": "ml",
+            "basis": {
+              "amount": 100,
+              "unit": "ml",
+              "energyKcal": 0
+            },
+            "energyKcal": 0,
+            "source": "recipe",
+            "reference": null,
+            "note": "纯水，不含糖或奶"
+          }
+        ],
+        "totalKcal": 82.1,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": {
+        "name": "海底捞官方网站特色菜",
+        "url": "https://www.haidilao.com/cate/dish/specialty",
+        "scope": "仅作捞派虾滑等菜名和品牌背景，不作为本应用配方热量来源；份量不是门店标准份"
+      }
+    },
+    {
+      "id": "hdl-tomato-broth",
+      "name": "海底捞 番茄汤食用量（配方估算）",
+      "category": "海底捞",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 57
+      },
+      "portion": 1,
+      "source": "storeRecipe",
+      "note": "参考配方；番茄生重100g＋水200ml＋油3g＋糖3g；1份为本参考汤汁全部食用量，非整锅；不含涮菜、其他配料或蘸料",
+      "aliases": [
+        "番茄锅",
+        "汤底",
+        "HDL"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "tomato",
+            "name": "番茄",
+            "quantity": 100,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 18
+            },
+            "energyKcal": 18,
+            "source": "recipe",
+            "reference": null,
+            "note": "基础食材参考18kcal/100g；可食生重，见USDA NDB 11529与来源说明"
+          },
+          {
+            "foodId": "water",
+            "name": "水",
+            "quantity": 200,
+            "unit": "ml",
+            "basis": {
+              "amount": 100,
+              "unit": "ml",
+              "energyKcal": 0
+            },
+            "energyKcal": 0,
+            "source": "recipe",
+            "reference": null,
+            "note": "纯水，不含糖或奶"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 3,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 27,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          },
+          {
+            "foodId": "sugar",
+            "name": "额外白糖",
+            "quantity": 3,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 4
+            },
+            "energyKcal": 12,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的糖；4kcal/g"
+          }
+        ],
+        "totalKcal": 57,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": {
+        "name": "海底捞官方网站特色菜",
+        "url": "https://www.haidilao.com/cate/dish/specialty",
+        "scope": "仅作捞派虾滑等菜名和品牌背景，不作为本应用配方热量来源；份量不是门店标准份"
+      }
+    },
+    {
+      "id": "hdl-spicy-broth",
+      "name": "海底捞 麻辣汤食用量（配方估算）",
+      "category": "海底捞",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 95.3
+      },
+      "portion": 1,
+      "source": "storeRecipe",
+      "note": "参考配方；水250ml＋食用油10g＋酱油10g为个人吃进汤汁与附着油的独立参考，非整锅、非品牌牛油锅配方；不喝汤也可能吃进附着油",
+      "aliases": [
+        "麻辣锅",
+        "牛油锅",
+        "汤底",
+        "HDL"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "water",
+            "name": "水",
+            "quantity": 250,
+            "unit": "ml",
+            "basis": {
+              "amount": 100,
+              "unit": "ml",
+              "energyKcal": 0
+            },
+            "energyKcal": 0,
+            "source": "recipe",
+            "reference": null,
+            "note": "纯水，不含糖或奶"
+          },
+          {
+            "foodId": "oil",
+            "name": "额外食用油",
+            "quantity": 10,
+            "unit": "g",
+            "basis": {
+              "amount": 1,
+              "unit": "g",
+              "energyKcal": 9
+            },
+            "energyKcal": 90,
+            "source": "recipe",
+            "reference": null,
+            "note": "只记录配方以外额外添加的油；9kcal/g"
+          },
+          {
+            "foodId": "soy-sauce",
+            "name": "酱油",
+            "quantity": 10,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 53
+            },
+            "energyKcal": 5.300000000000001,
+            "source": "sr28",
+            "reference": {
+              "ndb": "16123",
+              "description": "SOY SAU MADE FROM SOY&WHEAT (SHOYU)",
+              "kcalPer100g": 53
+            },
+            "note": "酿造酱油参考，按g；不能据热量判断钠摄入；USDA SR28 NDB 16123"
+          }
+        ],
+        "totalKcal": 95.3,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": {
+        "name": "海底捞官方网站特色菜",
+        "url": "https://www.haidilao.com/cate/dish/specialty",
+        "scope": "仅作捞派虾滑等菜名和品牌背景，不作为本应用配方热量来源；份量不是门店标准份"
+      }
+    },
+    {
+      "id": "hdl-sesame-sauce",
+      "name": "海底捞 芝麻酱蘸料（配方估算）",
+      "category": "海底捞",
+      "unit": "份",
+      "basis": {
+        "amount": 1,
+        "unit": "份",
+        "energyKcal": 121.65
+      },
+      "portion": 1,
+      "source": "storeRecipe",
+      "note": "参考配方；纯芝麻酱通用参考20g＋酱油5g＋水15ml，1份参考蘸料约40g；不是门店小料标准配方，按实际吃进量调整",
+      "aliases": [
+        "麻酱",
+        "蘸碟",
+        "小料",
+        "HDL"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "recipe": {
+        "components": [
+          {
+            "foodId": "tahini",
+            "name": "芝麻酱（通用参考）",
+            "quantity": 20,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 595
+            },
+            "energyKcal": 119,
+            "source": "sr28",
+            "reference": {
+              "ndb": "12166",
+              "description": "SESAME BUTTER,TAHINI,FROM RSTD&TSTD KRNLS (MOST COMMON TYPE)",
+              "kcalPer100g": 595
+            },
+            "note": "烤芝麻酱参考；不是门店调制蘸料，包装和稀释比例优先；USDA SR28 NDB 12166"
+          },
+          {
+            "foodId": "soy-sauce",
+            "name": "酱油",
+            "quantity": 5,
+            "unit": "g",
+            "basis": {
+              "amount": 100,
+              "unit": "g",
+              "energyKcal": 53
+            },
+            "energyKcal": 2.6500000000000004,
+            "source": "sr28",
+            "reference": {
+              "ndb": "16123",
+              "description": "SOY SAU MADE FROM SOY&WHEAT (SHOYU)",
+              "kcalPer100g": 53
+            },
+            "note": "酿造酱油参考，按g；不能据热量判断钠摄入；USDA SR28 NDB 16123"
+          },
+          {
+            "foodId": "water",
+            "name": "水",
+            "quantity": 15,
+            "unit": "ml",
+            "basis": {
+              "amount": 100,
+              "unit": "ml",
+              "energyKcal": 0
+            },
+            "energyKcal": 0,
+            "source": "recipe",
+            "reference": null,
+            "note": "纯水，不含糖或奶"
+          }
+        ],
+        "totalKcal": 121.65,
+        "description": "仅按本参考配方合计；原料生重/熟重分别注明，不由成品总克重反推。"
+      },
+      "menuSource": {
+        "name": "海底捞官方网站特色菜",
+        "url": "https://www.haidilao.com/cate/dish/specialty",
+        "scope": "仅作捞派虾滑等菜名和品牌背景，不作为本应用配方热量来源；份量不是门店标准份"
+      }
+    },
+    {
+      "id": "hdl-beef",
+      "name": "海底捞 牛肉片（生肉通用参考）",
+      "category": "海底捞",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 215
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "85%瘦肉15%脂肪生绞牛肉参考；不是特定肥牛片或品牌部位实测；USDA SR28 NDB 23567；按个人实际食用的对应生/熟食材可食量记录，不是门店整份或下锅后称重；汤底、附着油、蘸料另记",
+      "aliases": [
+        "肥牛",
+        "涮牛肉",
+        "HDL"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "23567",
+        "description": "BEEF,GROUND,85% LN MEAT / 15% FAT,RAW",
+        "kcalPer100g": 215
+      },
+      "menuSource": {
+        "name": "海底捞官方网站特色菜",
+        "url": "https://www.haidilao.com/cate/dish/specialty",
+        "scope": "仅作捞派虾滑等菜名和品牌背景，不作为本应用配方热量来源；份量不是门店标准份"
+      },
+      "browseTags": [
+        "restaurant",
+        "lunch",
+        "dinner",
+        "meat"
+      ]
+    },
+    {
+      "id": "hdl-tripe",
+      "name": "海底捞 牛肚（生牛肚通用参考）",
+      "category": "海底捞",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 85
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "可食生重，不同加工毛肚含水量不同；煮熟后食用；USDA SR28 NDB 13341；按个人实际食用的对应生/熟食材可食量记录，不是门店整份或下锅后称重；汤底、附着油、蘸料另记",
+      "aliases": [
+        "毛肚",
+        "牛百叶",
+        "HDL"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "13341",
+        "description": "BEEF,VAR MEATS&BY-PRODUCTS,TRIPE,RAW",
+        "kcalPer100g": 85
+      },
+      "menuSource": {
+        "name": "海底捞官方网站特色菜",
+        "url": "https://www.haidilao.com/cate/dish/specialty",
+        "scope": "仅作捞派虾滑等菜名和品牌背景，不作为本应用配方热量来源；份量不是门店标准份"
+      },
+      "browseTags": [
+        "restaurant",
+        "lunch",
+        "dinner",
+        "meat"
+      ]
+    },
+    {
+      "id": "hdl-shrimp",
+      "name": "海底捞 虾仁（生可食部参考）",
+      "category": "海底捞",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 71
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "混合虾种SR28历史参考71kcal/100g；去壳可食生重，不套用熟虾或所有虾种；USDA SR28 NDB 15149；按个人实际食用的对应生/熟食材可食量记录，不是门店整份或下锅后称重；汤底、附着油、蘸料另记",
+      "aliases": [
+        "鲜虾",
+        "HDL"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "15149",
+        "description": "CRUSTACEANS,SHRIMP,MXD SP,RAW (MAYBE PREVIOUSLY FROZEN)",
+        "kcalPer100g": 71
+      },
+      "menuSource": {
+        "name": "海底捞官方网站特色菜",
+        "url": "https://www.haidilao.com/cate/dish/specialty",
+        "scope": "仅作捞派虾滑等菜名和品牌背景，不作为本应用配方热量来源；份量不是门店标准份"
+      },
+      "browseTags": [
+        "restaurant",
+        "lunch",
+        "dinner",
+        "meat"
+      ]
+    },
+    {
+      "id": "hdl-tofu",
+      "name": "海底捞 豆腐（食材参考）",
+      "category": "海底捞",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 76
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "石膏豆腐原重参考，不含额外油；USDA SR28 NDB 16427；按个人实际食用的对应生/熟食材可食量记录，不是门店整份或下锅后称重；汤底、附着油、蘸料另记",
+      "aliases": [
+        "嫩豆腐",
+        "HDL"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "16427",
+        "description": "TOFU,RAW,REG,PREP W/CA SULFATE",
+        "kcalPer100g": 76
+      },
+      "menuSource": {
+        "name": "海底捞官方网站特色菜",
+        "url": "https://www.haidilao.com/cate/dish/specialty",
+        "scope": "仅作捞派虾滑等菜名和品牌背景，不作为本应用配方热量来源；份量不是门店标准份"
+      },
+      "browseTags": [
+        "restaurant",
+        "lunch",
+        "dinner",
+        "dairy"
+      ]
+    },
+    {
+      "id": "hdl-lotus",
+      "name": "海底捞 藕片（生食材参考）",
+      "category": "海底捞",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 74
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "可食生重，烹饪油另算；USDA SR28 NDB 11254；按个人实际食用的对应生/熟食材可食量记录，不是门店整份或下锅后称重；汤底、附着油、蘸料另记",
+      "aliases": [
+        "莲藕",
+        "HDL"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "11254",
+        "description": "LOTUS ROOT,RAW",
+        "kcalPer100g": 74
+      },
+      "menuSource": {
+        "name": "海底捞官方网站特色菜",
+        "url": "https://www.haidilao.com/cate/dish/specialty",
+        "scope": "仅作捞派虾滑等菜名和品牌背景，不作为本应用配方热量来源；份量不是门店标准份"
+      },
+      "browseTags": [
+        "restaurant",
+        "lunch",
+        "dinner",
+        "vegetable"
+      ]
+    },
+    {
+      "id": "hdl-potato",
+      "name": "海底捞 土豆片（生食材参考）",
+      "category": "海底捞",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 77
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "生重，不是炸薯条或熟成品重量；USDA SR28 NDB 11352；按个人实际食用的对应生/熟食材可食量记录，不是门店整份或下锅后称重；汤底、附着油、蘸料另记",
+      "aliases": [
+        "土豆",
+        "HDL"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "11352",
+        "description": "POTATOES,FLESH & SKN,RAW",
+        "kcalPer100g": 77
+      },
+      "menuSource": {
+        "name": "海底捞官方网站特色菜",
+        "url": "https://www.haidilao.com/cate/dish/specialty",
+        "scope": "仅作捞派虾滑等菜名和品牌背景，不作为本应用配方热量来源；份量不是门店标准份"
+      },
+      "browseTags": [
+        "restaurant",
+        "lunch",
+        "dinner",
+        "vegetable"
+      ]
+    },
+    {
+      "id": "hdl-lettuce",
+      "name": "海底捞 生菜（生食材参考）",
+      "category": "海底捞",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 17
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "可食生重，不含酱汁；USDA SR28 NDB 11251；按个人实际食用的对应生/熟食材可食量记录，不是门店整份或下锅后称重；汤底、附着油、蘸料另记",
+      "aliases": [
+        "蔬菜",
+        "HDL"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "11251",
+        "description": "LETTUCE,COS OR ROMAINE,RAW",
+        "kcalPer100g": 17
+      },
+      "menuSource": {
+        "name": "海底捞官方网站特色菜",
+        "url": "https://www.haidilao.com/cate/dish/specialty",
+        "scope": "仅作捞派虾滑等菜名和品牌背景，不作为本应用配方热量来源；份量不是门店标准份"
+      },
+      "browseTags": [
+        "restaurant",
+        "lunch",
+        "dinner",
+        "vegetable"
+      ]
+    },
+    {
+      "id": "hdl-enoki",
+      "name": "海底捞 金针菇（生食材参考）",
+      "category": "海底捞",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 37
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "可食生重，需充分煮熟；烹饪油另算；USDA SR28 NDB 11950；按个人实际食用的对应生/熟食材可食量记录，不是门店整份或下锅后称重；汤底、附着油、蘸料另记",
+      "aliases": [
+        "菌菇",
+        "HDL"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "11950",
+        "description": "MUSHROOMS,ENOKI,RAW",
+        "kcalPer100g": 37
+      },
+      "menuSource": {
+        "name": "海底捞官方网站特色菜",
+        "url": "https://www.haidilao.com/cate/dish/specialty",
+        "scope": "仅作捞派虾滑等菜名和品牌背景，不作为本应用配方热量来源；份量不是门店标准份"
+      },
+      "browseTags": [
+        "restaurant",
+        "lunch",
+        "dinner",
+        "vegetable"
+      ]
+    },
+    {
+      "id": "hdl-corn",
+      "name": "海底捞 玉米粒（熟食材参考）",
+      "category": "海底捞",
+      "unit": "g",
+      "basis": {
+        "amount": 100,
+        "unit": "g",
+        "energyKcal": 96
+      },
+      "portion": 100,
+      "source": "sr28",
+      "note": "煮熟沥水，不含玉米芯与额外油；USDA SR28 NDB 11168；按个人实际食用的对应生/熟食材可食量记录，不是门店整份或下锅后称重；汤底、附着油、蘸料另记",
+      "aliases": [
+        "玉米",
+        "HDL"
+      ],
+      "region": "CN",
+      "dataVersion": "2026-10-25.1",
+      "checkedAt": "2026-10-25",
+      "reference": {
+        "ndb": "11168",
+        "description": "CORN,SWT,YEL,CKD,BLD,DRND,WO/SALT",
+        "kcalPer100g": 96
+      },
+      "menuSource": {
+        "name": "海底捞官方网站特色菜",
+        "url": "https://www.haidilao.com/cate/dish/specialty",
+        "scope": "仅作捞派虾滑等菜名和品牌背景，不作为本应用配方热量来源；份量不是门店标准份"
+      },
+      "browseTags": [
+        "restaurant",
+        "lunch",
+        "dinner",
+        "staple"
+      ]
+    }
+  ],
+  "checkedAt": "2026-10-25",
+  "sourceZipSha256": "39df5c0516a7d343ffb043bb5542ab8c29f2c9998c93608e7fd3feca82ce1cef"
+}
