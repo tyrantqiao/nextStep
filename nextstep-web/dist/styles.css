@@ -157,3 +157,21 @@ dialog:has(.workout-player){width:min(640px,calc(100vw - 24px));max-width:calc(1
 
 .workout-player .player-art.has-motion{display:grid;width:100%;height:auto;margin:4px auto 12px;box-shadow:none;background:transparent}.workout-player .player-art.has-motion .movement-svg{width:100%;height:145px}@media(max-height:650px){.workout-player .player-art.has-motion .movement-svg{height:110px;margin:0 auto}}
 .plan-editor-list{display:grid;gap:12px;margin:18px 0}.plan-editor-item{padding:14px;border:1px solid var(--line);border-radius:14px;display:grid;gap:10px;min-width:0}.plan-editor-item strong{overflow-wrap:anywhere}.plan-editor-actions{display:flex;align-items:center;gap:12px}.plan-editor-actions button{min-height:44px}.plan-editor-item .small-label{margin:4px 0 0}
+
+/* Shared action geometry for the browser and Android WebView. */
+button{line-height:1.5;-webkit-appearance:none;appearance:none}
+.primary-button,.secondary-button{min-height:48px;min-width:0;padding:11px 16px;line-height:1.5;overflow-wrap:anywhere;text-align:center}
+.dialog-header{gap:8px;flex-wrap:nowrap}
+.dialog-header h2{flex:1;margin:0}
+.dialog-header>.text-button{flex:0 0 auto;min-height:44px;max-width:48%;padding:8px;line-height:1.5;text-align:center}
+.dialog-header>.close-button{flex:0 0 44px;width:44px;height:44px;min-height:44px;padding:0}
+.settings-actions{align-items:stretch}
+.settings-actions>button,.settings-actions>.text-button{width:100%;min-height:48px;margin:0}
+.card-actions:not(.settings-actions){display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,120px),1fr));grid-auto-rows:1fr;align-items:stretch}
+.card-actions:not(.settings-actions)>button{min-width:0;min-height:48px;width:100%;margin:0}
+.plan-editor-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;align-items:stretch}
+.plan-editor-actions>button{min-height:48px;width:100%;margin:0}
+.settings-section>.secondary-button{width:100%;margin-top:12px}
+.project-tabs button,.journal-views button{min-height:44px}
+.metadata-heading button,.project-entry>[data-picker-back],.rest-add-button{min-height:44px}
+@media(max-width:700px){.page-heading>.text-button,.topbar .text-button,.card-head>.text-button{min-height:44px;display:flex;align-items:center;justify-content:center}.card-head>button{flex-shrink:0}.page-heading>button{flex-shrink:0}}

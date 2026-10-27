@@ -1,0 +1,17 @@
+{
+  "verified": true,
+  "assets": [
+    "index.html",
+    "app.js",
+    "styles.css",
+    "home.css",
+    "nutrition.css",
+    "foods.js",
+    "nutrition.js",
+    "images/food-samples.png",
+    "images/food-samples-more.png",
+    "images/food-samples-dishes.png"
+  ],
+  "sha256": "5b1deae4df8735d83d3a13e0c366cd880d0e0bbaf020f9bb97d2525a79eac2fa",
+  "bytes": 8504582
+}

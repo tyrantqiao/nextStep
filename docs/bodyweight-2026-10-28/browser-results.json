@@ -1,0 +1,410 @@
+{
+  "results": [
+    {
+      "name": "Pushup setup fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Target is labelled 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Pushup player fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Actual repetitions are explicit 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Set 1 stores actual reps 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Set 2 stores actual reps 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Set 3 stores actual reps 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "History keeps varying reps 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "History fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "History editing fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Plank setup uses seconds 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Plank setup fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Plank player seconds 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Plank player fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Input survives reload 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Last set editing uses seconds 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Last set fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Plank history unit 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Historical seconds above 100 save 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Balance board setup 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Balance setup fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Balance player fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Cart seconds label 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Cart fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Statistics fits 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Period switch preserves focus 320",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Pushup setup fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Target is labelled 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Pushup player fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Actual repetitions are explicit 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Set 1 stores actual reps 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Set 2 stores actual reps 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Set 3 stores actual reps 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "History keeps varying reps 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "History fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "History editing fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Plank setup uses seconds 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Plank setup fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Plank player seconds 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Plank player fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Input survives reload 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Last set editing uses seconds 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Last set fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Plank history unit 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Historical seconds above 100 save 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Balance board setup 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Balance setup fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Balance player fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Cart seconds label 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Cart fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Statistics fits 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Period switch preserves focus 390",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Pushup setup fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Target is labelled 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Pushup player fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Actual repetitions are explicit 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Set 1 stores actual reps 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Set 2 stores actual reps 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Set 3 stores actual reps 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "History keeps varying reps 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "History fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "History editing fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Plank setup uses seconds 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Plank setup fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Plank player seconds 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Plank player fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Input survives reload 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Last set editing uses seconds 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Last set fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Plank history unit 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Historical seconds above 100 save 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Balance board setup 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Balance setup fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Balance player fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Cart seconds label 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Cart fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Statistics fits 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Period switch preserves focus 1280",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Failed write keeps editable current form",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Retry keeps actual input",
+      "passed": true,
+      "value": true
+    },
+    {
+      "name": "Old unmarked custom plank keeps repetitions",
+      "passed": true,
+      "value": true
+    }
+  ],
+  "errors": []
+}

@@ -398,3 +398,15 @@ button.history-row{display:grid;grid-template-columns:38px minmax(0,1fr) 16px;al
 .home-training-alternatives button{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:0;background:#fff;border:1px solid #e4e9f2;border-radius:12px}
 .training-repeat-entry{flex-shrink:0;min-height:40px;align-self:center;font-size:12px;margin-top:6px}
 .home-plan-defaults .secondary-button{border:1px solid #e0e6f0;border-radius:10px;padding:12px;background:#fff}
+
+/* Keep shopping actions on a shared grid rather than spacing by label width. */
+.training-shop .dialog-header{flex-wrap:nowrap;align-items:center;gap:8px}
+.training-shop .dialog-header>.text-button{min-height:44px;line-height:1.5}
+.training-shop-footer{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr;align-items:stretch;gap:10px}
+.training-shop-footer:has(>button:nth-of-type(3)){grid-template-columns:repeat(3,minmax(0,1fr))}
+.training-shop-footer:has(>div){grid-template-columns:minmax(0,1fr) minmax(120px,1fr);align-items:center}
+.training-shop-footer>button{width:100%;min-width:0;min-height:48px;padding:10px 12px;font-size:13px;line-height:1.5;margin:0}
+.training-cart-order>button,.training-repeat-entry{min-height:44px}
+.home-launch-choices{grid-auto-rows:1fr}
+.home-launch-choices .mode-quick-choice{height:100%}
+@media(max-width:430px){.training-shop-footer:has(>button:nth-of-type(3)){grid-template-columns:1fr}.home-training-alternatives{grid-auto-rows:1fr}.home-training-alternatives>button{height:100%}}
